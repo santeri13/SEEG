@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://qxtpt0gymowq"]
+
+[ext_resource type="Script" path="res://Backend/Code/Instruments/VPN.gd" id="1_6pfjq"]
+
+[node name="Vpn" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6pfjq")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0917722
+anchor_top = 0.0566406
+anchor_right = 0.920886
+anchor_bottom = 0.113281
+grow_horizontal = 2
+text = "Sorce VPN"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VPNAadressLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0886076
+anchor_top = 0.323843
+anchor_right = 0.917722
+anchor_bottom = 0.44484
+grow_horizontal = 2
+text = "Please insert VPN address"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VPNAadress" type="LineEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.123418
+anchor_top = 0.47331
+anchor_right = 0.911392
+anchor_bottom = 0.604982
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Type VPN address"
+metadata/_edit_use_anchors_ = true
+
+[node name="Send" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.151899
+anchor_top = 0.704626
+anchor_right = 0.89557
+anchor_bottom = 0.83274
+offset_top = 1.52588e-05
+grow_horizontal = 2
+grow_vertical = 0
+text = "Connect"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Panel/Send" to="." method="_on_send_pressed"]

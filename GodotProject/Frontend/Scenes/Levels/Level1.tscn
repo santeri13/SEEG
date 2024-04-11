@@ -1,0 +1,169 @@
+[gd_scene load_steps=11 format=3 uid="uid://bmgd1lvvnuutb"]
+
+[ext_resource type="Texture2D" uid="uid://dopfqygkv0cp8" path="res://Frontend/Recourses/GameStart.png" id="1_2bqdr"]
+[ext_resource type="Script" path="res://Backend/Code/Levels/Level1.gd" id="1_no7fg"]
+[ext_resource type="Texture2D" uid="uid://0f6wmnlgh5fn" path="res://Frontend/Recourses/browser_13408985.png" id="2_ruebr"]
+[ext_resource type="Texture2D" uid="uid://berhbt8ceajj5" path="res://Frontend/Recourses/mail_9068642.png" id="3_8c4kf"]
+[ext_resource type="Texture2D" uid="uid://derhselvkci6d" path="res://Frontend/Recourses/meetme.png" id="4_i71wy"]
+[ext_resource type="Texture2D" uid="uid://wj75lcanwg0g" path="res://Frontend/Recourses/vpn_9694717.png" id="5_myxku"]
+[ext_resource type="PackedScene" uid="uid://dkrkk78fdiww6" path="res://Frontend/Scenes/Instruments/Email.tscn" id="6_r6g0p"]
+[ext_resource type="PackedScene" uid="uid://qxtpt0gymowq" path="res://Frontend/Scenes/Instruments/VPN.tscn" id="7_liq6p"]
+[ext_resource type="PackedScene" uid="uid://j1gaj4y3ktw1" path="res://Frontend/Scenes/Instruments/WorkChat.tscn" id="8_kcmro"]
+[ext_resource type="PackedScene" uid="uid://csuhyqjgu6da8" path="res://Frontend/Scenes/Instruments/RecordApp.tscn" id="9_mhyd8"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_no7fg")
+
+[node name="GameStart" type="Sprite2D" parent="."]
+position = Vector2(593, 318)
+scale = Vector2(0.8, 0.626953)
+texture = ExtResource("1_2bqdr")
+
+[node name="Button" type="Button" parent="GameStart"]
+offset_left = -663.75
+offset_top = -414.704
+offset_right = -579.75
+offset_bottom = -304.704
+
+[node name="Browser13408985" type="Sprite2D" parent="GameStart/Button"]
+position = Vector2(43.5, 53.7695)
+scale = Vector2(0.148926, 0.193146)
+texture = ExtResource("2_ruebr")
+
+[node name="Button2" type="Button" parent="GameStart"]
+offset_left = -661.25
+offset_top = -304.648
+offset_right = -577.25
+offset_bottom = -194.648
+
+[node name="Mail9068642" type="Sprite2D" parent="GameStart/Button2"]
+position = Vector2(36.2501, 55.8256)
+scale = Vector2(0.151367, 0.193146)
+texture = ExtResource("3_8c4kf")
+
+[node name="Button3" type="Button" parent="GameStart"]
+offset_left = -667.5
+offset_top = -194.592
+offset_right = -583.5
+offset_bottom = -84.5919
+
+[node name="Meetme" type="Sprite2D" parent="GameStart/Button3"]
+position = Vector2(42.5, 55.8256)
+scale = Vector2(0.13916, 0.165109)
+texture = ExtResource("4_i71wy")
+
+[node name="Button4" type="Button" parent="GameStart"]
+offset_left = -663.75
+offset_top = -86.1308
+offset_right = -579.75
+offset_bottom = 23.8692
+
+[node name="Vpn9694717" type="Sprite2D" parent="GameStart/Button4"]
+position = Vector2(42.5001, 54.2305)
+scale = Vector2(0.141602, 0.168224)
+texture = ExtResource("5_myxku")
+
+[node name="List_of_tasks" type="Panel" parent="GameStart"]
+offset_left = 563.0
+offset_top = -427.0
+offset_right = 699.0
+offset_bottom = -252.0
+
+[node name="Color_List_of_tasks" type="ColorRect" parent="GameStart/List_of_tasks"]
+modulate = Color(0.870588, 0.870588, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text_List_of_task" type="TextEdit" parent="GameStart/List_of_tasks"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Task:
+Open Email"
+editable = false
+
+[node name="Email" parent="GameStart" instance=ExtResource("6_r6g0p")]
+visible = false
+offset_left = -660.0
+offset_top = -415.0
+offset_right = -759.0
+offset_bottom = -697.0
+
+[node name="Close" type="Button" parent="GameStart/Email"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="Vpn" parent="GameStart" instance=ExtResource("7_liq6p")]
+visible = false
+offset_left = 390.0
+offset_top = -142.0
+offset_right = -771.0
+offset_bottom = -726.0
+
+[node name="Close" type="Button" parent="GameStart/Vpn"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_right = 1.0
+offset_bottom = 51.0
+grow_horizontal = 0
+
+[node name="WorkChat" parent="GameStart" instance=ExtResource("8_kcmro")]
+visible = false
+offset_left = -664.0
+offset_top = -415.0
+offset_right = -760.0
+offset_bottom = -686.0
+
+[node name="Close" type="Button" parent="GameStart/WorkChat"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -39.0
+offset_bottom = 45.0
+grow_horizontal = 0
+
+[node name="RecordApp" parent="GameStart" instance=ExtResource("9_mhyd8")]
+visible = false
+offset_left = -666.0
+offset_top = -415.0
+offset_right = -765.0
+offset_bottom = -688.0
+
+[node name="Close" type="Button" parent="GameStart/RecordApp"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 47.0
+grow_horizontal = 0
+
+[node name="Show_text" type="TextEdit" parent="."]
+visible = false
+offset_left = 307.0
+offset_top = 382.0
+offset_right = 849.0
+offset_bottom = 455.0
+editable = false
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="GameStart/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GameStart/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="GameStart/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="GameStart/Button4" to="." method="_on_button_4_pressed"]

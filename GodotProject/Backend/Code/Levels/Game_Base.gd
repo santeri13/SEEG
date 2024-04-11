@@ -1,0 +1,83 @@
+extends Node2D
+signal pressedEnter
+signal openRecord
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	$Show_text.text = "Hello, welcome first day on your job. My name is Morty I will texh you how to work with tools which you will use on your job\n Press enter to next"
+	await pressedEnter
+	await pressedEnter
+	$Show_text.text = "Lets start with mailbox where you can see mails which you recive on work\n Open mail"
+	
+	
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_button_4_pressed():
+	$GameStart/Vpn.show()
+	$Show_text.text = "This is VPN application which connctyou with our organization network. It is xtremely rare that you would need tou use it but sometimes happens\n Close VPM app"
+
+
+func _on_button_3_pressed():
+	$GameStart/WorkChat.show()
+	$Show_text.text = "Here you can recive messages from your colleges and answer on them\n Close work chat"
+
+
+func _on_button_2_pressed():
+	$GameStart/Email.show()
+	$Show_text.text = "Here you can answers on mail, delete or report it if you find something suspiscious\n Close mail"
+
+
+func _on_button_pressed():
+	$GameStart/RecordApp.show()
+	$Show_text.text = "As you can see here you need tracking code of product to do changes in there. \n Press enter to next"
+	await pressedEnter
+	await pressedEnter
+	$Show_text.text = "Tracking numbers come on your email or in work chat. Now I will give you one as practice. Put there (PL289087) \n Enter code in app"
+
+func _on_button_pressed_email():
+	$GameStart/Email.hide()
+	$Show_text.text = "Next lets open your main tool in work\n Open internet browser"
+
+
+func _on_close_pressed_VPN():
+	$GameStart/Vpn.hide()
+	$Show_text.text = "Also, there is some things which could help you in your work\n Press enter"
+	await pressedEnter
+	await pressedEnter
+	$Show_text.text = "Here you could see sticki note with tasks which you need to do by day. Remember that first you need to check email and then \n Press enter"
+	await pressedEnter
+	await pressedEnter
+	$Show_text.text = "Here you could se your money,do not lose it \n Press enter"
+	await pressedEnter
+	await pressedEnter
+	$Show_text.text = "Thats all remmber to read manual for personal and work hard \n Press enter for next day"
+	await pressedEnter
+	await pressedEnter
+	$Panel.show()
+
+
+func _on_close_pressed_Workchat():
+	$GameStart/WorkChat.hide()
+	$Show_text.text = "Last one could be intrestng to you, becaus you could you use it before\n Open VPN app"
+
+
+func _on_close_pressed_RecordApp():
+	$GameStart/RecordApp.hide()
+	$Show_text.text = "Now when you know how you would work lets talk about another way of comunication, work chat\n Open work chat"
+	
+func _input(event):
+	print(event.as_text())
+	if event.as_text() == "Enter":
+		pressedEnter.emit()
+
+
+func _on_next_day_pressed():
+	get_tree().change_scene_to_file("res://Frontend/Scenes/Levels/Level1.tscn")
+
+func _show_message():
+	$Show_text.text = "Grate job. Now you see inromation about this package which sometimes you need to chnage by client needs. Now close app \n Close application"

@@ -1,0 +1,120 @@
+[gd_scene load_steps=3 format=3 uid="uid://56dm5pdiavks"]
+
+[ext_resource type="Script" path="res://Backend/Code/Menus/Encyclopedia.gd" id="1_omqet"]
+[ext_resource type="Texture2D" uid="uid://dfs524qkgv8py" path="res://Frontend/Recourses/Light-surface-container.png" id="2_dhbiq"]
+
+[node name="Encyclopedia" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_omqet")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -412.0
+offset_top = 37.0
+offset_right = 412.0
+offset_bottom = 89.0
+grow_horizontal = 2
+text = "Encyclpedia"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = -74.0
+offset_right = 85.999
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Phishing" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Phishing"
+
+[node name="PhishihgContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Example1" type="Button" parent="VBoxContainer/PhishihgContainer"]
+self_modulate = Color(0.25098, 0.25098, 0.25098, 1)
+layout_mode = 2
+text = "Example1"
+
+[node name="LockExample1" type="Sprite2D" parent="VBoxContainer/PhishihgContainer/Example1"]
+position = Vector2(85.5, 15.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dhbiq")
+
+[node name="Example2" type="Button" parent="VBoxContainer/PhishihgContainer"]
+self_modulate = Color(0.25098, 0.25098, 0.25098, 1)
+layout_mode = 2
+text = "Example2"
+
+[node name="LockExample2" type="Sprite2D" parent="VBoxContainer/PhishihgContainer/Example2"]
+position = Vector2(85.5, 15.5)
+scale = Vector2(0.521, 0.5)
+texture = ExtResource("2_dhbiq")
+
+[node name="Example3" type="Button" parent="VBoxContainer/PhishihgContainer"]
+self_modulate = Color(0.25098, 0.25098, 0.25098, 1)
+layout_mode = 2
+text = "Example3"
+
+[node name="LockExample3" type="Sprite2D" parent="VBoxContainer/PhishihgContainer/Example3"]
+position = Vector2(85.5, 15.5)
+scale = Vector2(0.521, 0.5)
+texture = ExtResource("2_dhbiq")
+
+[node name="WIPhishing" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "WIPhishing"
+
+[node name="WiPhishihngContainer" type="VBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Example1" type="Button" parent="VBoxContainer/WiPhishihngContainer"]
+layout_mode = 2
+text = "Example1"
+
+[node name="Example2" type="Button" parent="VBoxContainer/WiPhishihngContainer"]
+layout_mode = 2
+text = "Example2"
+
+[node name="Example3" type="Button" parent="VBoxContainer/WiPhishihngContainer"]
+layout_mode = 2
+text = "Example3"
+
+[node name="Pharming" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Pharming"
+
+[node name="PharmingContainer" type="VBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Example1" type="Button" parent="VBoxContainer/PharmingContainer"]
+layout_mode = 2
+text = "Example1"
+
+[node name="Example2" type="Button" parent="VBoxContainer/PharmingContainer"]
+layout_mode = 2
+text = "Example2"
+
+[node name="Example3" type="Button" parent="VBoxContainer/PharmingContainer"]
+layout_mode = 2
+text = "Example3"
+
+[connection signal="pressed" from="VBoxContainer/Phishing" to="." method="_on_phishing_pressed"]
+[connection signal="pressed" from="VBoxContainer/WIPhishing" to="." method="_on_wi_phishing_pressed"]
+[connection signal="pressed" from="VBoxContainer/Pharming" to="." method="_on_pharming_pressed"]

@@ -1,0 +1,114 @@
+[gd_scene load_steps=3 format=3 uid="uid://csuhyqjgu6da8"]
+
+[ext_resource type="Theme" uid="uid://cqb1nvxnmaeis" path="res://Frontend/Themes/Standard.tres" id="1_jh1ty"]
+[ext_resource type="Script" path="res://Backend/Code/Instruments/RecordApp.gd" id="1_r4lon"]
+
+[node name="RecordApp" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r4lon")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jh1ty")
+
+[node name="OrderNumber" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = -63.0
+offset_right = 250.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/OrderNumber"]
+layout_mode = 2
+text = "Order number"
+horizontal_alignment = 1
+
+[node name="OrderNumber" type="LineEdit" parent="Panel/OrderNumber"]
+layout_mode = 2
+size_flags_vertical = 6
+placeholder_text = "Place order number"
+alignment = 1
+
+[node name="Send" type="Button" parent="Panel/OrderNumber"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Send"
+
+[node name="OrderData" type="VBoxContainer" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.0
+offset_top = -164.0
+offset_right = 282.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Order_Data" type="Label" parent="Panel/OrderData"]
+layout_mode = 2
+text = "Order Data"
+horizontal_alignment = 1
+
+[node name="Comapny_Name" type="Label" parent="Panel/OrderData"]
+layout_mode = 2
+text = "Company Name"
+
+[node name="Comapny_Name_Text" type="LineEdit" parent="Panel/OrderData"]
+layout_mode = 2
+
+[node name="From" type="Label" parent="Panel/OrderData"]
+layout_mode = 2
+text = "From"
+
+[node name="From_Text" type="LineEdit" parent="Panel/OrderData"]
+layout_mode = 2
+
+[node name="To" type="Label" parent="Panel/OrderData"]
+layout_mode = 2
+text = "To"
+
+[node name="To_Text" type="LineEdit" parent="Panel/OrderData"]
+layout_mode = 2
+
+[node name="Date_of_Departure" type="Label" parent="Panel/OrderData"]
+layout_mode = 2
+text = "Date of Departure"
+
+[node name="Date_of_Departure_Text" type="LineEdit" parent="Panel/OrderData"]
+layout_mode = 2
+
+[node name="Date_of_Arriving" type="Label" parent="Panel/OrderData"]
+layout_mode = 2
+text = "Date of Arriving"
+
+[node name="Date_of_Arriving_Text" type="LineEdit" parent="Panel/OrderData"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Panel/OrderData"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Send"
+
+[connection signal="pressed" from="Panel/OrderNumber/Send" to="." method="_on_send_pressed"]

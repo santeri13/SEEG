@@ -1,0 +1,123 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkrkk78fdiww6"]
+
+[ext_resource type="Script" path="res://Backend/Code/Instruments/email_app.gd" id="1_2gomj"]
+
+[node name="Email" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2gomj")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pannel" type="ColorRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 211.0
+offset_bottom = 3.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Pannel"]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 210.0
+offset_bottom = 416.0
+
+[node name="Inbox" type="Button" parent="Panel/Pannel/VBoxContainer"]
+layout_mode = 2
+text = "Inbox"
+
+[node name="Sended email" type="Button" parent="Panel/Pannel/VBoxContainer"]
+layout_mode = 2
+text = "Sended email"
+
+[node name="Deleted" type="Button" parent="Panel/Pannel/VBoxContainer"]
+layout_mode = 2
+text = "Deleted"
+
+[node name="Junk" type="Button" parent="Panel/Pannel/VBoxContainer"]
+layout_mode = 2
+text = "Junk"
+
+[node name="Email_list" type="ColorRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 219.0
+offset_top = 51.0
+offset_right = 532.0
+offset_bottom = 3.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Email_list"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -313.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Email_text" type="ColorRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.467882
+anchor_top = 0.0787037
+anchor_right = 0.996528
+anchor_bottom = 1.00309
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Email" type="TextEdit" parent="Panel/Email_text"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0851419
+anchor_right = 1.0
+anchor_bottom = 0.148581
+grow_horizontal = 2
+text = "Email"
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="TextEdit" parent="Panel/Email_text"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.156928
+anchor_right = 1.0
+anchor_bottom = 0.220367
+grow_horizontal = 2
+text = "Name"
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="TextEdit" parent="Panel/Email_text"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.252087
+anchor_right = 1.0
+anchor_bottom = 0.986644
+grow_horizontal = 2
+text = "Text"
+metadata/_edit_use_anchors_ = true
+
+[node name="Search" type="TextEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.190105
+anchor_top = 0.00462963
+anchor_right = 0.906873
+anchor_bottom = 0.0694444
+grow_horizontal = 2
+text = "Search..."
+metadata/_edit_use_anchors_ = true
