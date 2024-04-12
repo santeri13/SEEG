@@ -30,6 +30,8 @@ func _on_button_3_pressed():
 
 
 func _on_button_2_pressed():
+	if $GameStart/Email.has_method("_load_file"):
+		$GameStart/Email._load_file()
 	$GameStart/Email.show()
 	$"Email-Arrow".hide()
 	$Show_text.text = "Here you can answers on mail, delete or report it if you find something suspiscious\n Close mail"

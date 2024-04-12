@@ -167,3 +167,7 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="GameStart/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="GameStart/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="GameStart/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="GameStart/Email/Close" to="." method="_on_close_pressed_Email"]
+[connection signal="pressed" from="GameStart/Vpn/Close" to="." method="_on_close_pressed_VPN"]
+[connection signal="pressed" from="GameStart/WorkChat/Close" to="." method="_on_close_pressed_WorkChat"]
+[connection signal="pressed" from="GameStart/RecordApp/Close" to="." method="_on_close_pressed_RecordApp"]

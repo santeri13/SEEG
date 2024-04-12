@@ -1,4 +1,5 @@
 extends Control
+signal hacked
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,4 +14,5 @@ func _process(delta):
 
 func _on_send_pressed():
 	if $Panel/VPNAadress.text == "101.0.0.0/24":
-		print("Sorry but you are hacked")
+		hacked.emit()
+		emit_signal(" hacked")

@@ -1,17 +1,15 @@
 extends Node
 
 var list_of_emails = []
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	var file = 'res://Backend/Text Files/Email/inbox.txt'
-	load_file(file)
 
-func load_file(file):
-	var f = FileAccess.open(file, FileAccess.READ)
+func _ready():
+	pass
+
+func _load_file():
+	var f = FileAccess.open('res://Backend/Text Files/Email/inbox.txt', FileAccess.READ)
 	var emails = f.get_as_text().split("\n")
 	emails.remove_at(emails.size()-1)
-	emails.remove_at(emails.size()-1)
-	print(emails)
+	f.close()
 	for email in emails:
 		var text = email.split(",")
 		var object: Email = Email.new(text[0],text[1],text[2],text[3])
