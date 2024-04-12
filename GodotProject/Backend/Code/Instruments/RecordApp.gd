@@ -14,6 +14,7 @@ func _process(delta):
 
 func _on_send_pressed():
 	if $Panel/OrderNumber/OrderNumber.text == "PL289087":
+		openRecord.emit()
 		emit_signal("openRecord")
 		$Panel/OrderNumber.hide()
 		$Panel/OrderData.show()
