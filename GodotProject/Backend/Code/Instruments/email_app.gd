@@ -3,6 +3,7 @@ extends Node
 signal RightReport
 signal WrongReport
 signal AnswerSend
+signal MalisiouseAnswerSend
 
 var list_of_emails = []
 var list_of_junk = []
@@ -90,5 +91,33 @@ func _on_junk_pressed():
 
 
 func _on_answer_send():
-	AnswerSend.emit()
-	emit_signal("AnswerSend")
+	var email = $Panel/Email_text/Email.text
+	var name = $Panel/Email_text/Name.text
+	var i:int = 0
+	for mail in list_of_emails:
+		if mail.email == email && mail.name == name:
+			if mail.malicious == "malisiouse":
+				MalisiouseAnswerSend.emit()
+				emit_signal("MalisiouseAnswerSend")
+				var file = FileAccess.open("res://Backend/Text Files/Email/junk.txt", FileAccess.READ_WRITE)
+				file.store_line(mail.email+","+mail.name+","+mail.text+","+mail.malicious+","+mail.answerson)
+				file.close()
+				list_of_emails.remove_at(i)
+				var file2 = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.WRITE)
+				for mail2 in list_of_emails:
+					file2.store_line(mail2.email+","+mail2.name+","+mail2.text+","+mail2.malicious+","+mail2.answerson)
+				file2.close()
+				$Panel/Email_text/Email_text.hide()
+			elif mail.malicious == "OK":
+				AnswerSend.emit()
+				emit_signal("AnswerSend")
+				var file = FileAccess.open("res://Backend/Text Files/Email/sended_email.txt", FileAccess.READ_WRITE)
+				file.store_line(mail.email+","+mail.name+","+mail.text+","+mail.malicious+","+mail.answerson)
+				file.close()
+				list_of_emails.remove_at(i)
+				var file2 = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.WRITE)
+				for mail2 in list_of_emails:
+					file2.store_line(mail2.email+","+mail2.name+","+mail2.text+","+mail2.malicious+","+mail2.answerson)
+				file2.close()
+				$Panel/Email_text/Email_text.hide()
+		i = i+1

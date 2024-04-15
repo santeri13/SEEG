@@ -124,6 +124,7 @@ text = "Answer"
 
 [node name="Report" type="Button" parent="Panel/Email_text"]
 visible = false
+layout_mode = 0
 offset_left = 152.0
 offset_top = 542.0
 offset_right = 286.0
