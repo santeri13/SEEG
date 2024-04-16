@@ -9,7 +9,7 @@ func _ready():
 	f.close()
 	emails.remove_at(emails.size()-1)
 	emails.append("support_admin@utcorp.com,Today tasks,Today tasks would be changing on tracking code TR25896 from Estonia to Helsinki and arrival time to 11.12.2023. Also chnage on BS25896 departure to 17.01.2024,OK,''")
-	emails.append("ralf.cout@utcorps.com,VPN access chnage,Our company update infromation in system and we reqire that all personal send their infromation with credentials on mail.\n Please send your infromation by the end of the day,malisiouse,'This is my credentials'")
+	emails.append("ralf.cout@utcorps.com,VPN access chnage,Our company update infromation in system and we reqire that all personal send their infromation with credentials on mail.\n Please send your infromation by the end of the day,malisiouse,This is my credentials")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:
 		file.store_line(email)

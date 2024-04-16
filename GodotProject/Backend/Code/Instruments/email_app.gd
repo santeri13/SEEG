@@ -32,6 +32,8 @@ func _load_file(path):
 		email_button.pressed.connect(func show_email():
 			$Panel/Email_text/Email.text = text[0]
 			$Panel/Email_text/Name.text = text[1]
+			if text[0] == "suto.kazuki@utcorp.com":
+				$Panel/Email_text/Text.add_theme_font_size_override("font_size", 30)
 			$Panel/Email_text/Text.text = text[2]
 			$Panel/Email_text/Email_text.show())
 		$Panel/Email_list/VBoxContainer.add_child(email_button)
