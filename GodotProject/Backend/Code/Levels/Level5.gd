@@ -1,13 +1,23 @@
 extends Node2D
 
 signal pressedEnter
-# Called when the node enters the scene tree for the first time.
+
+var save_path = "user://data.save"
+var level = 0
+var mistakes = 0
+var money = 10000
+var records_counter = 0
+
 func _ready():
-	var f = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ)
-	var emails = f.get_as_text().split("\n")
-	f.close()
-	emails.remove_at(emails.size()-1)
-	emails.append("support_admin@utcorp.com,Today tasks,Today tasks would be changing on tracking code TR25896 from Estonia to Helsinki and arrival time to 11.12.2023. Also chnage on BS25896 departure to 17.01.2024,OK,''")
+	load_data()
+	
+	##var f = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ)
+	##var emails = f.get_as_text().split("\n")
+	##f.close()
+	##emails.remove_at(emails.size()-1)
+	
+	var emails = []
+	emails.append("support_admin@utcorp.com,Today tasks,Adjustment required for NE9167: Change the arrival country to France. Also update needed for OI5832: Change the company name to Hellenic Logistics Solutions.,OK,''")
 	emails.append("suto.kazuki@utcorp.com,Cyber check,Yestarday was cyberattack which changed our links for our resources. Right now our team worked on them and all is ok but for addtionla check every worker go py provided link www.itisofficial.com and check if all work correct,malisiouse,''")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:
@@ -18,6 +28,8 @@ func _ready():
 	$GameStart/Email.connect("WrongReport",_wrong_report)
 	$GameStart/Email.connect("AnswerSend",_answer_send)
 	$GameStart/WorkChat.connect("CredentalSend",_credential_send)
+	$GameStart/RecordApp.connect("RecordChange",_record_chnage)
+	$GameStart/RecordApp.connect("FalseChange",_false_change)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -46,6 +58,7 @@ func _hacked_message():
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
+	read_mistakes()
 
 func _correct_report():
 	$Show_text.text = "We checked your report, great job"
@@ -53,6 +66,9 @@ func _correct_report():
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
+	records_counter = records_counter + 1
+	if records_counter == 3:
+		$Next_day.show()
 	
 func _wrong_report():
 	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time"
@@ -60,6 +76,7 @@ func _wrong_report():
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
+	read_mistakes()
 	
 func _answer_send():
 	$Show_text.text = "Answer send"
@@ -76,6 +93,15 @@ func _credential_send():
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
+	read_mistakes()
+	
+func _false_change():
+	$Show_text.text = "We find that infromtion from record was no right"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()
+	read_mistakes()
 	
 	
 func _input(event):
@@ -99,3 +125,47 @@ func _on_close_pressed_WorkChat():
 func _on_close_pressed_RecordApp():
 	$GameStart/RecordApp.hide()
 
+
+func load_data():
+	if FileAccess.file_exists(save_path):
+		var file = FileAccess.open(save_path,FileAccess.READ)
+		level = file.get_var(level)
+		mistakes = file.get_var(mistakes)
+		money = file.get_var(money)
+		
+func read_mistakes():
+	mistakes = mistakes+1
+	if mistakes == 5:
+		$GameOver.show()
+	
+func _record_chnage():
+	records_counter = records_counter + 1
+	if records_counter == 3:
+		$Next_day.show()
+
+func _on_next_day_pressed():
+	level = level+1
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(level)
+	file.store_var(mistakes)
+	file.store_var(money)
+	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/Level6.tscn")
+
+
+func _on_exit_pressed():
+	level = 0
+	mistakes = 0
+	money = 10000
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(level)
+	file.store_var(mistakes)
+	file.store_var(money)
+	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")
+
+
+func _on_back_to_menu_pressed():
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(level)
+	file.store_var(mistakes)
+	file.store_var(money)
+	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")

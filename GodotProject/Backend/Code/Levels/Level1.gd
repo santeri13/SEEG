@@ -2,22 +2,32 @@ extends Node2D
 
 signal pressedEnter
 
+var save_path = "user://data.save"
+var level = 0
+var mistakes = 0
+var money = 10000
+var records_counter = 0
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	var f = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ)
-	var emails = f.get_as_text().split("\n")
-	f.close()
-	emails.remove_at(emails.size()-1)
-	emails.append("support_admin@utcorp.com,Today tasks,Today tasks would be changing on tracking code TR25896 from Estonia to Helsinki and arrival time to 11.12.2023. Also chnage on BS25896 departure to 17.01.2024,OK,''")
+	load_data()
+	
+	##var f = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ)
+	##var emails = f.get_as_text().split("\n")
+	##f.close()
+	##emails.remove_at(emails.size()-1)
+	
+	var emails = []
+	emails.append("support_admin@utcorp.com,Today tasks,Today's task involves updating the tracking code ZP9538. Change the arrival destination from Estonia to Helsinki and the arrival date to 21.05.2024. Also there's a modification required for GV4210. Update the departure date to 17.01.2024.,OK,''")
 	emails.append("tech_guy@utcorpi.com,VPN access chnage,Can you change your VPN path to this 101.0.0.0/24,malisiouse,''")
-	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
+	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.WRITE)
 	for email in emails:
 		file.store_line(email)
 	file.close()
 	$GameStart/Vpn.connect("hacked",_hacked_message)
 	$GameStart/Email.connect("RightReport",_correct_report)
 	$GameStart/Email.connect("WrongReport",_wrong_report)
+	$GameStart/RecordApp.connect("RecordChange",_record_chnage)
+	$GameStart/RecordApp.connect("FalseChange",_false_change)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,7 +47,7 @@ func _on_button_2_pressed():
 	if $GameStart/Email.has_method("_on_inbox_pressed"):
 		$GameStart/Email._on_inbox_pressed()
 	$GameStart/Email.show()
-	$GameStart/List_of_tasks/Text_List_of_task.text = "Tasks:\n Change infromation on number TR25896: \n \t Estonia to Helsinki \n \t arrival time to 11.12.2023 \t BS25896: \n \t departure to 17.01.2024"
+	$GameStart/List_of_tasks/Text_List_of_task.text = "Tasks:\n Number ZP9538: \n \t arrival destination from Estonia to Helsinki \n \t arrival time to 21.05.2024 \n GV4210: \n \t departure to 17.01.2024"
 
 
 func _on_button_pressed():
@@ -57,7 +67,7 @@ func _on_close_pressed_WorkChat():
 
 
 func _on_close_pressed_RecordApp():
-	$GameStart/RecordApp.hide()#
+	$GameStart/RecordApp.hide()
 	
 func _hacked_message():
 	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
@@ -66,6 +76,7 @@ func _hacked_message():
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
+	read_mistakes()
 
 func _correct_report():
 	$Show_text.text = "We checked your report, great job"
@@ -73,6 +84,9 @@ func _correct_report():
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
+	records_counter = records_counter + 1
+	if records_counter == 3:
+		$Next_day.show()
 	
 func _wrong_report():
 	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time"
@@ -80,8 +94,65 @@ func _wrong_report():
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
+	read_mistakes()
 	
 func _input(event):
 	print(event.as_text())
 	if event.as_text() == "Enter":
 		pressedEnter.emit()
+
+func load_data():
+	if FileAccess.file_exists(save_path):
+		var file = FileAccess.open(save_path,FileAccess.READ)
+		level = file.get_var(level)
+		print(level)
+		mistakes = file.get_var(mistakes)
+		print(mistakes)
+		money = file.get_var(money)
+		print(level)
+
+func read_mistakes():
+	print(mistakes)
+	mistakes = mistakes+1
+	if mistakes == 5:
+		$GameOver.show()
+	
+func _record_chnage():
+	records_counter = records_counter + 1
+	if records_counter == 3:
+		$Next_day.show()
+
+func _false_change():
+	$Show_text.text = "We find that infromtion from record was no right"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()
+	read_mistakes()
+	
+func _on_next_day_pressed():
+	level = level+1
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(level)
+	file.store_var(mistakes)
+	file.store_var(money)
+	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/Level2.tscn")
+
+
+func _on_exit_pressed():
+	level = 0
+	mistakes = 0
+	money = 10000
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(level)
+	file.store_var(mistakes)
+	file.store_var(money)
+	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")
+
+
+func _on_menu_pressed():
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(level)
+	file.store_var(mistakes)
+	file.store_var(money)
+	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")

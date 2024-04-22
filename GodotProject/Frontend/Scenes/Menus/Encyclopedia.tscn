@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://56dm5pdiavks"]
+[gd_scene load_steps=4 format=3 uid="uid://56dm5pdiavks"]
 
 [ext_resource type="Script" path="res://Backend/Code/Menus/Encyclopedia.gd" id="1_omqet"]
 [ext_resource type="Texture2D" uid="uid://dfs524qkgv8py" path="res://Frontend/Recourses/Light-surface-container.png" id="2_dhbiq"]
+[ext_resource type="Texture2D" uid="uid://u605ox0e1klc" path="res://Frontend/Recourses/schwab-email.png" id="3_5y0vh"]
 
 [node name="Encyclopedia" type="Control"]
 layout_mode = 3
@@ -43,34 +44,35 @@ layout_mode = 2
 text = "Phishing"
 
 [node name="PhishihgContainer" type="VBoxContainer" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 
-[node name="Example1" type="Button" parent="VBoxContainer/PhishihgContainer"]
-self_modulate = Color(0.25098, 0.25098, 0.25098, 1)
+[node name="Data_protection" type="Button" parent="VBoxContainer/PhishihgContainer"]
 layout_mode = 2
+disabled = true
 text = "Example1"
 
-[node name="LockExample1" type="Sprite2D" parent="VBoxContainer/PhishihgContainer/Example1"]
+[node name="LockExample1" type="Sprite2D" parent="VBoxContainer/PhishihgContainer/Data_protection"]
 position = Vector2(85.5, 15.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_dhbiq")
 
-[node name="Example2" type="Button" parent="VBoxContainer/PhishihgContainer"]
-self_modulate = Color(0.25098, 0.25098, 0.25098, 1)
+[node name="Maiciouse_email" type="Button" parent="VBoxContainer/PhishihgContainer"]
 layout_mode = 2
+disabled = true
 text = "Example2"
 
-[node name="LockExample2" type="Sprite2D" parent="VBoxContainer/PhishihgContainer/Example2"]
+[node name="LockExample2" type="Sprite2D" parent="VBoxContainer/PhishihgContainer/Maiciouse_email"]
 position = Vector2(85.5, 15.5)
 scale = Vector2(0.521, 0.5)
 texture = ExtResource("2_dhbiq")
 
-[node name="Example3" type="Button" parent="VBoxContainer/PhishihgContainer"]
-self_modulate = Color(0.25098, 0.25098, 0.25098, 1)
+[node name="Maiciouse_email2" type="Button" parent="VBoxContainer/PhishihgContainer"]
 layout_mode = 2
+disabled = true
 text = "Example3"
 
-[node name="LockExample3" type="Sprite2D" parent="VBoxContainer/PhishihgContainer/Example3"]
+[node name="LockExample3" type="Sprite2D" parent="VBoxContainer/PhishihgContainer/Maiciouse_email2"]
 position = Vector2(85.5, 15.5)
 scale = Vector2(0.521, 0.5)
 texture = ExtResource("2_dhbiq")
@@ -83,17 +85,15 @@ text = "WIPhishing"
 visible = false
 layout_mode = 2
 
-[node name="Example1" type="Button" parent="VBoxContainer/WiPhishihngContainer"]
+[node name="VPN" type="Button" parent="VBoxContainer/WiPhishihngContainer"]
 layout_mode = 2
+disabled = true
 text = "Example1"
 
-[node name="Example2" type="Button" parent="VBoxContainer/WiPhishihngContainer"]
-layout_mode = 2
-text = "Example2"
-
-[node name="Example3" type="Button" parent="VBoxContainer/WiPhishihngContainer"]
-layout_mode = 2
-text = "Example3"
+[node name="LockExample1" type="Sprite2D" parent="VBoxContainer/WiPhishihngContainer/VPN"]
+position = Vector2(85.5, 15.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dhbiq")
 
 [node name="Pharming" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -103,18 +103,108 @@ text = "Pharming"
 visible = false
 layout_mode = 2
 
-[node name="Example1" type="Button" parent="VBoxContainer/PharmingContainer"]
+[node name="Wrong_path" type="Button" parent="VBoxContainer/PharmingContainer"]
 layout_mode = 2
+disabled = true
 text = "Example1"
 
-[node name="Example2" type="Button" parent="VBoxContainer/PharmingContainer"]
+[node name="LockExample1" type="Sprite2D" parent="VBoxContainer/PharmingContainer/Wrong_path"]
+position = Vector2(85.5, 15.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dhbiq")
+
+[node name="Malisiouse_prize" type="Button" parent="VBoxContainer/PharmingContainer"]
 layout_mode = 2
+disabled = true
 text = "Example2"
 
-[node name="Example3" type="Button" parent="VBoxContainer/PharmingContainer"]
+[node name="LockExample1" type="Sprite2D" parent="VBoxContainer/PharmingContainer/Malisiouse_prize"]
+position = Vector2(85.5, 15.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dhbiq")
+
+[node name="Maliciouse_link" type="Button" parent="VBoxContainer/PharmingContainer"]
 layout_mode = 2
+disabled = true
 text = "Example3"
 
+[node name="LockExample1" type="Sprite2D" parent="VBoxContainer/PharmingContainer/Maliciouse_link"]
+position = Vector2(85.5, 15.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dhbiq")
+
+[node name="Explanation" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Explanation"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -56.0
+offset_bottom = 56.0
+grow_horizontal = 0
+
+[node name="Name" type="LineEdit" parent="Explanation"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 49.0
+offset_bottom = 115.0
+grow_horizontal = 2
+text = "Email Phishing"
+alignment = 1
+
+[node name="Mitigation" type="TextEdit" parent="Explanation"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -400.0
+offset_right = -702.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "The email is not addressed to the recipient. If the recipient was truly being notified by Charles Schwab that there was an issue with their account, they would know the recipient’s name.
+
+Again, they don’t know the recipient’s name;\"Dear Customer\" isn’t an identifier.
+
+The recipient hasn’t attempted to sign into a Schwab account, so could not have exceeded the number of attempts allowed.
+
+Grammatical errors: The words Online Banking are capitalized throughout the text. And, if you read carefully, the text says \"Please visit www.schwab.com/activate Reset Account your account\" which clearly doesn’t make sense, but since most people scan emails quickly, grammatical errors that are this small usually don’t get noticed.
+
+They try to reassure recipients by encouraging them to confirm the email is from Schwab….. by using a link they provide.
+
+Look at the sixth flag; this shows the true email address displayed when you hover your mouse over any link on this page (which is a red flag in itself, what company would have all of these actions point to the same link?). See that the website is actually http://almall.us? The scammer added the words /schwab.com/ after their website’s true name in an attempt to look legitimate, but this site is anything but legitimate."
+wrap_mode = 1
+
+[node name="Explanation" type="TextEdit" parent="Explanation"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -197.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Phishing is a type of online scam where criminals impersonate legitimate organizations via email, text message, advertisement or other means in order to steal sensitive information. This is usually done by including a link that will appear to take you to the company’s website to fill in your information – but the website is a clever fake and the information you provide goes straight to the crooks behind the scam."
+wrap_mode = 1
+
+[node name="Schwab-email" type="Sprite2D" parent="Explanation"]
+visible = false
+position = Vector2(819, 440)
+scale = Vector2(0.8, 0.833)
+texture = ExtResource("3_5y0vh")
+
 [connection signal="pressed" from="VBoxContainer/Phishing" to="." method="_on_phishing_pressed"]
+[connection signal="pressed" from="VBoxContainer/PhishihgContainer/Maiciouse_email" to="." method="_on_maiciouse_email_pressed"]
 [connection signal="pressed" from="VBoxContainer/WIPhishing" to="." method="_on_wi_phishing_pressed"]
 [connection signal="pressed" from="VBoxContainer/Pharming" to="." method="_on_pharming_pressed"]
+[connection signal="pressed" from="Explanation/Button" to="." method="_on_buttonclose_pressed"]

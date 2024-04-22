@@ -36,18 +36,22 @@ offset_right = 210.0
 offset_bottom = 416.0
 
 [node name="Inbox" type="Button" parent="Panel/Pannel/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Inbox"
 
 [node name="Sended email" type="Button" parent="Panel/Pannel/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Sended email"
 
 [node name="Deleted" type="Button" parent="Panel/Pannel/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Deleted"
 
 [node name="Junk" type="Button" parent="Panel/Pannel/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Junk"
 
@@ -123,7 +127,6 @@ offset_bottom = 590.0
 text = "Answer"
 
 [node name="Report" type="Button" parent="Panel/Email_text"]
-visible = false
 layout_mode = 0
 offset_left = 152.0
 offset_top = 542.0

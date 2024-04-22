@@ -112,3 +112,4 @@ size_flags_vertical = 10
 text = "Send"
 
 [connection signal="pressed" from="Panel/OrderNumber/Send" to="." method="_on_send_pressed"]
+[connection signal="pressed" from="Panel/OrderData/Button" to="." method="_on_button_pressed"]

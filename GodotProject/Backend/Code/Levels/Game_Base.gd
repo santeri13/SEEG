@@ -1,9 +1,17 @@
 extends Node2D
 signal pressedEnter
 
+var save_path = "user://data.save"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var emails = []
+	emails.append("boss@utcorp.com,Welcoming letter,Welcom into position second level support. Our team welcom you and wiat when we all start to work together.,OK,''")
+	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.WRITE)
+	for email in emails:
+		file.store_line(email)
+	file.close()
 	$Show_text.text = "Hello, welcome first day on your job. My name is Morty I will texh you how to work with tools which you will use on your job\n Press enter to next"
 	await pressedEnter
 	await pressedEnter
@@ -31,7 +39,7 @@ func _on_button_3_pressed():
 
 func _on_button_2_pressed():
 	if $GameStart/Email.has_method("_load_file"):
-		$GameStart/Email._load_file()
+		$GameStart/Email._load_file('res://Backend/Text Files/Email/inbox.txt')
 	$GameStart/Email.show()
 	$"Email-Arrow".hide()
 	$Show_text.text = "Here you can answers on mail, delete or report it if you find something suspiscious\n Close mail"
@@ -91,6 +99,9 @@ func _input(event):
 
 
 func _on_next_day_pressed():
+	var level = 1
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(level)
 	get_tree().change_scene_to_file("res://Frontend/Scenes/Levels/Level1.tscn")
 
 func _show_message():
