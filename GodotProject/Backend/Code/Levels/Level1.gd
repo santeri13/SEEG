@@ -6,6 +6,13 @@ var save_path = "user://data.save"
 var level = 0
 var mistakes = 0
 var money = 10000
+var VPN = false
+var Wrong_path = false
+var Malisiouse_prize = false
+var Maliciouse_link = false
+var Data_protection = false
+var Maiciouse_email = false
+var Maiciouse_email2 = false
 var records_counter = 0
 
 func _ready():
@@ -97,7 +104,6 @@ func _wrong_report():
 	read_mistakes()
 	
 func _input(event):
-	print(event.as_text())
 	if event.as_text() == "Enter":
 		pressedEnter.emit()
 
@@ -105,15 +111,19 @@ func load_data():
 	if FileAccess.file_exists(save_path):
 		var file = FileAccess.open(save_path,FileAccess.READ)
 		level = file.get_var(level)
-		print(level)
 		mistakes = file.get_var(mistakes)
-		print(mistakes)
 		money = file.get_var(money)
-		print(level)
+		VPN = file.get_var(VPN)
+		Wrong_path = file.get_var(Wrong_path)
+		Malisiouse_prize = file.get_var(Wrong_path)
+		Maliciouse_link = file.get_var(Maliciouse_link)
+		Data_protection = file.get_var(Data_protection)
+		Maiciouse_email = file.get_var(Maiciouse_email)
+		Maiciouse_email2 = file.get_var(Maiciouse_email2)
 
 func read_mistakes():
+	mistakes=mistakes+1
 	print(mistakes)
-	mistakes = mistakes+1
 	if mistakes == 5:
 		$GameOver.show()
 	
@@ -136,6 +146,13 @@ func _on_next_day_pressed():
 	file.store_var(level)
 	file.store_var(mistakes)
 	file.store_var(money)
+	file.store_var(VPN)
+	file.store_var(Wrong_path)
+	file.store_var(Wrong_path)
+	file.store_var(Maliciouse_link)
+	file.store_var(Data_protection)
+	file.store_var(Maiciouse_email)
+	file.store_var(Maiciouse_email2)
 	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/Level2.tscn")
 
 
@@ -147,6 +164,13 @@ func _on_exit_pressed():
 	file.store_var(level)
 	file.store_var(mistakes)
 	file.store_var(money)
+	file.store_var(VPN)
+	file.store_var(Wrong_path)
+	file.store_var(Wrong_path)
+	file.store_var(Maliciouse_link)
+	file.store_var(Data_protection)
+	file.store_var(Maiciouse_email)
+	file.store_var(Maiciouse_email2)
 	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")
 
 
@@ -155,4 +179,11 @@ func _on_menu_pressed():
 	file.store_var(level)
 	file.store_var(mistakes)
 	file.store_var(money)
+	file.store_var(VPN)
+	file.store_var(Wrong_path)
+	file.store_var(Wrong_path)
+	file.store_var(Maliciouse_link)
+	file.store_var(Data_protection)
+	file.store_var(Maiciouse_email)
+	file.store_var(Maiciouse_email2)
 	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")

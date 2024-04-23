@@ -6,6 +6,13 @@ var save_path = "user://data.save"
 var level = 0
 var mistakes = 0
 var money = 10000
+var VPN = false
+var Wrong_path = false
+var Malisiouse_prize = false
+var Maliciouse_link = false
+var Data_protection = false
+var Maiciouse_email = false
+var Maiciouse_email2 = false
 var records_counter = 0
 
 func _ready():
@@ -130,6 +137,13 @@ func load_data():
 		level = file.get_var(level)
 		mistakes = file.get_var(mistakes)
 		money = file.get_var(money)
+		VPN = file.get_var(VPN)
+		Wrong_path = file.get_var(Wrong_path)
+		Malisiouse_prize = file.get_var(Wrong_path)
+		Maliciouse_link = file.get_var(Maliciouse_link)
+		Data_protection = file.get_var(Data_protection)
+		Maiciouse_email = file.get_var(Maiciouse_email)
+		Maiciouse_email2 = file.get_var(Maiciouse_email2)
 		
 func read_mistakes():
 	mistakes = mistakes+1
@@ -148,6 +162,13 @@ func _on_next_day_pressed():
 	file.store_var(level)
 	file.store_var(mistakes)
 	file.store_var(money)
+	file.store_var(VPN)
+	file.store_var(Wrong_path)
+	file.store_var(Wrong_path)
+	file.store_var(Maliciouse_link)
+	file.store_var(Data_protection)
+	file.store_var(Maiciouse_email)
+	file.store_var(Maiciouse_email2)
 	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/Level8.tscn")
 
 
@@ -159,6 +180,13 @@ func _on_exit_pressed():
 	file.store_var(level)
 	file.store_var(mistakes)
 	file.store_var(money)
+	file.store_var(VPN)
+	file.store_var(Wrong_path)
+	file.store_var(Wrong_path)
+	file.store_var(Maliciouse_link)
+	file.store_var(Data_protection)
+	file.store_var(Maiciouse_email)
+	file.store_var(Maiciouse_email2)
 	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")
 
 
@@ -167,4 +195,11 @@ func _on_back_to_menu_pressed():
 	file.store_var(level)
 	file.store_var(mistakes)
 	file.store_var(money)
+	file.store_var(VPN)
+	file.store_var(Wrong_path)
+	file.store_var(Wrong_path)
+	file.store_var(Maliciouse_link)
+	file.store_var(Data_protection)
+	file.store_var(Maiciouse_email)
+	file.store_var(Maiciouse_email2)
 	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")

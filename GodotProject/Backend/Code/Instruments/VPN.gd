@@ -15,4 +15,3 @@ func _process(delta):
 func _on_send_pressed():
 	if $Panel/VPNAadress.text == "101.0.0.0/24":
 		hacked.emit()
-		emit_signal(" hacked")

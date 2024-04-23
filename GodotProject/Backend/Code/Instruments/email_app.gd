@@ -59,7 +59,6 @@ func _on_report_pressed():
 		if mail.email == email && mail.name == name:
 			if mail.malicious == "malisiouse":
 				RightReport.emit()
-				emit_signal("RightReport")
 				var file = FileAccess.open("res://Backend/Text Files/Email/junk.txt", FileAccess.READ_WRITE)
 				file.store_line(mail.email+","+mail.name+","+mail.text+","+mail.malicious+","+mail.answerson)
 				file.close()
@@ -71,7 +70,6 @@ func _on_report_pressed():
 				$Panel/Email_text/Email_text.hide()
 			elif mail.malicious == "OK":
 				WrongReport.emit()
-				emit_signal("WrongReport")
 		i = i+1
 	_load_file('res://Backend/Text Files/Email/inbox.txt')
 
@@ -100,7 +98,6 @@ func _on_answer_send():
 		if mail.email == email && mail.name == name:
 			if mail.malicious == "malisiouse":
 				MalisiouseAnswerSend.emit()
-				emit_signal("MalisiouseAnswerSend")
 				var file = FileAccess.open("res://Backend/Text Files/Email/junk.txt", FileAccess.READ_WRITE)
 				file.store_line(mail.email+","+mail.name+","+mail.text+","+mail.malicious+","+mail.answerson)
 				file.close()
@@ -112,7 +109,6 @@ func _on_answer_send():
 				$Panel/Email_text/Email_text.hide()
 			elif mail.malicious == "OK":
 				AnswerSend.emit()
-				emit_signal("AnswerSend")
 				var file = FileAccess.open("res://Backend/Text Files/Email/sended_email.txt", FileAccess.READ_WRITE)
 				file.store_line(mail.email+","+mail.name+","+mail.text+","+mail.malicious+","+mail.answerson)
 				file.close()

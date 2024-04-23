@@ -33,7 +33,6 @@ func _on_sendcredential_pressed():
 	if $Panel/Credentials/OrderNumber/OrderNumber.text == "user@utcorp.com" && $Panel/Credentials/OrderNumber/OrderNumber2.text == "TonyRule":
 		$Panel/Credentials/OrderNumber/Coment.text = "Credentails send"
 		CredentalSend.emit()
-		emit_signal("CredentalSend")
 		$Panel/Credentials.hide()
 	elif $Panel/Credentials/OrderNumber/OrderNumber.text == "":
 		$Panel/Credentials/OrderNumber/Coment.text = "Email field is empty"
@@ -47,7 +46,6 @@ func _on_sendprize_pressed():
 	if $Panel/Prize/OrderNumber/OrderNumber.text == "Liza" && $Panel/Prize/OrderNumber/OrderNumber2.text == "Marienko" && $Panel/Prize/OrderNumber/OrderNumber3.text == "19.09.1991" && $Panel/Prize/OrderNumber/OrderNumber4.text == "19.09.1991" && $Panel/Prize/OrderNumber/OrderNumber5.text == "Sir str 48-19":
 		$Panel/Prize/OrderNumber/Coment.text = "Data send"
 		PrizeSend.emit()
-		emit_signal("PrizeSend")
 		$Panel/Prize.hide()
 	elif $Panel/Prize/OrderNumber/OrderNumber.text == "":
 		$Panel/Prize/OrderNumber/Coment.text = "Name is empy"
@@ -65,7 +63,6 @@ func _on_sendcompanydata_pressed():
 	if $Panel/CompanyPhishing/OrderNumber/OrderNumber.text == "Liza" && $Panel/Credentials/OrderNumber/OrderNumber2.text == "Marienko" && $Panel/Credentials/OrderNumber/OrderNumber3.text == "19.09.1991" && $Panel/Credentials/OrderNumber/OrderNumber4.text == "19.09.1991":
 		$Panel/CompanyPhishing/OrderNumber/Coment.text = "Data send"
 		CompanyWebpage.emit()
-		emit_signal("CompanyWebpage")
 		$Panel/CompanyPhishing.hide()
 	elif $Panel/CompanyPhishing/OrderNumber/OrderNumber.text == "":
 		$Panel/CompanyPhishing/OrderNumber/Coment.text = "Name is empy"

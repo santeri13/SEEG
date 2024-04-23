@@ -4,6 +4,7 @@ signal pressedEnter
 var save_path = "user://data.save"
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var emails = []
@@ -100,8 +101,26 @@ func _input(event):
 
 func _on_next_day_pressed():
 	var level = 1
+	var mistakes = 0
+	var money = 10000
+	var VPN = false
+	var Wrong_path = false
+	var Malisiouse_prize = false
+	var Maliciouse_link = false
+	var Data_protection = false
+	var Maiciouse_email = false
+	var Maiciouse_email2 = false
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	file.store_var(level)
+	file.store_var(mistakes)
+	file.store_var(money)
+	file.store_var(VPN)
+	file.store_var(Wrong_path)
+	file.store_var(Malisiouse_prize)
+	file.store_var(Maliciouse_link)
+	file.store_var(Data_protection)
+	file.store_var(Maiciouse_email)
+	file.store_var(Maiciouse_email2)
 	get_tree().change_scene_to_file("res://Frontend/Scenes/Levels/Level1.tscn")
 
 func _show_message():
