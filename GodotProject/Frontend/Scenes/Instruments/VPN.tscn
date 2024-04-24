@@ -32,49 +32,57 @@ color = Color(1, 0, 0, 1)
 [node name="Name" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0917722
-anchor_top = 0.0566406
-anchor_right = 0.920886
-anchor_bottom = 0.113281
+anchor_left = 0.0920139
+anchor_top = 0.0570988
+anchor_right = 0.921007
+anchor_bottom = 0.152778
 grow_horizontal = 2
-text = "Sorce VPN"
+theme_override_font_sizes/font_size = 30
+text = "Access VPN"
 horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="VPNAadressLabel" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0886076
 anchor_top = 0.323843
-anchor_right = 0.917722
+anchor_right = 1.0
 anchor_bottom = 0.44484
 grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
 text = "Please insert VPN address"
 horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="VPNAadress" type="LineEdit" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.123418
 anchor_top = 0.47331
-anchor_right = 0.911392
+anchor_right = 1.0
 anchor_bottom = 0.604982
+offset_left = 200.0
+offset_right = -200.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 20
 placeholder_text = "Type VPN address"
+alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Send" type="Button" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.151899
 anchor_top = 0.704626
-anchor_right = 0.89557
+anchor_right = 1.0
 anchor_bottom = 0.83274
+offset_left = 300.0
 offset_top = 1.52588e-05
+offset_right = -300.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_font_sizes/font_size = 20
 text = "Connect"
 metadata/_edit_use_anchors_ = true
 
