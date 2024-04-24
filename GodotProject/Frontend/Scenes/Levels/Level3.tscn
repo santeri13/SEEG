@@ -95,31 +95,12 @@ offset_top = -415.0
 offset_right = -759.0
 offset_bottom = -697.0
 
-[node name="Close" type="Button" parent="GameStart/Email"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -45.0
-offset_bottom = 50.0
-grow_horizontal = 0
-
 [node name="Vpn" parent="GameStart" instance=ExtResource("7_lrkob")]
 visible = false
 offset_left = 390.0
 offset_top = -142.0
 offset_right = -771.0
 offset_bottom = -726.0
-
-[node name="Close" type="Button" parent="GameStart/Vpn"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -48.0
-offset_right = 1.0
-offset_bottom = 51.0
-grow_horizontal = 0
 
 [node name="WorkChat" parent="GameStart" instance=ExtResource("8_7owme")]
 visible = false
@@ -128,30 +109,12 @@ offset_top = -415.0
 offset_right = -760.0
 offset_bottom = -686.0
 
-[node name="Close" type="Button" parent="GameStart/WorkChat"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -39.0
-offset_bottom = 45.0
-grow_horizontal = 0
-
 [node name="RecordApp" parent="GameStart" instance=ExtResource("9_fon12")]
 visible = false
 offset_left = -666.0
 offset_top = -415.0
 offset_right = -765.0
 offset_bottom = -688.0
-
-[node name="Close" type="Button" parent="GameStart/RecordApp"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 47.0
-grow_horizontal = 0
 
 [node name="Show_text" type="TextEdit" parent="."]
 visible = false
@@ -208,10 +171,10 @@ offset_right = 1167.0
 offset_bottom = 35.0
 text = "Menu"
 
-[connection signal="pressed" from="GameStart/Email/Close" to="." method="_on_close_pressed_Email"]
-[connection signal="pressed" from="GameStart/Vpn/Close" to="." method="_on_close_pressed_Vpn"]
-[connection signal="pressed" from="GameStart/WorkChat/Close" to="." method="_on_close_pressed_WorkChat"]
-[connection signal="pressed" from="GameStart/RecordApp/Close" to="." method="_on_close_pressed_RecordApp"]
+[connection signal="pressed" from="GameStart/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GameStart/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="GameStart/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="GameStart/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Next_day" to="." method="_on_next_day_pressed"]
 [connection signal="pressed" from="GameOver/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Back_to_menu" to="." method="_on_back_to_menu_pressed"]

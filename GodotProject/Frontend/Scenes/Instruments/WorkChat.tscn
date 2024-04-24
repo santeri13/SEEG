@@ -19,13 +19,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Close" type="ColorPickerButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -46.0
+offset_bottom = 42.0
+grow_horizontal = 0
+color = Color(1, 0, 0, 1)
+
 [node name="LinkEdit" type="LineEdit" parent="Panel"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_left = 26.0
 offset_top = 16.0
-offset_right = -99.0
+offset_right = -158.0
 offset_bottom = 66.0
 grow_horizontal = 2
 placeholder_text = "Provide link"
@@ -283,11 +293,12 @@ alignment = 1
 
 [node name="Button" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 1067.0
-offset_top = 21.0
-offset_right = 1133.0
-offset_bottom = 62.0
+offset_left = 1010.0
+offset_top = 20.0
+offset_right = 1076.0
+offset_bottom = 61.0
 
+[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Panel/CompanyPhishing/OrderNumber/Send" to="." method="_on_sendcompanydata_pressed"]
 [connection signal="pressed" from="Panel/Prize/OrderNumber/Send" to="." method="_on_sendprize_pressed"]
 [connection signal="pressed" from="Panel/Credentials/OrderNumber/Send" to="." method="_on_sendcredential_pressed"]

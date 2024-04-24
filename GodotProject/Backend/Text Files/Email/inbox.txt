@@ -1,2 +1,2 @@
-support_admin@utcorp.com,Today tasks,Today's task involves updating the tracking code ZP9538. Change the arrival destination from Estonia to Helsinki and the arrival date to 21.05.2024. Also there's a modification required for GV4210. Update the departure date to 17.01.2024.,OK,''
-tech_guy@utcorpi.com,VPN access chnage,Can you change your VPN path to this 101.0.0.0/24,malisiouse,''
+support_admin@utcorp.com,Today tasks,Task update for FK7085: The departure country needs to be changed from Estonia to Lithuania. Also attention needed for RD6021. Alter the arrival date to 30.04.2024.,OK,''
+ralf.cout@utcorps.com,VPN access chnage,Our company update infromation in system and we reqire that all personal send their infromation with credentials on mail. Please send your infromation by the end of the day,malisiouse,This is my credentials

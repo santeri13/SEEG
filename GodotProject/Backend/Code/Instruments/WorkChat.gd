@@ -3,6 +3,7 @@ extends Control
 signal CredentalSend
 signal PrizeSend
 signal CompanyWebpage
+signal CloseWorkChat
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -72,3 +73,10 @@ func _on_sendcompanydata_pressed():
 		$Panel/CompanyPhishing/OrderNumber/Coment.text = "Birthdate is empty"
 	elif $Panel/CompanyPhishing/OrderNumber/OrderNumber4.text == "":
 		$Panel/CompanyPhishing/OrderNumber/Coment.text = "Email is empty"
+
+
+func _on_close_pressed():
+	CloseWorkChat.emit()
+	$Panel/CompanyPhishing.hide()
+	$Panel/Prize.hide()
+	$Panel/Credentials.hide()

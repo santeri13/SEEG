@@ -19,6 +19,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Close" type="ColorPickerButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -43.0
+offset_bottom = 41.0
+grow_horizontal = 0
+color = Color(1, 0, 0, 1)
+
 [node name="Pannel" type="ColorRect" parent="Panel"]
 layout_mode = 1
 anchors_preset = 9
@@ -151,6 +161,7 @@ offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[connection signal="pressed" from="Panel/Close" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="Panel/Pannel/VBoxContainer/Inbox" to="." method="_on_inbox_pressed"]
 [connection signal="pressed" from="Panel/Pannel/VBoxContainer/Sended email" to="." method="_on_sended_email_pressed"]
 [connection signal="pressed" from="Panel/Pannel/VBoxContainer/Deleted" to="." method="_on_deleted_pressed"]

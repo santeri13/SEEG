@@ -13,6 +13,8 @@ func _on_start_pressed():
 			get_tree().change_scene_to_file("res://Frontend/Scenes/Levels/Tutorial.tscn")
 		1:
 			get_tree().change_scene_to_file("res://Frontend/Scenes/Levels/Level1.tscn")
+		2:
+			get_tree().change_scene_to_file("res://Frontend/Scenes/Levels/Level2.tscn")
 		3:
 			get_tree().change_scene_to_file("res://Frontend/Scenes/Levels/Level3.tscn")
 		4:

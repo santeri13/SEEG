@@ -24,7 +24,7 @@ func _ready():
 	##emails.remove_at(emails.size()-1)
 	
 	var emails = []
-	emails.append("support_admin@utcorp.com,Today tasks,Today's task involves updating the tracking code ZP9538. Change the arrival destination from Estonia to Helsinki and the arrival date to 21.05.2024. Also there's a modification required for GV4210. Update the departure date to 17.01.2024.,OK,''")
+	emails.append("support_admin@utcorp.com,Today tasks,Today's task involves updating the tracking code ZP9538. Change the arrival destination from Spain to Helsinki and the arrival date to 21.05.2024. Also there's a modification required for GV4210. Update the departure date to 17.01.2024.,OK,''")
 	emails.append("tech_guy@utcorpi.com,VPN access chnage,Can you change your VPN path to this 101.0.0.0/24,malisiouse,''")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.WRITE)
 	for email in emails:
@@ -35,6 +35,10 @@ func _ready():
 	$GameStart/Email.connect("WrongReport",_wrong_report)
 	$GameStart/RecordApp.connect("RecordChange",_record_chnage)
 	$GameStart/RecordApp.connect("FalseChange",_false_change)
+	$GameStart/Vpn.connect("CloseVPN",_on_close_pressed_VPN)
+	$GameStart/Email.connect("CloseEmail",_on_close_pressed_Email)
+	$GameStart/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
+	$GameStart/WorkChat.connect("CloseWorkChat",_on_close_pressed_WorkChat)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -54,7 +58,7 @@ func _on_button_2_pressed():
 	if $GameStart/Email.has_method("_on_inbox_pressed"):
 		$GameStart/Email._on_inbox_pressed()
 	$GameStart/Email.show()
-	$GameStart/List_of_tasks/Text_List_of_task.text = "Tasks:\n Number ZP9538: \n \t arrival destination from Estonia to Helsinki \n \t arrival time to 21.05.2024 \n GV4210: \n \t departure to 17.01.2024"
+	$GameStart/List_of_tasks/Text_List_of_task.text = "Tasks:\nZP9538: \n \t arrival destination from Spain to Helsinki \n \t arrival time to 21.05.2024 \n GV4210: \n \t departure to 17.01.2024"
 
 
 func _on_button_pressed():
@@ -129,6 +133,12 @@ func read_mistakes():
 	
 func _record_chnage():
 	records_counter = records_counter + 1
+	$GameStart/RecordApp.hide()
+	$Show_text.text = "Record changed, good job"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()
 	if records_counter == 3:
 		$Next_day.show()
 
@@ -153,7 +163,7 @@ func _on_next_day_pressed():
 	file.store_var(Data_protection)
 	file.store_var(Maiciouse_email)
 	file.store_var(Maiciouse_email2)
-	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/Level2.tscn")
+	get_tree().change_scene_to_file("res://Frontend/Scenes/Levels/Level2.tscn")
 
 
 func _on_exit_pressed():

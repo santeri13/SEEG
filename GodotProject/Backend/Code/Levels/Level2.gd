@@ -26,7 +26,7 @@ func _ready():
 	
 	var emails = []
 	emails.append("support_admin@utcorp.com,Today tasks,Task update for FK7085: The departure country needs to be changed from Estonia to Lithuania. Also attention needed for RD6021. Alter the arrival date to 30.04.2024.,OK,''")
-	emails.append("ralf.cout@utcorps.com,VPN access chnage,Our company update infromation in system and we reqire that all personal send their infromation with credentials on mail.\n Please send your infromation by the end of the day,malisiouse,This is my credentials")
+	emails.append("ralf.cout@utcorps.com,VPN access chnage,Our company update infromation in system and we reqire that all personal send their infromation with credentials on mail. Please send your infromation by the end of the day,malisiouse,This is my credentials")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:
 		file.store_line(email)
@@ -37,6 +37,11 @@ func _ready():
 	$GameStart/Email.connect("AnswerSend",_answer_send)
 	$GameStart/RecordApp.connect("RecordChange",_record_chnage)
 	$GameStart/RecordApp.connect("FalseChange",_false_change)
+	$GameStart/Vpn.connect("CloseVPN",_on_close_pressed_VPN)
+	$GameStart/Email.connect("CloseEmail",_on_close_pressed_Email)
+	$GameStart/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
+	$GameStart/WorkChat.connect("CloseWorkChat",_on_close_pressed_WorkChat)
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -52,7 +57,10 @@ func _on_button_3_pressed():
 
 
 func _on_button_2_pressed():
+	if $GameStart/Email.has_method("_on_inbox_pressed"):
+		$GameStart/Email._on_inbox_pressed()
 	$GameStart/Email.show()
+	$GameStart/List_of_tasks/Text_List_of_task.text = "Tasks:\nFK7085: \n \t departure destination from Estonia to Lithuania \n RD6021: \n \t arrival to 30.04.2024"
 
 
 func _on_button_pressed():
@@ -72,7 +80,7 @@ func _on_close_pressed_WorkChat():
 
 
 func _on_close_pressed_RecordApp():
-	$GameStart/RecordApp.hide()#
+	$GameStart/RecordApp.hide()
 	
 func _hacked_message():
 	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
@@ -125,7 +133,6 @@ func _false_change():
 	read_mistakes()
 	
 func _input(event):
-	print(event.as_text())
 	if event.as_text() == "Enter":
 		pressedEnter.emit()
 
@@ -167,7 +174,7 @@ func _on_next_day_pressed():
 	file.store_var(Data_protection)
 	file.store_var(Maiciouse_email)
 	file.store_var(Maiciouse_email2)
-	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/Level3.tscn")
+	get_tree().change_scene_to_file("res://Frontend/Scenes/Levels/Level3.tscn")
 
 
 func _on_exit_pressed():

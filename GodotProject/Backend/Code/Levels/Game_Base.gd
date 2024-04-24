@@ -18,6 +18,10 @@ func _ready():
 	await pressedEnter
 	$"Email-Arrow".show()
 	$Show_text.text = "Lets start with mailbox where you can see mails which you recive on work\n Open mail"
+	$GameStart/Vpn.connect("CloseVPN",_on_close_pressed_VPN)
+	$GameStart/Email.connect("CloseEmail",_on_button_pressed_email)
+	$GameStart/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
+	$GameStart/WorkChat.connect("CloseWorkChat",_on_close_pressed_Workchat)
 	
 	
 
@@ -94,7 +98,6 @@ func _on_close_pressed_RecordApp():
 	$Show_text.text = "Now when you know how you would work lets talk about another way of comunication, work chat\n Open work chat"
 	
 func _input(event):
-	print(event.as_text())
 	if event.as_text() == "Enter":
 		pressedEnter.emit()
 

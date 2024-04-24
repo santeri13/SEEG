@@ -36,6 +36,10 @@ func _ready():
 	$GameStart/Email.connect("AnswerSend",_answer_send)
 	$GameStart/RecordApp.connect("RecordChange",_record_chnage)
 	$GameStart/RecordApp.connect("FalseChange",_false_change)
+	$GameStart/Vpn.connect("CloseVPN",_on_close_pressed_Vpn)
+	$GameStart/Email.connect("CloseEmail",_on_close_pressed_Email)
+	$GameStart/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
+	$GameStart/WorkChat.connect("CloseWorkChat",_on_close_pressed_WorkChat)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -51,7 +55,10 @@ func _on_button_3_pressed():
 
 
 func _on_button_2_pressed():
+	if $GameStart/Email.has_method("_on_inbox_pressed"):
+		$GameStart/Email._on_inbox_pressed()
 	$GameStart/Email.show()
+	$GameStart/List_of_tasks/Text_List_of_task.text = "Tasks:\nJP0135: \n \t arrival from Netherlands to Greece \n UV2479: \n \t departure date to 27.04.2024 \n \t arrival date to 30.04.2024"
 
 
 func _on_button_pressed():
@@ -100,7 +107,6 @@ func _false_change():
 	read_mistakes()
 	
 func _input(event):
-	print(event.as_text())
 	if event.as_text() == "Enter":
 		pressedEnter.emit()
 
@@ -165,7 +171,7 @@ func _on_next_day_pressed():
 	file.store_var(Data_protection)
 	file.store_var(Maiciouse_email)
 	file.store_var(Maiciouse_email2)
-	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/Level5.tscn")
+	get_tree().change_scene_to_file("res://Frontend/Scenes/Levels/Level5.tscn")
 
 
 func _on_exit_pressed():

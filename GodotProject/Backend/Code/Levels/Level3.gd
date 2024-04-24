@@ -25,7 +25,7 @@ func _ready():
 	
 	var emails = []
 	emails.append("support_admin@utcorp.com,Today tasks,Today action required for WH3472: Change the departure country to Spain. Also update needed for QL8496: Change the company name to Balkan Express Logistics.,OK,''")
-	emails.append("suto.kazuki@utcorpa.com,Infromation about product,Hi \n can you send me inromation about product with number FR56297?\n I like to check it but I do not access fro our tools right now,malisiouse,This is my credentials")
+	emails.append("suto.kazuki@utcorpa.com,Infromation about product,Hi can you send me inromation about product with number FR56297?\n I like to check it but I do not access fro our tools right now,malisiouse,This is my credentials")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:
 		file.store_line(email)
@@ -36,6 +36,10 @@ func _ready():
 	$GameStart/Email.connect("AnswerSend",_answer_send)
 	$GameStart/RecordApp.connect("RecordChange",_record_chnage)
 	$GameStart/RecordApp.connect("FalseChange",_false_change)
+	$GameStart/Vpn.connect("CloseVPN",_on_close_pressed_Vpn)
+	$GameStart/Email.connect("CloseEmail",_on_close_pressed_Email)
+	$GameStart/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
+	$GameStart/WorkChat.connect("CloseWorkChat",_on_close_pressed_WorkChat)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -51,7 +55,10 @@ func _on_button_3_pressed():
 
 
 func _on_button_2_pressed():
+	if $GameStart/Email.has_method("_on_inbox_pressed"):
+		$GameStart/Email._on_inbox_pressed()
 	$GameStart/Email.show()
+	$GameStart/List_of_tasks/Text_List_of_task.text = "Tasks:\nWH3472: \n \t departure departure from Sweden to Spain \n QL8496: \n \t company name to Balkan Express Logistics"
 
 
 func _on_button_pressed():
@@ -116,7 +123,6 @@ func _false_change():
 	read_mistakes()
 	
 func _input(event):
-	print(event.as_text())
 	if event.as_text() == "Enter":
 		pressedEnter.emit()
 		
@@ -158,7 +164,7 @@ func _on_next_day_pressed():
 	file.store_var(Data_protection)
 	file.store_var(Maiciouse_email)
 	file.store_var(Maiciouse_email2)
-	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/Level4.tscn")
+	get_tree().change_scene_to_file("res://Frontend/Scenes/Levels/Level4.tscn")
 
 
 func _on_exit_pressed():

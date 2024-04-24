@@ -3,6 +3,7 @@ extends Control
 signal openRecord
 signal RecordChange
 signal FalseChange
+signal CloseRecordApp
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -176,90 +177,133 @@ func _on_button_pressed():
 		"ZP9538":
 			if $Panel/OrderData/Comapny_Name_Text.text == "EuroTrans Logistics" && $Panel/OrderData/Date_of_Departure_Text.text == "21.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "21.05.2024" && $Panel/OrderData/From_Text.text == "France" && $Panel/OrderData/To_Text.text == "Helsinki":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"GV4210":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Alpine Express" && $Panel/OrderData/Date_of_Departure_Text.text == "17.01.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "25.04.2024" && $Panel/OrderData/From_Text.text == "Switzerland" && $Panel/OrderData/To_Text.text == "Austria":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"FK7085":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Baltic Freight Solutions" && $Panel/OrderData/Date_of_Departure_Text.text == "23.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "26.04.2024" && $Panel/OrderData/From_Text.text == "Lithuania" && $Panel/OrderData/To_Text.text == "Latvia":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"RD6021":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Nordic Haulage Ltd." && $Panel/OrderData/Date_of_Departure_Text.text == "24.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "30.04.2024" && $Panel/OrderData/From_Text.text == "Sweden" && $Panel/OrderData/To_Text.text == "Norway":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"WH3472":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Iberian Cargo Services" && $Panel/OrderData/Date_of_Departure_Text.text == "25.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "28.04.2024" && $Panel/OrderData/From_Text.text == "Spain" && $Panel/OrderData/To_Text.text == "Spain":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"QL8496":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Balkan Express Logistics" && $Panel/OrderData/Date_of_Departure_Text.text == "26.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "29.04.2024" && $Panel/OrderData/From_Text.text == "Croatia" && $Panel/OrderData/To_Text.text == "Slovenia":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"JP0135":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Benelux Logistics" && $Panel/OrderData/Date_of_Departure_Text.text == "27.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "30.04.2024" && $Panel/OrderData/From_Text.text == "Belgium" && $Panel/OrderData/To_Text.text == "Greece":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"UV2479":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Danube Shipping Co." && $Panel/OrderData/Date_of_Departure_Text.text == "27.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "30.04.2024" && $Panel/OrderData/From_Text.text == "Hungary" && $Panel/OrderData/To_Text.text == "Romania":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"NE9167":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Irish Transport Services" && $Panel/OrderData/Date_of_Departure_Text.text == "29.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "02.05.2024" && $Panel/OrderData/From_Text.text == "Ireland" && $Panel/OrderData/To_Text.text == "France":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"OI5832":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Hellenic Logistics Solutions" && $Panel/OrderData/Date_of_Departure_Text.text == "30.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "03.05.2024" && $Panel/OrderData/From_Text.text == "Greece" && $Panel/OrderData/To_Text.text == "Cyprus":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"YX4096":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Italian Freight Forwarders" && $Panel/OrderData/Date_of_Departure_Text.text == "01.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "04.05.2024" && $Panel/OrderData/From_Text.text == "Cyprus" && $Panel/OrderData/To_Text.text == "Vatican City":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"LD6259":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Central European Transport" && $Panel/OrderData/Date_of_Departure_Text.text == "01.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "05.05.2024" && $Panel/OrderData/From_Text.text == "Czech Republic" && $Panel/OrderData/To_Text.text == "Slovakia":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"AM7148":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Swiss Cargo Solutions" && $Panel/OrderData/Date_of_Departure_Text.text == "03.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "06.05.2024" && $Panel/OrderData/From_Text.text == "Switzerland" && $Panel/OrderData/To_Text.text == "Liechtenstein":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"ZT8032":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Polish Cargo Logistics" && $Panel/OrderData/Date_of_Departure_Text.text == "04.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "07.05.2024" && $Panel/OrderData/From_Text.text == "Poland" && $Panel/OrderData/To_Text.text == "Ukraine":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"BG1094":
-			if $Panel/OrderData/Comapny_Name_Text.text == "Finnish Freight Carriers" && $Panel/OrderData/Date_of_Departure_Text.text == "05.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "08.05.2024" && $Panel/OrderData/From_Text.text == "Finland" && $Panel/OrderData/To_Text.text == "Sweden":
+			if $Panel/OrderData/Comapny_Name_Text.text == "Finnish Freight Carriers" && $Panel/OrderData/Date_of_Departure_Text.text == "05.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "08.05.2024" && $Panel/OrderData/From_Text.text == "Finland" && $Panel/OrderData/To_Text.text == "Finland":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"EC2675":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Scandinavian Shipping Solutions" && $Panel/OrderData/Date_of_Departure_Text.text == "06.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "08.05.2024" && $Panel/OrderData/From_Text.text == "Denmark" && $Panel/OrderData/To_Text.text == "Norway":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"JN5204":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Italian Express Logistics" && $Panel/OrderData/Date_of_Departure_Text.text == "07.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "10.05.2024" && $Panel/OrderData/From_Text.text == "Malta" && $Panel/OrderData/To_Text.text == "Italy":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
 		"KP9013":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Luxembourg Logistics Group" && $Panel/OrderData/Date_of_Departure_Text.text == "16.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "21.05.2024" && $Panel/OrderData/From_Text.text == "Luxembourg" && $Panel/OrderData/To_Text.text == "Belgium":
 				RecordChange.emit()
+				$Panel/OrderData.hide()
+				$Panel/OrderNumber.show()
 			else:
 				FalseChange.emit()
+
+
+func _on_close_pressed():
+	$Panel/OrderData.hide()
+	$Panel/OrderNumber.show()
+	$Panel/OrderNumber/OrderNumber.text=""
+	CloseRecordApp.emit()

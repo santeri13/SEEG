@@ -4,6 +4,7 @@ signal RightReport
 signal WrongReport
 signal AnswerSend
 signal MalisiouseAnswerSend
+signal CloseEmail
 
 var list_of_emails = []
 var list_of_junk = []
@@ -67,7 +68,6 @@ func _on_report_pressed():
 				for mail2 in list_of_emails:
 					file2.store_line(mail2.email+","+mail2.name+","+mail2.text+","+mail2.malicious+","+mail2.answerson)
 				file2.close()
-				$Panel/Email_text/Email_text.hide()
 			elif mail.malicious == "OK":
 				WrongReport.emit()
 		i = i+1
@@ -119,3 +119,7 @@ func _on_answer_send():
 				file2.close()
 				$Panel/Email_text/Email_text.hide()
 		i = i+1
+
+
+func _on_close_button_pressed():
+	CloseEmail.emit()
