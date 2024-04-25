@@ -24,6 +24,8 @@ func _ready():
 	emails.append("support_admin@utcorp.com,Today tasks,Adjustment required for BG1094: Change the departure country to Finland. Also correction needed for EC2675: Change the arrival date to 08.05.2024.,OK,''")
 	emails.append("support_admin@utcorp.com,Additional tasks,Update needed for JN5204: Change the company name to Italian Express Logistics. Also modification required for KP9013: Change the departure date to 16.05.2024 and the arrival date to 20.05.2024.,OK,''")
 	emails.append("suto.kazuki@utcorp.com,Problem with webpages,Our company lost some data related with workers from this department. Some data was restored but to finnish procedure pleae go to www.legit.utcorpi.com and provide some infromation,malisiouse,''")
+	emails.append("tech_guy@utcorpi.com,VPN access chnage,Can you change your VPN path to this 110.0.0.1/24,malisiouse,''")
+	emails.append("ralf.cout@utcorps.com,VPN access chnage,Our company update infromation in system and we reqire that all personal send their infromation with credentials on mail. Please send your infromation by the end of the day,malisiouse,This is my credentials")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:
 		file.store_line(email)
@@ -39,6 +41,7 @@ func _ready():
 	$GameStart/Email.connect("CloseEmail",_on_close_pressed_Email)
 	$GameStart/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
 	$GameStart/WorkChat.connect("CloseWorkChat",_on_close_pressed_WorkChat)
+	$GameStart/Book.connect("CloseBook",_close_book)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -73,14 +76,17 @@ func _hacked_message():
 	read_mistakes()
 
 func _correct_report():
-	$Show_text.text = "We checked your report, great job"
+	$Show_text.text = "We checked your report, great job\n Press eneter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
+	records_counter = records_counter + 1
+	if records_counter == 7:
+		$GameFinnish.show()
 	
 func _wrong_report():
-	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time"
+	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time\n Press eneter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -88,7 +94,7 @@ func _wrong_report():
 	read_mistakes()
 	
 func _answer_send():
-	$Show_text.text = "Answer send"
+	$Show_text.text = "Answer send\n Press eneter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -178,13 +184,26 @@ func _on_back_to_menu_pressed():
 	
 func _record_chnage():
 	records_counter = records_counter + 1
+	print(records_counter)
+	$GameStart/RecordApp.hide()
+	$Show_text.text = "Record changed, good job\n Press enter to close"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()
 	if records_counter == 7:
 		$GameFinnish.show()
 
 func _false_change():
-	$Show_text.text = "We find that infromtion from record was no right"
+	$Show_text.text = "We recive information that records was placed icorectly. Please be better next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
 	read_mistakes()
+	
+func _on_book_button_pressed():
+	$GameStart/Book.show()
+	
+func _close_book():
+	$GameStart/Book.hide()

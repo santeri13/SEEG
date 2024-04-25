@@ -25,7 +25,7 @@ func _ready():
 	
 	var emails = []
 	emails.append("support_admin@utcorp.com,Today tasks,Adjustment required for NE9167: Change the arrival country to France. Also update needed for OI5832: Change the company name to Hellenic Logistics Solutions.,OK,''")
-	emails.append("suto.kazuki@utcorp.com,Cyber check,Yestarday was cyberattack which changed our links for our resources. Right now our team worked on them and all is ok but for addtionla check every worker go py provided link www.itisofficial.com and check if all work correct,malisiouse,''")
+	emails.append("suto.kazuki@utcorp.com,Cyber check,Yestarday was cyberattack which changed our links for our resources. Right now our team worked on them and all is ok but for addtionla check every worker go py provided link www.official.utcorp.com and check if all work correct,malisiouse,''")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:
 		file.store_line(email)
@@ -41,6 +41,7 @@ func _ready():
 	$GameStart/Email.connect("CloseEmail",_on_close_pressed_Email)
 	$GameStart/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
 	$GameStart/WorkChat.connect("CloseWorkChat",_on_close_pressed_WorkChat)
+	$GameStart/Book.connect("CloseBook",_close_book)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -59,7 +60,7 @@ func _on_button_2_pressed():
 	if $GameStart/Email.has_method("_on_inbox_pressed"):
 		$GameStart/Email._on_inbox_pressed()
 	$GameStart/Email.show()
-	$GameStart/List_of_tasks/Text_List_of_task.text = "Tasks:\nNE9167: \n \t arrival from United Kingdom to France \n OI5832: \n \t company name to Hellenic Logistics Solutions"
+	$GameStart/List_of_tasks/Text_List_of_task.text = "Tasks:\nNE9167: \n \t arrival to France \n OI5832: \n \t company name to Hellenic Logistics Solutions"
 
 
 func _on_button_pressed():
@@ -75,7 +76,8 @@ func _hacked_message():
 	read_mistakes()
 
 func _correct_report():
-	$Show_text.text = "We checked your report, great job"
+	Wrong_path = true
+	$Show_text.text = "We checked your report, great job\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -85,7 +87,7 @@ func _correct_report():
 		$Next_day.show()
 	
 func _wrong_report():
-	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time"
+	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -110,7 +112,7 @@ func _credential_send():
 	read_mistakes()
 	
 func _false_change():
-	$Show_text.text = "We find that infromtion from record was no right"
+	$Show_text.text = "We recive information that records was placed icorectly. Please be better next time\n Press eneter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -160,6 +162,12 @@ func read_mistakes():
 	
 func _record_chnage():
 	records_counter = records_counter + 1
+	$GameStart/RecordApp.hide()
+	$Show_text.text = "Record changed, good job\n Press enter to close"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()
 	if records_counter == 3:
 		$Next_day.show()
 
@@ -210,3 +218,9 @@ func _on_back_to_menu_pressed():
 	file.store_var(Maiciouse_email)
 	file.store_var(Maiciouse_email2)
 	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")
+	
+func _on_book_button_pressed():
+	$GameStart/Book.show()
+
+func _close_book():
+	$GameStart/Book.hide()

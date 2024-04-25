@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://j1gaj4y3ktw1"]
+[gd_scene load_steps=3 format=3 uid="uid://j1gaj4y3ktw1"]
 
 [ext_resource type="Script" path="res://Backend/Code/Instruments/WorkChat.gd" id="1_5vdxx"]
+[ext_resource type="Texture2D" uid="uid://bk1tnttmlnc1w" path="res://Frontend/Recourses/enter (1).png" id="2_qw7ao"]
 
 [node name="WorkChat" type="Control"]
 layout_mode = 3
@@ -18,6 +19,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 1020.0
+offset_top = 12.0
+offset_right = 1084.0
+offset_bottom = 76.0
+texture_normal = ExtResource("2_qw7ao")
 
 [node name="Close" type="ColorPickerButton" parent="Panel"]
 layout_mode = 1
@@ -68,6 +77,7 @@ grow_vertical = 2
 [node name="Coment" type="LineEdit" parent="Panel/CompanyPhishing/OrderNumber"]
 layout_mode = 2
 alignment = 1
+editable = false
 
 [node name="Label" type="Label" parent="Panel/CompanyPhishing/OrderNumber"]
 layout_mode = 2
@@ -155,6 +165,7 @@ grow_vertical = 2
 [node name="Coment" type="LineEdit" parent="Panel/Prize/OrderNumber"]
 layout_mode = 2
 alignment = 1
+editable = false
 
 [node name="Label" type="Label" parent="Panel/Prize/OrderNumber"]
 layout_mode = 2
@@ -254,6 +265,7 @@ grow_vertical = 2
 [node name="Coment" type="LineEdit" parent="Panel/Credentials/OrderNumber"]
 layout_mode = 2
 alignment = 1
+editable = false
 
 [node name="Label" type="Label" parent="Panel/Credentials/OrderNumber"]
 layout_mode = 2
@@ -291,15 +303,8 @@ grow_horizontal = 2
 text = "Company name"
 alignment = 1
 
-[node name="Button" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 1010.0
-offset_top = 20.0
-offset_right = 1076.0
-offset_bottom = 61.0
-
+[connection signal="pressed" from="Panel/TextureButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Panel/CompanyPhishing/OrderNumber/Send" to="." method="_on_sendcompanydata_pressed"]
 [connection signal="pressed" from="Panel/Prize/OrderNumber/Send" to="." method="_on_sendprize_pressed"]
 [connection signal="pressed" from="Panel/Credentials/OrderNumber/Send" to="." method="_on_sendcredential_pressed"]
-[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

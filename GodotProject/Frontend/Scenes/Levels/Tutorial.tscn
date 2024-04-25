@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://r134gcv5xi6c"]
+[gd_scene load_steps=13 format=3 uid="uid://r134gcv5xi6c"]
 
 [ext_resource type="Script" path="res://Backend/Code/Levels/Game_Base.gd" id="1_q8ybe"]
 [ext_resource type="Texture2D" uid="uid://dopfqygkv0cp8" path="res://Frontend/Recourses/GameStart.png" id="2_whtth"]
 [ext_resource type="Texture2D" uid="uid://0f6wmnlgh5fn" path="res://Frontend/Recourses/browser_13408985.png" id="3_6q07w"]
+[ext_resource type="Texture2D" uid="uid://cgr1ruanqrx1b" path="res://Frontend/Recourses/wallpaper_monitor.png" id="3_otqod"]
 [ext_resource type="Texture2D" uid="uid://berhbt8ceajj5" path="res://Frontend/Recourses/mail_9068642.png" id="4_ne52e"]
 [ext_resource type="Texture2D" uid="uid://derhselvkci6d" path="res://Frontend/Recourses/meetme.png" id="5_2euoe"]
 [ext_resource type="Texture2D" uid="uid://wj75lcanwg0g" path="res://Frontend/Recourses/vpn_9694717.png" id="6_fsr7a"]
@@ -19,6 +20,11 @@ script = ExtResource("1_q8ybe")
 position = Vector2(593, 318)
 scale = Vector2(0.8, 0.626953)
 texture = ExtResource("2_whtth")
+
+[node name="WallpaperMonitor" type="Sprite2D" parent="GameStart"]
+position = Vector2(9.37494, -37.4829)
+scale = Vector2(2.58414, 2.63453)
+texture = ExtResource("3_otqod")
 
 [node name="Button" type="Button" parent="GameStart"]
 offset_left = -663.75

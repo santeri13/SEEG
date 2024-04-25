@@ -13,6 +13,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_omqet")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.419608, 0.678431, 1)
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 132.0
+offset_top = 59.0
+offset_right = -132.0
+offset_bottom = 115.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 25
+text = "Encycopedia"
+alignment = 1
+flat = true
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -130,14 +153,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="Explanation"]
+[node name="ColorRect" type="ColorRect" parent="Explanation"]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = -56.0
-offset_bottom = 56.0
-grow_horizontal = 0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.054902, 0.0823529, 0.396078, 1)
 
 [node name="Name" type="LineEdit" parent="Explanation"]
 layout_mode = 1
@@ -159,17 +182,6 @@ offset_top = -400.0
 offset_right = -702.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "The email is not addressed to the recipient. If the recipient was truly being notified by Charles Schwab that there was an issue with their account, they would know the recipient’s name.
-
-Again, they don’t know the recipient’s name;\"Dear Customer\" isn’t an identifier.
-
-The recipient hasn’t attempted to sign into a Schwab account, so could not have exceeded the number of attempts allowed.
-
-Grammatical errors: The words Online Banking are capitalized throughout the text. And, if you read carefully, the text says \"Please visit www.schwab.com/activate Reset Account your account\" which clearly doesn’t make sense, but since most people scan emails quickly, grammatical errors that are this small usually don’t get noticed.
-
-They try to reassure recipients by encouraging them to confirm the email is from Schwab….. by using a link they provide.
-
-Look at the sixth flag; this shows the true email address displayed when you hover your mouse over any link on this page (which is a red flag in itself, what company would have all of these actions point to the same link?). See that the website is actually http://almall.us? The scammer added the words /schwab.com/ after their website’s true name in an attempt to look legitimate, but this site is anything but legitimate."
 wrap_mode = 1
 
 [node name="Explanation" type="TextEdit" parent="Explanation"]
@@ -182,29 +194,31 @@ offset_top = -197.0
 offset_bottom = -94.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Phishing is a type of online scam where criminals impersonate legitimate organizations via email, text message, advertisement or other means in order to steal sensitive information. This is usually done by including a link that will appear to take you to the company’s website to fill in your information – but the website is a clever fake and the information you provide goes straight to the crooks behind the scam."
 wrap_mode = 1
 
 [node name="Schwab-email" type="Sprite2D" parent="Explanation"]
-visible = false
 position = Vector2(819, 440)
 scale = Vector2(0.8, 0.833)
 texture = ExtResource("3_5y0vh")
 
-[node name="LineEdit" type="LineEdit" parent="."]
+[node name="Close" type="ColorPickerButton" parent="Explanation"]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 132.0
-offset_top = 30.0
-offset_right = -132.0
-offset_bottom = 86.0
-grow_horizontal = 2
-text = "Encycopedia"
-alignment = 1
+offset_left = -47.0
+offset_bottom = 41.0
+grow_horizontal = 0
+color = Color(1, 0, 0, 1)
 
 [connection signal="pressed" from="VBoxContainer/Phishing" to="." method="_on_phishing_pressed"]
+[connection signal="pressed" from="VBoxContainer/PhishihgContainer/Data_protection" to="." method="_on_data_protection_pressed"]
 [connection signal="pressed" from="VBoxContainer/PhishihgContainer/Maiciouse_email" to="." method="_on_maiciouse_email_pressed"]
+[connection signal="pressed" from="VBoxContainer/PhishihgContainer/Maiciouse_email2" to="." method="_on_maiciouse_email_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/WIPhishing" to="." method="_on_wi_phishing_pressed"]
+[connection signal="pressed" from="VBoxContainer/WiPhishihngContainer/VPN" to="." method="_on_vpn_pressed"]
 [connection signal="pressed" from="VBoxContainer/Pharming" to="." method="_on_pharming_pressed"]
-[connection signal="pressed" from="Explanation/Button" to="." method="_on_buttonclose_pressed"]
+[connection signal="pressed" from="VBoxContainer/PharmingContainer/Wrong_path" to="." method="_on_wrong_path_pressed"]
+[connection signal="pressed" from="VBoxContainer/PharmingContainer/Malisiouse_prize" to="." method="_on_malisiouse_prize_pressed"]
+[connection signal="pressed" from="VBoxContainer/PharmingContainer/Maliciouse_link" to="." method="_on_maliciouse_link_pressed"]
+[connection signal="pressed" from="Explanation/Close" to="." method="_on_buttonclose_pressed"]

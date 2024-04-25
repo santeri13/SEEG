@@ -35,8 +35,14 @@ func _load_file(path):
 			$Panel/Email_text/Name.text = text[1]
 			if text[0] == "suto.kazuki@utcorp.com":
 				$Panel/Email_text/Text.add_theme_font_size_override("font_size", 30)
+			else:
+				$Panel/Email_text/Text.add_theme_font_size_override("font_size", 17)
 			$Panel/Email_text/Text.text = text[2]
-			$Panel/Email_text.show())
+			$Panel/Email_text.show()
+			if text[4].length() > 2:
+				$Panel/Email_text/Answer.show()
+			else:
+				$Panel/Email_text/Answer.hide())
 		$Panel/Email_list/VBoxContainer.add_child(email_button)
 
 
@@ -60,6 +66,7 @@ func _on_report_pressed():
 		if mail.email == email && mail.name == name:
 			if mail.malicious == "malisiouse":
 				RightReport.emit()
+				$Panel/Email_text.hide()
 				var file = FileAccess.open("res://Backend/Text Files/Email/junk.txt", FileAccess.READ_WRITE)
 				file.store_line(mail.email+","+mail.name+","+mail.text+","+mail.malicious+","+mail.answerson)
 				file.close()

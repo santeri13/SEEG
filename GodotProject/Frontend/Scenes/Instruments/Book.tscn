@@ -1,0 +1,387 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpt2kcjnrcwgb"]
+
+[ext_resource type="Script" path="res://Backend/Code/Instruments/Book.gd" id="1_juhax"]
+[ext_resource type="Texture2D" uid="uid://sh74itpevsuf" path="res://Frontend/Recourses/tablet.png" id="2_ya8p5"]
+[ext_resource type="Texture2D" uid="uid://blhb1wmhvptvc" path="res://Frontend/Recourses/painting-mountain-lake-with-mountain-background.jpg" id="3_s3kf8"]
+
+[node name="Book" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_juhax")
+
+[node name="Tablet" type="Sprite2D" parent="."]
+position = Vector2(581, 319)
+rotation = -1.5708
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_ya8p5")
+
+[node name="Painting-mountain-lake-with-mountain-background" type="Sprite2D" parent="Tablet"]
+position = Vector2(-3.61108, -1.66675)
+rotation = 1.5708
+scale = Vector2(0.925556, 1.0829)
+texture = ExtResource("3_s3kf8")
+
+[node name="LineEdit" type="LineEdit" parent="Tablet"]
+modulate = Color(1, 0.027451, 0.0745098, 1)
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -369.778
+offset_top = -666.0
+offset_right = -23.7778
+offset_bottom = -616.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+theme_override_font_sizes/font_size = 30
+text = "Book of knowlege "
+alignment = 1
+editable = false
+flat = true
+
+[node name="Emails" type="Button" parent="Tablet"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -557.0
+offset_top = -550.0
+offset_right = -444.0
+offset_bottom = -508.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+text = "Emails"
+
+[node name="Vpn" type="Button" parent="Tablet"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -612.0
+offset_top = -550.0
+offset_right = -499.0
+offset_bottom = -508.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+text = "VPN"
+
+[node name="Links" type="Button" parent="Tablet"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -667.0
+offset_top = -550.0
+offset_right = -554.0
+offset_bottom = -506.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+text = "Links"
+
+[node name="Reports" type="Button" parent="Tablet"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -722.0
+offset_top = -550.0
+offset_right = -609.0
+offset_bottom = -506.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+text = "Reports
+"
+
+[node name="CloseBook" type="ColorPickerButton" parent="Tablet"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -412.0
+offset_top = -588.667
+offset_right = -365.0
+offset_bottom = -536.667
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(1, 0, 0, 1)
+
+[node name="VPN_note" type="Panel" parent="Tablet"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -313.0
+offset_top = -466.0
+offset_right = -355.0
+offset_bottom = -527.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Close_VPN" type="ColorPickerButton" parent="Tablet/VPN_note"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.3334
+offset_top = -63.8889
+offset_right = -13.3334
+offset_bottom = -11.8889
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(1, 0, 0, 1)
+
+[node name="TextEdit" type="TextEdit" parent="Tablet/VPN_note"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -189.0
+offset_right = 736.0
+offset_bottom = -502.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+text = "VPN is used to recive access to network of our company. As second level support you cannot change any settings in VPN connection. If it is require then we send you private email messgae where we write about day and time when you need to provide your device to service center."
+editable = false
+wrap_mode = 1
+
+[node name="LineEdit" type="LineEdit" parent="Tablet/VPN_note"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -100.5
+offset_right = 111.0
+offset_bottom = -37.5
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+theme_override_font_sizes/font_size = 30
+text = "VPN"
+alignment = 1
+editable = false
+flat = true
+
+[node name="Report_note" type="Panel" parent="Tablet"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -313.0
+offset_top = -466.0
+offset_right = -355.0
+offset_bottom = -527.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Close_Report" type="ColorPickerButton" parent="Tablet/Report_note"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.3334
+offset_top = -63.8889
+offset_right = -13.3334
+offset_bottom = -11.8889
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(1, 0, 0, 1)
+
+[node name="TextEdit" type="TextEdit" parent="Tablet/Report_note"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -189.0
+offset_right = 736.0
+offset_bottom = -502.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+text = "Each worker of the company need to be cautiouse in his actions and actions which could bring harm to the company. By that, if you find something suspicious then send report about it, but please double check if you are sure that something what you found is dangerous."
+editable = false
+wrap_mode = 1
+
+[node name="LineEdit" type="LineEdit" parent="Tablet/Report_note"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -100.5
+offset_right = 111.0
+offset_bottom = -37.5
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+theme_override_font_sizes/font_size = 30
+text = "Reports"
+alignment = 1
+editable = false
+flat = true
+
+[node name="Email_note" type="Panel" parent="Tablet"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -313.0
+offset_top = -466.0
+offset_right = -355.0
+offset_bottom = -527.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Close_Email" type="ColorPickerButton" parent="Tablet/Email_note"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.3334
+offset_top = -63.8889
+offset_right = -13.3334
+offset_bottom = -11.8889
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(1, 0, 0, 1)
+
+[node name="TextEdit" type="TextEdit" parent="Tablet/Email_note"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -189.0
+offset_right = 736.0
+offset_bottom = -502.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+text = "Each worker have their private email address with domain utcorp.com. Also we write in traditional style so no big letter or special characters in messages. This is also for security purpose."
+editable = false
+wrap_mode = 1
+
+[node name="LineEdit" type="LineEdit" parent="Tablet/Email_note"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -100.5
+offset_right = 111.0
+offset_bottom = -37.5
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+theme_override_font_sizes/font_size = 30
+text = "Email"
+alignment = 1
+editable = false
+flat = true
+
+[node name="Links_note" type="Panel" parent="Tablet"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -313.0
+offset_top = -466.0
+offset_right = -355.0
+offset_bottom = -527.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Close_Links" type="ColorPickerButton" parent="Tablet/Links_note"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.3334
+offset_top = -63.8889
+offset_right = -13.3334
+offset_bottom = -11.8889
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(1, 0, 0, 1)
+
+[node name="TextEdit" type="TextEdit" parent="Tablet/Links_note"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -189.0
+offset_right = 736.0
+offset_bottom = -502.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+text = "For security measures browser on your workstaions is rewriten that you cna only access company products on them. Fro now we work on 3 products which you will recive access in future: 
+support.utcorp.com
+it.utcorp.com
+source.utcorp.com
+If there would be new products then all information would be given here."
+editable = false
+wrap_mode = 1
+
+[node name="LineEdit" type="LineEdit" parent="Tablet/Links_note"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -100.5
+offset_right = 111.0
+offset_bottom = -37.5
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+theme_override_font_sizes/font_size = 30
+text = "Links"
+alignment = 1
+editable = false
+flat = true
+
+[connection signal="pressed" from="Tablet/Emails" to="." method="_on_emails_pressed"]
+[connection signal="pressed" from="Tablet/Vpn" to="." method="_on_vpn_pressed"]
+[connection signal="pressed" from="Tablet/Links" to="." method="_on_links_pressed"]
+[connection signal="pressed" from="Tablet/Reports" to="." method="_on_reports_pressed"]
+[connection signal="pressed" from="Tablet/CloseBook" to="." method="_on_close_book_pressed"]
+[connection signal="pressed" from="Tablet/VPN_note/Close_VPN" to="." method="_on_close_vpn_pressed"]
+[connection signal="pressed" from="Tablet/Report_note/Close_Report" to="." method="_on_close_report_pressed"]
+[connection signal="pressed" from="Tablet/Email_note/Close_Email" to="." method="_on_close_email_pressed"]
+[connection signal="pressed" from="Tablet/Links_note/Close_Links" to="." method="_on_close_links_pressed"]

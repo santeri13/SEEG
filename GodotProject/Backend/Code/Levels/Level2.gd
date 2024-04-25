@@ -41,6 +41,7 @@ func _ready():
 	$GameStart/Email.connect("CloseEmail",_on_close_pressed_Email)
 	$GameStart/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
 	$GameStart/WorkChat.connect("CloseWorkChat",_on_close_pressed_WorkChat)
+	$GameStart/Book.connect("CloseBook",_close_book)
 
 
 
@@ -60,7 +61,7 @@ func _on_button_2_pressed():
 	if $GameStart/Email.has_method("_on_inbox_pressed"):
 		$GameStart/Email._on_inbox_pressed()
 	$GameStart/Email.show()
-	$GameStart/List_of_tasks/Text_List_of_task.text = "Tasks:\nFK7085: \n \t departure destination from Estonia to Lithuania \n RD6021: \n \t arrival to 30.04.2024"
+	$GameStart/List_of_tasks/Text_List_of_task.text = "Tasks:\nFK7085: \n \t departure to Lithuania \n RD6021: \n \t arrival to 30.04.2024"
 
 
 func _on_button_pressed():
@@ -84,7 +85,7 @@ func _on_close_pressed_RecordApp():
 	
 func _hacked_message():
 	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
-	It is good that we have backups, next time pay close attention what you do.\n Press eneter to close"
+	It is good that we have backups, next time pay close attention what you do.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -92,7 +93,8 @@ func _hacked_message():
 	read_mistakes()
 
 func _correct_report():
-	$Show_text.text = "We checked your report, great job"
+	Data_protection = true
+	$Show_text.text = "We checked your report, great job\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -102,7 +104,7 @@ func _correct_report():
 		$Next_day.show()
 	
 func _wrong_report():
-	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time"
+	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -110,7 +112,7 @@ func _wrong_report():
 	read_mistakes()
 	
 func _malisiouse_answer():
-	$Show_text.text = "We lost access in some parts of the system, by our investigation we understood that it was happend from your credentials, we restore access back, please be more cautios next time"
+	$Show_text.text = "We lost access in some parts of the system, by our investigation we understood that it was happend from your credentials, we restore access back, please be more cautios next time\n Press eneter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -118,14 +120,14 @@ func _malisiouse_answer():
 	read_mistakes()
 	
 func _answer_send():
-	$Show_text.text = "Answer send"
+	$Show_text.text = "Answer send\n Press eneter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
 	
 func _false_change():
-	$Show_text.text = "We find that infromtion from record was no right"
+	$Show_text.text = "We recive information that records was placed icorectly. Please be better next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -157,6 +159,12 @@ func read_mistakes():
 	
 func _record_chnage():
 	records_counter = records_counter + 1
+	$GameStart/RecordApp.hide()
+	$Show_text.text = "Record changed, good job\n Press enter to close"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()
 	if records_counter == 3:
 		$Next_day.show()
 
@@ -209,3 +217,9 @@ func _on_back_to_menu_pressed():
 	file.store_var(Maiciouse_email)
 	file.store_var(Maiciouse_email2)
 	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")
+	
+func _on_book_button_pressed():
+	$GameStart/Book.show()
+
+func _close_book():
+	$GameStart/Book.hide()

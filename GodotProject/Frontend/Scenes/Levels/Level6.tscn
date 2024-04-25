@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://fqwkvtkhot0t"]
+[gd_scene load_steps=13 format=3 uid="uid://fqwkvtkhot0t"]
 
 [ext_resource type="Script" path="res://Backend/Code/Levels/Level6.gd" id="1_gf5xr"]
 [ext_resource type="Texture2D" uid="uid://dopfqygkv0cp8" path="res://Frontend/Recourses/GameStart.png" id="1_hbicd"]
 [ext_resource type="Texture2D" uid="uid://0f6wmnlgh5fn" path="res://Frontend/Recourses/browser_13408985.png" id="2_e3pic"]
+[ext_resource type="Texture2D" uid="uid://cgr1ruanqrx1b" path="res://Frontend/Recourses/wallpaper_monitor.png" id="3_hd27v"]
 [ext_resource type="Texture2D" uid="uid://berhbt8ceajj5" path="res://Frontend/Recourses/mail_9068642.png" id="3_o1i45"]
 [ext_resource type="Texture2D" uid="uid://derhselvkci6d" path="res://Frontend/Recourses/meetme.png" id="4_8kxv6"]
 [ext_resource type="Texture2D" uid="uid://wj75lcanwg0g" path="res://Frontend/Recourses/vpn_9694717.png" id="5_ea6tq"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://qxtpt0gymowq" path="res://Frontend/Scenes/Instruments/VPN.tscn" id="7_norh2"]
 [ext_resource type="PackedScene" uid="uid://j1gaj4y3ktw1" path="res://Frontend/Scenes/Instruments/WorkChat.tscn" id="8_w63pu"]
 [ext_resource type="PackedScene" uid="uid://csuhyqjgu6da8" path="res://Frontend/Scenes/Instruments/RecordApp.tscn" id="9_rqw2f"]
+[ext_resource type="PackedScene" uid="uid://dpt2kcjnrcwgb" path="res://Frontend/Scenes/Instruments/Book.tscn" id="12_ty0dv"]
 
 [node name="Level6" type="Node2D"]
 script = ExtResource("1_gf5xr")
@@ -18,6 +20,25 @@ script = ExtResource("1_gf5xr")
 position = Vector2(593, 318)
 scale = Vector2(0.8, 0.626953)
 texture = ExtResource("1_hbicd")
+
+[node name="Book_Button" type="Button" parent="GameStart"]
+offset_left = 466.0
+offset_top = -507.0
+offset_right = 581.0
+offset_bottom = -451.0
+text = "Book"
+
+[node name="Back_to_menu" type="Button" parent="GameStart"]
+offset_left = 596.0
+offset_top = -507.0
+offset_right = 707.0
+offset_bottom = -453.0
+text = "Menu"
+
+[node name="WallpaperMonitor" type="Sprite2D" parent="GameStart"]
+position = Vector2(9.37494, -37.4829)
+scale = Vector2(2.58414, 2.63453)
+texture = ExtResource("3_hd27v")
 
 [node name="Button" type="Button" parent="GameStart"]
 offset_left = -663.75
@@ -64,10 +85,10 @@ scale = Vector2(0.141602, 0.168224)
 texture = ExtResource("5_ea6tq")
 
 [node name="List_of_tasks" type="Panel" parent="GameStart"]
-offset_left = 563.0
+offset_left = 481.0
 offset_top = -427.0
 offset_right = 699.0
-offset_bottom = -252.0
+offset_bottom = -182.0
 
 [node name="Color_List_of_tasks" type="ColorRect" parent="GameStart/List_of_tasks"]
 modulate = Color(0.870588, 0.870588, 0, 1)
@@ -85,7 +106,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Task"
+text = "Task:
+Open Email"
 editable = false
 
 [node name="Email" parent="GameStart" instance=ExtResource("6_tjpyl")]
@@ -115,6 +137,14 @@ offset_left = -666.0
 offset_top = -415.0
 offset_right = -765.0
 offset_bottom = -688.0
+
+[node name="Book" parent="GameStart" instance=ExtResource("12_ty0dv")]
+visible = false
+offset_left = -927.5
+offset_top = -524.76
+offset_right = 937.5
+offset_bottom = 826.24
+scale = Vector2(1.6, 1.6)
 
 [node name="Show_text" type="TextEdit" parent="."]
 visible = false
@@ -165,16 +195,9 @@ offset_right = 664.0
 offset_bottom = 372.0
 text = "Back to menu"
 
-[node name="Back_to_menu" type="Button" parent="."]
-offset_left = 1070.0
-offset_right = 1167.0
-offset_bottom = 35.0
-text = "Menu"
-
 [connection signal="pressed" from="GameStart/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="GameStart/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="GameStart/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="GameStart/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Next_day" to="." method="_on_next_day_pressed"]
 [connection signal="pressed" from="GameOver/Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Back_to_menu" to="." method="_on_back_to_menu_pressed"]
