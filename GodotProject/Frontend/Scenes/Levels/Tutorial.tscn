@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://0f6wmnlgh5fn" path="res://Frontend/Recourses/browser_13408985.png" id="3_6q07w"]
 [ext_resource type="Texture2D" uid="uid://cgr1ruanqrx1b" path="res://Frontend/Recourses/wallpaper_monitor.png" id="3_otqod"]
 [ext_resource type="Texture2D" uid="uid://berhbt8ceajj5" path="res://Frontend/Recourses/mail_9068642.png" id="4_ne52e"]
-[ext_resource type="Texture2D" uid="uid://derhselvkci6d" path="res://Frontend/Recourses/meetme.png" id="5_2euoe"]
 [ext_resource type="Texture2D" uid="uid://wj75lcanwg0g" path="res://Frontend/Recourses/vpn_9694717.png" id="6_fsr7a"]
+[ext_resource type="Texture2D" uid="uid://piktxiednwh" path="res://Frontend/Recourses/browser.png" id="6_jwtpw"]
 [ext_resource type="PackedScene" uid="uid://dkrkk78fdiww6" path="res://Frontend/Scenes/Instruments/Email.tscn" id="7_01e0d"]
 [ext_resource type="PackedScene" uid="uid://qxtpt0gymowq" path="res://Frontend/Scenes/Instruments/VPN.tscn" id="8_cb5ns"]
 [ext_resource type="PackedScene" uid="uid://j1gaj4y3ktw1" path="res://Frontend/Scenes/Instruments/WorkChat.tscn" id="9_8qum1"]
@@ -27,43 +27,47 @@ scale = Vector2(2.58414, 2.63453)
 texture = ExtResource("3_otqod")
 
 [node name="Button" type="Button" parent="GameStart"]
-offset_left = -663.75
+offset_left = -660.0
 offset_top = -414.704
-offset_right = -579.75
+offset_right = -576.0
 offset_bottom = -304.704
+flat = true
 
 [node name="Browser13408985" type="Sprite2D" parent="GameStart/Button"]
-position = Vector2(43.5, 53.7695)
+position = Vector2(42.5, 60.6105)
 scale = Vector2(0.148926, 0.193146)
 texture = ExtResource("3_6q07w")
 
 [node name="Button2" type="Button" parent="GameStart"]
-offset_left = -661.25
+offset_left = -660.0
 offset_top = -304.648
-offset_right = -577.25
+offset_right = -576.0
 offset_bottom = -194.648
+flat = true
 
 [node name="Mail9068642" type="Sprite2D" parent="GameStart/Button2"]
-position = Vector2(36.2501, 55.8256)
+position = Vector2(45, 57.4206)
 scale = Vector2(0.151367, 0.193146)
 texture = ExtResource("4_ne52e")
 
 [node name="Button3" type="Button" parent="GameStart"]
-offset_left = -667.5
+offset_left = -660.0
 offset_top = -194.592
-offset_right = -583.5
+offset_right = -576.0
 offset_bottom = -84.5919
+flat = true
 
-[node name="Meetme" type="Sprite2D" parent="GameStart/Button3"]
-position = Vector2(42.5, 55.8256)
+[node name="Browser" type="Sprite2D" parent="GameStart/Button3"]
+position = Vector2(45, 57.4206)
 scale = Vector2(0.13916, 0.165109)
-texture = ExtResource("5_2euoe")
+texture = ExtResource("6_jwtpw")
 
 [node name="Button4" type="Button" parent="GameStart"]
-offset_left = -663.75
-offset_top = -86.1308
-offset_right = -579.75
-offset_bottom = 23.8692
+offset_left = -660.0
+offset_top = -86.131
+offset_right = -576.0
+offset_bottom = 23.869
+flat = true
 
 [node name="Vpn9694717" type="Sprite2D" parent="GameStart/Button4"]
 position = Vector2(42.5001, 54.2305)
@@ -71,10 +75,10 @@ scale = Vector2(0.141602, 0.168224)
 texture = ExtResource("6_fsr7a")
 
 [node name="List_of_tasks" type="Panel" parent="GameStart"]
-offset_left = 563.0
+offset_left = 481.0
 offset_top = -427.0
 offset_right = 699.0
-offset_bottom = -252.0
+offset_bottom = -182.0
 
 [node name="Color_List_of_tasks" type="ColorRect" parent="GameStart/List_of_tasks"]
 modulate = Color(0.870588, 0.870588, 0, 1)
@@ -92,7 +96,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Task"
 editable = false
 
 [node name="Email" parent="GameStart" instance=ExtResource("7_01e0d")]
@@ -123,20 +126,13 @@ offset_top = -415.0
 offset_right = -765.0
 offset_bottom = -688.0
 
-[node name="LineEdit" type="LineEdit" parent="GameStart"]
-offset_left = 502.5
-offset_top = -484.885
-offset_right = 697.5
-offset_bottom = -432.885
-placeholder_text = "10000$"
-alignment = 2
-
 [node name="Show_text" type="TextEdit" parent="."]
 offset_left = 307.0
 offset_top = 382.0
 offset_right = 849.0
 offset_bottom = 455.0
 editable = false
+wrap_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="VPN-Arrow" type="Sprite2D" parent="."]

@@ -89,6 +89,7 @@ layout_mode = 2
 size_flags_vertical = 6
 placeholder_text = "Name"
 alignment = 1
+editable = false
 
 [node name="Label2" type="Label" parent="Panel/CompanyPhishing/OrderNumber"]
 layout_mode = 2

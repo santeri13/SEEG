@@ -39,7 +39,7 @@ func _on_button_4_pressed():
 func _on_button_3_pressed():
 	$GameStart/WorkChat.show()
 	$"Chat-Arrow".hide()
-	$Show_text.text = "Here you can recive messages from your colleges and answer on them\n Close work chat"
+	$Show_text.text = "Here you can access tools which company us by browser. You can access only company provided websites. You can check information about them later in Book of Knowlege\n Close browser"
 
 
 func _on_button_2_pressed():
@@ -62,7 +62,7 @@ func _on_button_pressed():
 func _on_button_pressed_email():
 	$GameStart/Email.hide()
 	$"Internet-Arrow".show()
-	$Show_text.text = "Next lets open your main tool in work\n Open internet browser"
+	$Show_text.text = "Next lets open your main tool in work\n Open record app"
 
 
 func _on_close_pressed_VPN():
@@ -95,7 +95,7 @@ func _on_close_pressed_Workchat():
 func _on_close_pressed_RecordApp():
 	$GameStart/RecordApp.hide()
 	$"Chat-Arrow".show()
-	$Show_text.text = "Now when you know how you would work lets talk about another way of comunication, work chat\n Open work chat"
+	$Show_text.text = "Now when you know how you would comunicate on your work, lets see browser\n Open browser"
 	
 func _input(event):
 	if event.as_text() == "Enter":

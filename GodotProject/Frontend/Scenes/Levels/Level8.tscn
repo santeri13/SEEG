@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://0f6wmnlgh5fn" path="res://Frontend/Recourses/browser_13408985.png" id="2_fixg0"]
 [ext_resource type="Texture2D" uid="uid://cgr1ruanqrx1b" path="res://Frontend/Recourses/wallpaper_monitor.png" id="3_n3ei4"]
 [ext_resource type="Texture2D" uid="uid://berhbt8ceajj5" path="res://Frontend/Recourses/mail_9068642.png" id="3_w41ui"]
-[ext_resource type="Texture2D" uid="uid://derhselvkci6d" path="res://Frontend/Recourses/meetme.png" id="4_aexen"]
 [ext_resource type="Texture2D" uid="uid://wj75lcanwg0g" path="res://Frontend/Recourses/vpn_9694717.png" id="5_0doa4"]
 [ext_resource type="PackedScene" uid="uid://dkrkk78fdiww6" path="res://Frontend/Scenes/Instruments/Email.tscn" id="6_qunc4"]
+[ext_resource type="Texture2D" uid="uid://piktxiednwh" path="res://Frontend/Recourses/browser.png" id="6_v0b6w"]
 [ext_resource type="PackedScene" uid="uid://qxtpt0gymowq" path="res://Frontend/Scenes/Instruments/VPN.tscn" id="7_vdoaq"]
 [ext_resource type="PackedScene" uid="uid://j1gaj4y3ktw1" path="res://Frontend/Scenes/Instruments/WorkChat.tscn" id="8_prl6s"]
 [ext_resource type="PackedScene" uid="uid://csuhyqjgu6da8" path="res://Frontend/Scenes/Instruments/RecordApp.tscn" id="9_4ommj"]
@@ -71,10 +71,10 @@ offset_right = -576.0
 offset_bottom = -84.5919
 flat = true
 
-[node name="Meetme" type="Sprite2D" parent="GameStart/Button3"]
+[node name="Browser" type="Sprite2D" parent="GameStart/Button3"]
 position = Vector2(45, 57.4206)
 scale = Vector2(0.13916, 0.165109)
-texture = ExtResource("4_aexen")
+texture = ExtResource("6_v0b6w")
 
 [node name="Button4" type="Button" parent="GameStart"]
 offset_left = -660.0

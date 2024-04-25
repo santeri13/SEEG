@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://derhselvkci6d"
-path="res://.godot/imported/meetme.png-b0e2366cb8d0f0bafb2d76b16b0c8ba1.ctex"
+uid="uid://piktxiednwh"
+path="res://.godot/imported/browser.png-a7dd815832b3a822b0ccaba7e6db8ac5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Frontend/Recourses/meetme.png"
-dest_files=["res://.godot/imported/meetme.png-b0e2366cb8d0f0bafb2d76b16b0c8ba1.ctex"]
+source_file="res://Frontend/Recourses/browser.png"
+dest_files=["res://.godot/imported/browser.png-a7dd815832b3a822b0ccaba7e6db8ac5.ctex"]
 
 [params]
 
