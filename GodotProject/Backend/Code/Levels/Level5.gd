@@ -25,7 +25,7 @@ func _ready():
 	
 	var emails = []
 	emails.append("support_admin@utcorp.com,Today tasks,Adjustment required for NE9167: Change the arrival country to France. Also update needed for OI5832: Change the company name to Hellenic Logistics Solutions.,OK,''")
-	emails.append("suto.kazuki@utcorp.com,Cyber check,Yestarday was cyberattack which changed our links for our resources. Right now our team worked on them and all is ok but for addtionla check every worker go py provided link www.official.utcorp.com and check if all work correct,malisiouse,''")
+	emails.append("admin@ytcorp.com,Cyber check,Yesterday was a cyberattack that changed our links for our resources. Our team is working on fixing this issue, and they say they have nearly fixed it. For additional check every worker must go to the link www.official.utcorp.com to check if all work is correct.,malisiouse,''")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:
 		file.store_line(email)

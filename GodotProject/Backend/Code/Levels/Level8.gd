@@ -17,14 +17,17 @@ var records_counter = 0
 
 func _ready():
 	load_data()
-	var f = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ)
-	var emails = f.get_as_text().split("\n")
-	f.close()
-	emails.remove_at(emails.size()-1)
+	
+	##var f = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ)
+	##var emails = f.get_as_text().split("\n")
+	##f.close()
+	##emails.remove_at(emails.size()-1)
+	
+	var emails = []
 	emails.append("support_admin@utcorp.com,Today tasks,Adjustment required for BG1094: Change the departure country to Finland. Also correction needed for EC2675: Change the arrival date to 08.05.2024.,OK,''")
 	emails.append("support_admin@utcorp.com,Additional tasks,Update needed for JN5204: Change the company name to Italian Express Logistics. Also modification required for KP9013: Change the departure date to 16.05.2024 and the arrival date to 20.05.2024.,OK,''")
 	emails.append("suto.kazuki@utcorp.com,Problem with webpages,Our company lost some data related with workers from this department. Some data was restored but to finnish procedure pleae go to www.legit.utcorpi.com and provide some infromation,malisiouse,''")
-	emails.append("tech_guy@utcorpi.com,VPN access chnage,Can you change your VPN path to this 110.0.0.1/24,malisiouse,''")
+	emails.append("tech_guy@utcorpi.com,VPN access chnage,Can you change your VPN path to 110.0.0.1/24.Our team to check if connection works on this path.,malisiouse,''")
 	emails.append("ralf.cout@utcorps.com,VPN access chnage,Our company update infromation in system and we reqire that all personal send their infromation with credentials on mail. Please send your infromation by the end of the day,malisiouse,This is my credentials")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:

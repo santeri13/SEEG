@@ -85,6 +85,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Email_text" type="ColorRect" parent="Panel"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.259
@@ -128,7 +129,6 @@ anchor_right = 0.998358
 anchor_bottom = 0.886476
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 17
-placeholder_text = "aaaaaaaaaa"
 editable = false
 wrap_mode = 1
 metadata/_edit_use_anchors_ = true

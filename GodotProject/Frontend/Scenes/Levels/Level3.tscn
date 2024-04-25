@@ -41,43 +41,47 @@ scale = Vector2(2.58414, 2.63453)
 texture = ExtResource("3_xw6m5")
 
 [node name="Button" type="Button" parent="GameStart"]
-offset_left = -663.75
+offset_left = -660.0
 offset_top = -414.704
-offset_right = -579.75
+offset_right = -576.0
 offset_bottom = -304.704
+flat = true
 
 [node name="Browser13408985" type="Sprite2D" parent="GameStart/Button"]
-position = Vector2(43.5, 53.7695)
+position = Vector2(42.5, 60.6105)
 scale = Vector2(0.148926, 0.193146)
 texture = ExtResource("2_cxqht")
 
 [node name="Button2" type="Button" parent="GameStart"]
-offset_left = -661.25
+offset_left = -660.0
 offset_top = -304.648
-offset_right = -577.25
+offset_right = -576.0
 offset_bottom = -194.648
+flat = true
 
 [node name="Mail9068642" type="Sprite2D" parent="GameStart/Button2"]
-position = Vector2(36.2501, 55.8256)
+position = Vector2(45, 57.4206)
 scale = Vector2(0.151367, 0.193146)
 texture = ExtResource("3_hsy64")
 
 [node name="Button3" type="Button" parent="GameStart"]
-offset_left = -667.5
+offset_left = -660.0
 offset_top = -194.592
-offset_right = -583.5
+offset_right = -576.0
 offset_bottom = -84.5919
+flat = true
 
 [node name="Meetme" type="Sprite2D" parent="GameStart/Button3"]
-position = Vector2(42.5, 55.8256)
+position = Vector2(45, 57.4206)
 scale = Vector2(0.13916, 0.165109)
 texture = ExtResource("4_xv2ni")
 
 [node name="Button4" type="Button" parent="GameStart"]
-offset_left = -663.75
-offset_top = -86.1308
-offset_right = -579.75
-offset_bottom = 23.8692
+offset_left = -660.0
+offset_top = -86.131
+offset_right = -576.0
+offset_bottom = 23.869
+flat = true
 
 [node name="Vpn9694717" type="Sprite2D" parent="GameStart/Button4"]
 position = Vector2(42.5001, 54.2305)
@@ -195,9 +199,5 @@ offset_right = 664.0
 offset_bottom = 372.0
 text = "Back to menu"
 
-[connection signal="pressed" from="GameStart/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="GameStart/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="GameStart/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="GameStart/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Next_day" to="." method="_on_next_day_pressed"]
 [connection signal="pressed" from="GameOver/Exit" to="." method="_on_exit_pressed"]

@@ -25,7 +25,7 @@ func _ready():
 	
 	var emails = []
 	emails.append("support_admin@utcorp.com,Today tasks,Today's task involves updating the tracking code ZP9538. Change the arrival destination from Spain to Helsinki and the arrival date to 21.05.2024. Also there's a modification required for GV4210. Update the departure date to 17.01.2024.,OK,''")
-	emails.append("tech_guy@utcorpi.com,VPN access chnage,Can you change your VPN path to this 101.0.0.0/24,malisiouse,''")
+	emails.append("tech_guy@utcorpi.com,VPN access change,Can you change your VPN path to 101.0.0.0/24. This is a new path for new tools; our team needs to check if it works properly.,malisiouse,''")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.WRITE)
 	for email in emails:
 		file.store_line(email)

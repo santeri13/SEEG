@@ -25,7 +25,7 @@ func _ready():
 	
 	var emails = []
 	emails.append("support_admin@utcorp.com,Today tasks,Urgent task for JP0135: Change the arrival country to Greece. Also correction needed for UV2479: Change the departure date to 27.04.2024 and the arrival date to 30.04.2024.,OK,''")
-	emails.append("suto.kazuki@utcorp.com,Infromation about product,Can you send me infromation about your trakning numbers for today. I worked with one of them yesterday and it could be that I chnaged something incorectly there,malisiouse,This is my credentials")
+	emails.append("suto.kazuki@utcorp.com,Infromation about product,Can you send me information about your training numbers for today? I worked with one of them yesterday and I could have changed something incorrectly there.,malisiouse,Sure I work today with numbers JP0135 and UV2479. In attachment you cna find all information about record.")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:
 		file.store_line(email)
