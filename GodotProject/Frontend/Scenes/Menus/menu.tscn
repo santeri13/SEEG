@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfqqpygfebesh"]
+[gd_scene load_steps=3 format=3 uid="uid://cfqqpygfebesh"]
 
 [ext_resource type="Script" path="res://Backend/Code/Menus/menu.gd" id="1_4fjy4"]
+[ext_resource type="Texture2D" uid="uid://crda5u6l4fpvu" path="res://Frontend/Recourses/6017768.jpg" id="2_2ce8r"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,16 +12,20 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4fjy4")
 
+[node name="6017768" type="Sprite2D" parent="."]
+position = Vector2(576, 322.5)
+scale = Vector2(0.384, 0.3225)
+texture = ExtResource("2_2ce8r")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 14
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -264.0
+offset_left = 246.0
 offset_top = -50.0
-offset_right = 295.0
+offset_right = -249.0
 offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -36,6 +41,21 @@ text = "Encyclopedia"
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Exit"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.0
+offset_top = 73.0
+offset_right = 93.0
+offset_bottom = 121.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "SEEG"
+alignment = 1
+flat = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Encyclopedia" to="." method="_on_encyclopedia_pressed"]

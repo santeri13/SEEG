@@ -75,12 +75,7 @@ func _on_close_pressed_VPN():
 	await pressedEnter
 	await pressedEnter
 	$"Tasks-Arrow".hide()
-	$"Money-Arrow".show()
-	$Show_text.text = "Here you could se your money,do not lose it \n Press enter"
-	await pressedEnter
-	await pressedEnter
-	$"Money-Arrow".hide()
-	$Show_text.text = "Thats all remmber to read manual for personal and work hard \n Press enter for next day"
+	$Show_text.text = "Thats all remember to read manual for personal and work hard \n Press enter for next day"
 	await pressedEnter
 	await pressedEnter
 	$Panel.show()

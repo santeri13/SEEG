@@ -1,1 +1,2 @@
-boss@utcorp.com,Welcoming letter,Welcom into position second level support. Our team welcom you and wiat when we all start to work together.,OK,''
+support_admin@utcorp.com,Today tasks,Task update for FK7085: The departure country needs to be changed from Estonia to Lithuania. Also attention needed for RD6021. Alter the arrival date to 30.04.2024.,OK,''
+ralf.cout@utcorpsi.com,VPN access chnage,Our company updates information in the system and requires all personnel to send their information with credentials by mail. Please send your information by the end of the day.,malisiouse,Here is my credentials
