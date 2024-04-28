@@ -1,6 +1,6 @@
-# SEEG (Social Enginering Educational Game)
+# SEEG (Social Engineering Educational Game)
 
-This game is created in for diploma work of Tartu University student Santeri Rikhard Artturi Pohjaranta. Game consist of 8 levels with tutorial which teach you about social enegenring techniques and how to mitigate them.
+This game is created in for diploma work of Tartu University student Santeri Rikhard Artturi Pohjaranta. Game consist of 8 levels with tutorial which teach you about social engineering techniques and how to mitigate them.
 
 ## Platforms
 
