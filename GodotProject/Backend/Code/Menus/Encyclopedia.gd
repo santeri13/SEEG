@@ -3,8 +3,10 @@ extends Control
 var save_path = "user://data.save"
 
 var level = 0
-var VPN = false
+var mistakes = 0
+var money = 10000
 var Wrong_path = false
+var VPN = false
 var Malisiouse_prize = false
 var Maliciouse_link = false
 var Data_protection = false
@@ -59,6 +61,8 @@ func load_data():
 	if FileAccess.file_exists(save_path):
 		var file = FileAccess.open(save_path,FileAccess.READ)
 		level = file.get_var(level)
+		mistakes = file.get_var(mistakes)
+		money = file.get_var(money)
 		VPN = file.get_var(VPN)
 		Wrong_path = file.get_var(Wrong_path)
 		Malisiouse_prize = file.get_var(Malisiouse_prize)
@@ -166,3 +170,7 @@ func _on_maiciouse_email_2_pressed():
 3. You cannot give infromation about shippment to other person who are not related with it. This could cause reputaional damage to company
 
 4. Check temaplate if there is something strange. As practice company email is written in one style and if there is used two styles or something which is not common practice in company email messages then it could be a trigger for action"
+
+
+func _on_backbutton_pressed():
+	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")

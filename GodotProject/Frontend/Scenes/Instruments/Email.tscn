@@ -85,16 +85,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Email_text" type="ColorRect" parent="Panel"]
-visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.259
 anchor_top = 0.079
-anchor_right = 0.259
+anchor_right = 0.997
 anchor_bottom = 1.00309
-offset_left = -0.368011
+offset_left = 298.0
 offset_top = -0.192001
-offset_right = 849.632
+offset_right = -0.544067
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 

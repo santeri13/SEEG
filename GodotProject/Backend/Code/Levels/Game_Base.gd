@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 signal pressedEnter
 
 var save_path = "user://data.save"
