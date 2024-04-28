@@ -30,18 +30,18 @@ func _ready():
 	for email in emails:
 		file.store_line(email)
 	file.close()
-	$GameStart/Vpn.connect("hacked",_hacked_message)
-	$GameStart/Email.connect("RightReport",_correct_report)
-	$GameStart/Email.connect("WrongReport",_wrong_report)
-	$GameStart/Email.connect("AnswerSend",_answer_send)
-	$GameStart/WorkChat.connect("CompanyWebpage",_companydata_send)
-	$GameStart/RecordApp.connect("RecordChange",_record_chnage)
-	$GameStart/RecordApp.connect("FalseChange",_false_change)
-	$GameStart/Vpn.connect("CloseVPN",_on_close_pressed_Vpn)
-	$GameStart/Email.connect("CloseEmail",_on_close_pressed_Email)
-	$GameStart/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
-	$GameStart/WorkChat.connect("CloseWorkChat",_on_close_pressed_WorkChat)
-	$GameStart/Book.connect("CloseBook",_close_book)
+	$GameStart/Wallpaper/Vpn.connect("hacked",_hacked_message)
+	$GameStart/Wallpaper/Email.connect("RightReport",_correct_report)
+	$GameStart/Wallpaper/Email.connect("WrongReport",_wrong_report)
+	$GameStart/Wallpaper/Email.connect("AnswerSend",_answer_send)
+	$GameStart/Wallpaper/WorkChat.connect("CompanyWebpage",_companydata_send)
+	$GameStart/Wallpaper/RecordApp.connect("RecordChange",_record_chnage)
+	$GameStart/Wallpaper/RecordApp.connect("FalseChange",_false_change)
+	$GameStart/Wallpaper/Vpn.connect("CloseVPN",_on_close_pressed_Vpn)
+	$GameStart/Wallpaper/Email.connect("CloseEmail",_on_close_pressed_Email)
+	$GameStart/Wallpaper/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
+	$GameStart/Wallpaper/WorkChat.connect("CloseWorkChat",_on_close_pressed_WorkChat)
+	$GameStart/Wallpaper/Book.connect("CloseBook",_close_book)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -49,22 +49,22 @@ func _process(delta):
 	pass
 
 func _on_button_4_pressed():
-	$GameStart/Vpn.show()
+	$GameStart/Wallpaper/Vpn.show()
 
 
 func _on_button_3_pressed():
-	$GameStart/WorkChat.show()
+	$GameStart/Wallpaper/WorkChat.show()
 
 
 func _on_button_2_pressed():
-	if $GameStart/Email.has_method("_on_inbox_pressed"):
-		$GameStart/Email._on_inbox_pressed()
-	$GameStart/Email.show()
-	$GameStart/List_of_tasks/Text_List_of_task.text = "Tasks:\nAM7148: \n \t company name to Swiss Cargo Solutions \n ZT8032: \n \t arrival from Belarus to Ukraine"
+	if $GameStart/Wallpaper/Email.has_method("_on_inbox_pressed"):
+		$GameStart/Wallpaper/Email._on_inbox_pressed()
+	$GameStart/Wallpaper/Email.show()
+	$GameStart/Wallpaper/List_of_tasks/Text_List_of_task.text = "Tasks:\nAM7148: \n \t company name to Swiss Cargo Solutions \n ZT8032: \n \t arrival from Belarus to Ukraine"
 
 
 func _on_button_pressed():
-	$GameStart/RecordApp.show()
+	$GameStart/Wallpaper/RecordApp.show()
 	
 func _hacked_message():
 	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
@@ -102,7 +102,7 @@ func _answer_send():
 	$Show_text.hide()
 	
 func _companydata_send():
-	$GameStart/WorkChat.hide()
+	$GameStart/Wallpaper/WorkChat.hide()
 	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
 	It is good that we have backups, next time pay close attention what you do.\n Press eneter to close"
 	$Show_text.show()
@@ -125,19 +125,19 @@ func _input(event):
 
 
 func _on_close_pressed_Email():
-	$GameStart/Email.hide()
+	$GameStart/Wallpaper/Email.hide()
 
 
 func _on_close_pressed_Vpn():
-	$GameStart/Vpn.hide()
+	$GameStart/Wallpaper/Vpn.hide()
 
 
 func _on_close_pressed_WorkChat():
-	$GameStart/WorkChat.hide()
+	$GameStart/Wallpaper/WorkChat.hide()
 
 
 func _on_close_pressed_RecordApp():
-	$GameStart/RecordApp.hide()
+	$GameStart/Wallpaper/RecordApp.hide()
 
 func load_data():
 	if FileAccess.file_exists(save_path):
@@ -160,7 +160,7 @@ func read_mistakes():
 	
 func _record_chnage():
 	records_counter = records_counter + 1
-	$GameStart/RecordApp.hide()
+	$GameStart/Wallpaper/RecordApp.hide()
 	$Show_text.text = "Record changed, good job\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
@@ -219,7 +219,7 @@ func _on_back_to_menu_pressed():
 	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")
 	
 func _on_book_button_pressed():
-	$GameStart/Book.show()
+	$GameStart/Wallpaper/Book.show()
 
 func _close_book():
-	$GameStart/Book.hide()
+	$GameStart/Wallpaper/Book.hide()

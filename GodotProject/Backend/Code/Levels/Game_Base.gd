@@ -18,10 +18,10 @@ func _ready():
 	await pressedEnter
 	$"Email-Arrow".show()
 	$Show_text.text = "Lets start with mailbox where you can see mails which you recive on work\n Open mail"
-	$GameStart/Vpn.connect("CloseVPN",_on_close_pressed_VPN)
-	$GameStart/Email.connect("CloseEmail",_on_button_pressed_email)
-	$GameStart/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
-	$GameStart/WorkChat.connect("CloseWorkChat",_on_close_pressed_Workchat)
+	$GameStart/Wallpaper/Vpn.connect("CloseVPN",_on_close_pressed_VPN)
+	$GameStart/Wallpaper/Email.connect("CloseEmail",_on_button_pressed_email)
+	$GameStart/Wallpaper/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
+	$GameStart/Wallpaper/WorkChat.connect("CloseWorkChat",_on_close_pressed_Workchat)
 	
 	
 
@@ -31,42 +31,42 @@ func _process(delta):
 
 
 func _on_button_4_pressed():
-	$GameStart/Vpn.show()
+	$GameStart/Wallpaper/Vpn.show()
 	$"VPN-Arrow".hide()
 	$Show_text.text = "This is VPN application which connctyou with our organization network. It is xtremely rare that you would need tou use it but sometimes happens\n Close VPM app"
 
 
 func _on_button_3_pressed():
-	$GameStart/WorkChat.show()
+	$GameStart/Wallpaper/WorkChat.show()
 	$"Chat-Arrow".hide()
 	$Show_text.text = "Here you can access tools which company us by browser. You can access only company provided websites. You can check information about them later in Book of Knowlege\n Close browser"
 
 
 func _on_button_2_pressed():
-	if $GameStart/Email.has_method("_load_file"):
-		$GameStart/Email._load_file('res://Backend/Text Files/Email/inbox.txt')
-	$GameStart/Email.show()
+	if $GameStart/Wallpaper/Email.has_method("_load_file"):
+		$GameStart/Wallpaper/Email._load_file('res://Backend/Text Files/Email/inbox.txt')
+	$GameStart/Wallpaper/Email.show()
 	$"Email-Arrow".hide()
 	$Show_text.text = "Here you can answers on mail, delete or report it if you find something suspiscious\n Close mail"
 
 
 func _on_button_pressed():
-	$GameStart/RecordApp.show()
+	$GameStart/Wallpaper/RecordApp.show()
 	$"Internet-Arrow".hide()
 	$Show_text.text = "As you can see here you need tracking code of product to do changes in there. \n Press enter to next"
 	await pressedEnter
 	await pressedEnter
 	$Show_text.text = "Tracking numbers come on your email or in work chat. Now I will give you one as practice. Put there (PL289087) \n Enter code in app"
-	$GameStart/RecordApp.connect("openRecord",_show_message)
+	$GameStart/Wallpaper/RecordApp.connect("openRecord",_show_message)
 
 func _on_button_pressed_email():
-	$GameStart/Email.hide()
+	$GameStart/Wallpaper/Email.hide()
 	$"Internet-Arrow".show()
 	$Show_text.text = "Next lets open your main tool in work\n Open record app"
 
 
 func _on_close_pressed_VPN():
-	$GameStart/Vpn.hide()
+	$GameStart/Wallpaper/Vpn.hide()
 	$Show_text.text = "Also, there is some things which could help you in your work\n Press enter"
 	await pressedEnter
 	await pressedEnter
@@ -82,13 +82,13 @@ func _on_close_pressed_VPN():
 
 
 func _on_close_pressed_Workchat():
-	$GameStart/WorkChat.hide()
+	$GameStart/Wallpaper/WorkChat.hide()
 	$"VPN-Arrow".show()
 	$Show_text.text = "Last one could be intrestng to you, becaus you could you use it before\n Open VPN app"
 
 
 func _on_close_pressed_RecordApp():
-	$GameStart/RecordApp.hide()
+	$GameStart/Wallpaper/RecordApp.hide()
 	$"Chat-Arrow".show()
 	$Show_text.text = "Now when you know how you would comunicate on your work, lets see browser\n Open browser"
 	
