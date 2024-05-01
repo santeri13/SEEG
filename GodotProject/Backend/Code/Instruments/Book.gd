@@ -44,4 +44,8 @@ func _on_links_pressed():
 
 
 func _on_close_book_pressed():
+	$Tablet/Links_note.hide()
+	$Tablet/Email_note.hide()
+	$Tablet/Report_note.hide()
+	$Tablet/VPN_note.hide()
 	CloseBook.emit()

@@ -76,13 +76,13 @@ func load_data():
 func _on_maiciouse_email_pressed():
 	$Explanation.show()
 	$Explanation/Name.text = "Email Phishing"
-	$Explanation/Explanation.text ="Phishing is attack in which attacker write message to target by email, chat or other tool of text comunication and try to recive from it something interesting to attacker. Target of attcker could br personal information, bank account information or intalling on target workstation malware which collect user data. In this example user recive message from another worker who need information about record which he work ealier but cannot recive access for it becasue his acount was locked"
-	$Explanation/Mitigation.text = "Here is instruction on what to do to not find yourself in such situaion:
-1. If his account was locked then it was done on purpose.
+	$Explanation/Explanation.text ="Phishing is an attack in which an attacker writes a message to a target by email, chat, or other text communication tool and tries to receive something interesting. The attacker's target could be personal information, bank account information, or installing on target workstation malware, which collects user data. In this example, the user received a message from another worker who needed information about a record that he worked on ealier but could not receive access to it because his account was locked."
+	$Explanation/Mitigation.text = "Here are instructions on what to do to not find yourself in such a situation:
+1. If his account was locked, then it was done on purpose.
 
-2. If he have problem with account then he need to go to support and recive help there.
+2. If he has a problem with the account, he must go to support and receive help there.
 
-3. You cannot give infromation about shippment to other person who are not related with it. This could cause reputaional damage to company"
+3. You cannot give information about the shipment to other unrelated people. This could cause reputational damage to the company."
 
 
 func _on_buttonclose_pressed():
@@ -94,24 +94,24 @@ func _on_buttonclose_pressed():
 func _on_vpn_pressed():
 	$Explanation.show()
 	$Explanation/Name.text = "VPN phishing"
-	$Explanation/Explanation.text = "Type of social engenering attack when attacker give target address by which he access to private networ. When target is connected he could see trafic from user. This could casue loss of your private data as passwords from accounts, private photo or video leaks and other sensitive infromation."
-	$Explanation/Mitigation.text = "Here is instruction on what to do to not find yourself in such situaion:
+	$Explanation/Explanation.text = "Type of social engineering attack when attacker gives target address by which he accesses to the private network. When the target is connected, the attacker could see data traffic from a user. This could cause loss of your private data, such as passwords from accounts, private photo or video leaks, and other sensitive information."
+	$Explanation/Mitigation.text = "Here are instructions on what to do to not find yourself in such a situation:
 		
-1. Do not connect to network in which security is under question
+1. Do not connect to a network in which security is under question
 
-2. If you still like to check if given VPN address then do not login with credentials from primary accounts and do not go to websites which could give bad impression about you"
+2. If you still want to check the given VPN address, do not log in with credentials from primary accounts, and do not go to websites with an unsecured connection."
 
 func _on_wrong_path_pressed():
 	$Explanation.show()
 	$Explanation/Name.text = "Pharming with known webpage"
-	$Explanation/Explanation.text = "Phishing is attack in which attacker create copy of original website or profile and use it to collect data from target impersonating itself as legitimate. In this example we have original link of the company where content was chnaged that hacker collect information from users."
-	$Explanation/Mitigation.text = "Here is instruction on what to do to not find yourself in such situaion:
+	$Explanation/Explanation.text = "Pharming is an attack in which the attacker creates a copy of the original website or profile and uses it to collect data from the target, impersonating itself as legitimate. In this example, we have an original link of the company where the content was changed so that hacker collect information from users."
+	$Explanation/Mitigation.text = "Here are instructions on what to do to not find yourself in such a situation:
 		
-1. Check contanet on webpage. Legitimate company with reputaion cretae website with good design.
+1. Check the content on a webpage. A legitimate company with a good reputation creates a website with good design.
 
-2. Google infromation on this domain and related with it. It could be possible that you could find information about recent hack of company service
+2. Google information on this domain. It could be possible that you could find information about a recent hack of company service
 
-3. Companies do not collect any personal data if it is not related with work or future contacts with perosn which they are interested"
+3. Companies do not collect any personal data if it is not related to work or future contacts with a perosn which they are interested"
 
 
 
@@ -119,57 +119,57 @@ func _on_wrong_path_pressed():
 func _on_malisiouse_prize_pressed():
 	$Explanation.show()
 	$Explanation/Name.text = "Pharming with prize"
-	$Explanation/Explanation.text = "Phsihng is attack in which attacker create copy of original website or profile and use it to collect data from target impersonating itself as legitimate. In this example attacker cretae website with form. Then he send to target email about that he win a prize and to recive it he need to provide personal infromation."
-	$Explanation/Mitigation.text = "Here is instruction on what to do to not find yourself in such situaion:
+	$Explanation/Explanation.text = "Pharming is an attack in which the attacker creates a copy of the original website or profile and uses it to collect data from the target, impersonating itself as legitimate. In this example, the attacker creates a website with a form. Then he sends a targeted email that target wins a prize and to receive it, he needs to provide personal information."
+	$Explanation/Mitigation.text = "Here are instructions on what to do to not find yourself in such a situation:
 		
-1. Google about such contest. If you was selected ro recive prize in contest about which you do not know then it is already suspiciouse.
+1. Google about such contests. If you were selected to receive a prize in a contest about which you do not know, then it is already suspicious.
 
-2. It could be that attacker could write that for reciveing prize on your bank account you need to write it in form. Do not provide any information which is related to your bank accounts. By such kind of maniplation they could recive infromation about you bank card and CVV code by which they could recive access to your money.
+2. the attacker could have written, 'To receive a prize on your bank account, you need to write in from your bank account or card data'. Do not provide any information related to your bank accounts. By such manipulation, attacker could receive information about your bank card number and CVV code, by which the attacker could obtain access to your money.
 
-3. If you need to recive a prize then write back that you recive it only in private maner. You go to company office which do lottery and recive proze there"
+3. If you need to receive a prize, write back that you received it only privately. You go to the company office which does the lottery and receive the prize there"
 
 
 func _on_maliciouse_link_pressed():
 	$Explanation.show()
 	$Explanation/Name.text = "Pharming with malisious link"
-	$Explanation/Explanation.text = "Pharming is attack in which attacker create copy of original website or profile and use it to collect data from target impersonating itself as legitimate. In this example user recive a link to website link which imitates the orginal company website. User which would see original design of company website do not think about chnaged link to it and could provie his data to attacker"
-	$Explanation/Mitigation.text = "Here is instruction on what to do to not find yourself in such situaion:
+	$Explanation/Explanation.text = "Pharming is an attack in which the attacker creates a copy of the original website or profile and uses it to collect data from the target, impersonating itself as legitimate. In this example, users receive a link to the website, which imitates the original company website. Users who would see the original design of the company website do not think about changed links to it and could provide their data to attacker."
+	$Explanation/Mitigation.text = "Here are instructions on what to do to not find yourself in such a situation:
 		
-1. Check webpage in google or other serach websites. If you have small idea about that page is not legit then check it.
+1. Check the webpage on Google or other search websites. Check it if you have a slight idea that the page needs to be more legit.
 
-2. Small details is important. Hackers cannot on 100% copy webite of owner. If you find something strange in some tiny detail then try to check if it is originla website.
+2. Small details are important. Hackers cannot 100% copy the owner's website. If you find something strange in some tiny detail, check if it is an original website.
 
-3. Companies do not collect any personal data if it is not related with work or future contacts with perosn which they are interested."
+3. Companies do not collect personal data if it is unrelated to work or future contacts with the person they are interested in."
 
 
 func _on_data_protection_pressed():
 	$Explanation.show()
 	$Explanation/Name.text = "Phishig of personal data"
-	$Explanation/Explanation.text = "Phishing is attack in which attacker write message to target by email, chat or other tool of text comunication and try to recive from it something interesting to attacker. Target of attcker could br personal information, bank account information or intalling on target workstation malware which collect user data. In this example attacker send message to collect infromation about company workers"
-	$Explanation/Mitigation.text = "Here is instruction on what to do to not find yourself in such situaion:
+	$Explanation/Explanation.text = "Phishing is an attack in which an attacker writes a message to a target by email, chat, or other text communication tool and tries to receive something interesting. The attacker's target could be personal information, bank account information, or installing on target workstation malware, which collects user data. In this example, the attacker sends a message to collect information about company workers."
+	$Explanation/Mitigation.text = "Here are instructions on what to do to not find yourself in such a situation:
 		
-1. Check email from where it is written.
+1. Check the email from where it was written.
 
-2. If official messgae is related with you then it would start as example 'Dear Name' or something like that.
+2. If the official message is related to you, it would start as 'Dear Name' or something like that.
 
-3. Company already have all needed infromation on you. If they requeire additional infromation then they ask you personaly
+3. The company already has all the needed information on you. If they require additional information, then they ask you personally
 
-4. Do not forget to check email address from where it is written"
+4. Do not forget to check the email address from where it is written"
 
 
 
 func _on_maiciouse_email_2_pressed():
 	$Explanation.show()
 	$Explanation/Name.text = "Email Phishing"
-	$Explanation/Explanation.text ="Phishing is attack in which attacker write message to target by email, chat or other tool of text comunication and try to recive from it something interesting to attacker. Target of attcker could br personal information, bank account information or intalling on target workstation malware which collect user data. In this example user recive message that he require same thing as previosue one but it is differnt in one little detail."
-	$Explanation/Mitigation.text = "Here is instruction on what to do to not find yourself in such situaion:
-1. If his account was locked then it was done on purpose.
+	$Explanation/Explanation.text ="Phishing is an attack in which an attacker writes a message to a target by email, chat, or other text communication tool and tries to receive something interesting. The attacker's target could be personal information, bank account information, or installing on target workstation malware, which collects user data. In this example, the user receives the message that he requires the same thing as the previous one, but it is different by providing text of a different format, which is not expected from a company worker."
+	$Explanation/Mitigation.text = "Here are instructions on what to do to not find yourself in such a situation:
+1. If his account was locked, then it was done on purpose.
 
-2. If he have problem with account then he need to go to support and recive help there.
+2. If he has a problem with the account, he must go to support and receive help there.
 
-3. You cannot give infromation about shippment to other person who are not related with it. This could cause reputaional damage to company
+3. You cannot give information about the shipment to other unrelated people. This could cause reputational damage to the company.
 
-4. Check temaplate if there is something strange. As practice company email is written in one style and if there is used two styles or something which is not common practice in company email messages then it could be a trigger for action"
+4. Check the template if there is something strange. As a practice, company email is written in one style, and if there are two styles or something that is not common practice in company email messages, then it could be a trigger for the action."
 
 
 func _on_backbutton_pressed():

@@ -25,7 +25,7 @@ func _ready():
 	
 	var emails = []
 	emails.append("support_admin@utcorp.com,Today tasks,Today action required for WH3472: Change the departure country to Spain. Also update needed for QL8496: Change the company name to Balkan Express Logistics.,OK,''")
-	emails.append("sara.konor@utcorpp.com,Information about product,Can you send me information about the record with the number FR56297? I want to check it but I cannot access our tools right now.,malisiouse,Sure in attachment you cna find all information about record.")
+	emails.append("sara.konor@utcorpp.com,Information about product,Can you send me information about the record with the number FR56297? I want to check it but cannot access our tools.,malisiouse,Sure in attachment you cna find all information about record.")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:
 		file.store_line(email)
@@ -82,8 +82,7 @@ func _on_close_pressed_RecordApp():
 	$GameStart/Wallpaper/RecordApp.hide()#
 	
 func _hacked_message():
-	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
-	It is good that we have backups, next time pay close attention what you do.\n Press eneter to close"
+	$Show_text.text = "Manager: We received from our team that someone has changed records in our system. By logs records were changed from your credentials. It is good that we have backups. Next time, pay close attention to what you do.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -92,7 +91,7 @@ func _hacked_message():
 
 func _correct_report():
 	Maiciouse_email = true
-	$Show_text.text = "We checked your report, great job\n Press enter to close"
+	$Show_text.text = "We checked your report, great job.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -102,7 +101,7 @@ func _correct_report():
 		$Next_day.show()
 	
 func _wrong_report():
-	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time\n Press enter to close"
+	$Show_text.text = "We checked your report, and this email is all right. Please be more cautious next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -117,7 +116,7 @@ func _answer_send():
 	$Show_text.hide()
 	
 func _false_change():
-	$Show_text.text = "We recive information that records was placed icorectly. Please be better next time\n Press eneter to close"
+	$Show_text.text = "We received notice that the information in the record was incorrectly placed. Please be better next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter

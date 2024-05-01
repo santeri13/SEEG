@@ -143,7 +143,7 @@ offset_top = 0.287994
 offset_bottom = -0.320068
 grow_horizontal = 2
 grow_vertical = 2
-text = "VPN is used to recive access to network of our company. As second level support you cannot change any settings in VPN connection. If it is require then we send you private email messgae where we write about day and time when you need to provide your device to service center."
+text = "VPN is used to receive access to our company's network. As second-level support, you are forbidden to change any settings in the VPN connection. If required, we will send you a private email message where we will write about the day and time when you need to provide your device to the service center."
 editable = false
 wrap_mode = 1
 
@@ -192,7 +192,7 @@ offset_top = -0.384003
 offset_bottom = -0.128052
 grow_horizontal = 2
 grow_vertical = 2
-text = "Each worker of the company need to be cautiouse in his actions and actions which could bring harm to the company. By that, if you find something suspicious then send report about it, but please double check if you are sure that something what you found is dangerous."
+text = "Each company worker must be cautious in their actions, which could harm the company. If you find something suspicious, send a report about it, but please double-check if you are sure that something you found is dangerous."
 editable = false
 wrap_mode = 1
 
@@ -241,7 +241,7 @@ offset_top = -0.320007
 offset_bottom = 0.42395
 grow_horizontal = 2
 grow_vertical = 2
-text = "Each worker have their private email address with domain utcorp.com. Also we write in traditional style so no big letter or special characters in messages. This is also for security purpose."
+text = "Each worker has a private email address with the domain utcorp.com. Also, we write in a traditional style, so no big letters or special characters are in messages. This is also for security purposes."
 editable = false
 wrap_mode = 1
 
@@ -289,11 +289,11 @@ anchor_bottom = 1.0
 offset_top = 0.375977
 grow_horizontal = 2
 grow_vertical = 2
-text = "For security measures browser on your workstaions is rewriten that you cna only access company products on them. Fro now we work on 3 products which you will recive access in future: 
+text = "For security measures, the browser on your workstations is programmed so that you can only access company products on them. For now, we are working on three products to which you will receive access in the future: 
 support.utcorp.com
 it.utcorp.com
 source.utcorp.com
-If there would be new products then all information would be given here."
+All the information will be given here if there are new products."
 editable = false
 wrap_mode = 1
 

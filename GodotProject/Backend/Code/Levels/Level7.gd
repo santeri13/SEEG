@@ -67,8 +67,7 @@ func _on_button_pressed():
 	$GameStart/Wallpaper/RecordApp.show()
 	
 func _hacked_message():
-	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
-	It is good that we have backups, next time pay close attention what you do.\n Press eneter to close"
+	$Show_text.text = "Manager: We received from our team that someone has changed records in our system. It is coming from your credentials. It is good that we have backups. Next time, pay close attention to what you do.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -77,7 +76,7 @@ func _hacked_message():
 
 func _correct_report():
 	Maliciouse_link = true
-	$Show_text.text = "We checked your report, great job\n Press enter to close"
+	$Show_text.text = "We checked your report, great job.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -87,7 +86,7 @@ func _correct_report():
 		$Next_day.show()
 	
 func _wrong_report():
-	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time \n Press enter to close"
+	$Show_text.text = "We checked your report, and this email is all right. Please be more cautious next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -95,7 +94,7 @@ func _wrong_report():
 	read_mistakes()
 	
 func _answer_send():
-	$Show_text.text = "Answer send \n Press enter to close"
+	$Show_text.text = "Answer send\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -103,8 +102,7 @@ func _answer_send():
 	
 func _companydata_send():
 	$GameStart/Wallpaper/WorkChat.hide()
-	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
-	It is good that we have backups, next time pay close attention what you do.\n Press eneter to close"
+	$Show_text.text = "Manager: We received from our team about a DDOS attack using the credentails of our workers.  Next time, pay close attention to what you do.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -112,7 +110,7 @@ func _companydata_send():
 	read_mistakes()
 
 func _false_change():
-	$Show_text.text = "We recive information that records was placed icorectly. Please be better next time\n Press eneter to close"
+	$Show_text.text = "We received notice that the information in the record was incorrectly placed. Please be better next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter

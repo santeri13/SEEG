@@ -82,8 +82,7 @@ func _on_close_pressed_RecordApp():
 	$GameStart/Wallpaper/RecordApp.hide()
 	
 func _hacked_message():
-	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
-	It is good that we have backups, next time pay close attention what you do.\n Press enter to close"
+	$Show_text.text = "Manager: We received from our team that someone has changed records in our system. By logs records were changed from your credentials. It is good that we have backups. Next time, pay close attention to what you do.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -102,7 +101,7 @@ func _correct_report():
 		$Next_day.show()
 	
 func _wrong_report():
-	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time\n Press enter to close"
+	$Show_text.text = "We checked your report, and this email is all right. Please be more cautious next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -145,7 +144,7 @@ func _record_chnage():
 		$Next_day.show()
 
 func _false_change():
-	$Show_text.text = "We recive information that records was placed icorectly. Please be better next time\n Press enter to close"
+	$Show_text.text = "We received notice that the information in the record was incorrectly placed. Please be better next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter

@@ -25,7 +25,7 @@ func _ready():
 	
 	var emails = []
 	emails.append("support_admin@utcorp.com,Today tasks,Adjustment required for NE9167: Change the arrival country to France. Also update needed for OI5832: Change the company name to Hellenic Logistics Solutions.,OK,''")
-	emails.append("admin@ytcorp.com,Cyber check,Yesterday was a cyberattack that changed our links for our resources. Our team is working on fixing this issue, and they say they have nearly fixed it. For additional check every worker must go to the link www.official.utcorp.com to check if all work is correct.,malisiouse,''")
+	emails.append("admin@ytcorp.com,Cyber check,Yesterday there was a cyberattack that changed the links to our resources. Our team is working on fixing this issue, and they say they have nearly fixed it. For additional check every worker must go to the link www.official.utcorp.com to check if all work is correct.,malisiouse,''")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:
 		file.store_line(email)
@@ -67,8 +67,7 @@ func _on_button_pressed():
 	$GameStart/Wallpaper/RecordApp.show()
 	
 func _hacked_message():
-	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
-	It is good that we have backups, next time pay close attention what you do.\n Press eneter to close"
+	$Show_text.text = "Manager: We received from our team that someone has changed records in our system. It is coming from your credentials. It is good that we have backups. Next time, pay close attention to what you do.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -77,7 +76,7 @@ func _hacked_message():
 
 func _correct_report():
 	Wrong_path = true
-	$Show_text.text = "We checked your report, great job\n Press enter to close"
+	$Show_text.text = "We checked your report, great job.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -87,7 +86,7 @@ func _correct_report():
 		$Next_day.show()
 	
 func _wrong_report():
-	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time\n Press enter to close"
+	$Show_text.text = "We checked your report, and this email is all right. Please be more cautious next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -95,7 +94,7 @@ func _wrong_report():
 	read_mistakes()
 	
 func _answer_send():
-	$Show_text.text = "Answer send"
+	$Show_text.text = "Answer send\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -103,7 +102,7 @@ func _answer_send():
 	
 func _credential_send():
 	$GameStart/Wallpaper/WorkChat.hide()
-	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
+	$Show_text.text = "Manager: we recive from our team accessed our server and dowanloaded from there importnat data. By logs records was chnaged from your credentials.
 	It is good that we have backups, next time pay close attention what you do.\n Press eneter to close"
 	$Show_text.show()
 	await pressedEnter
@@ -112,7 +111,7 @@ func _credential_send():
 	read_mistakes()
 	
 func _false_change():
-	$Show_text.text = "We recive information that records was placed icorectly. Please be better next time\n Press eneter to close"
+	$Show_text.text = "We received notice that the information in the record was incorrectly placed. Please be better next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter

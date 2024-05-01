@@ -26,9 +26,9 @@ func _ready():
 	var emails = []
 	emails.append("support_admin@utcorp.com,Today tasks,Adjustment required for BG1094: Change the departure country to Finland. Also correction needed for EC2675: Change the arrival date to 08.05.2024.,OK,''")
 	emails.append("support_admin@utcorp.com,Additional tasks,Update needed for JN5204: Change the company name to Italian Express Logistics. Also modification required for KP9013: Change the departure date to 16.05.2024 and the arrival date to 20.05.2024.,OK,''")
-	emails.append("suto.kazuki@utcorp.com,Problem with webpages,Our company lost some data related with workers from this department. Some data was restored but to finnish procedure pleae go to www.legit.utcorpi.com and provide some infromation,malisiouse,''")
-	emails.append("tech_guy@utcorpi.com,VPN access chnage,Can you change your VPN path to 110.0.0.1/24.Our team to check if connection works on this path.,malisiouse,''")
-	emails.append("ralf.cout@utcorps.com,VPN access chnage,Our company update infromation in system and we reqire that all personal send their infromation with credentials on mail. Please send your infromation by the end of the day,malisiouse,This is my credentials")
+	emails.append("suto.kazuki@utcorp.com,Problem with webpages,Our company lost some data related to workers from this department. Some data was restored but to finish procedure please go to www.legit.utcorpi.com and provide some information.,malisiouse,''")
+	emails.append("tech_guy@utcorpi.com,VPN access chnage,Can you change your VPN path to 101.0.0.1/24. This is a new path for new tools; our team needs to check if it works properly.,malisiouse,''")
+	emails.append("ralf.cout@utcorps.com,VPN access chnage,Our company updates information in the system and requires all personnel to mail their information with credentials. Please send your information by the end of the day.,malisiouse,This is my credentials")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:
 		file.store_line(email)
@@ -70,8 +70,7 @@ func _on_button_pressed():
 	$GameStart/Wallpaper/RecordApp.show()
 	
 func _hacked_message():
-	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
-	It is good that we have backups, next time pay close attention what you do.\n Press eneter to close"
+	$Show_text.text = "Manager: We received from our team that someone has changed records in our system. It is coming from your credentials. It is good that we have backups. Next time, pay close attention to what you do.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -79,7 +78,7 @@ func _hacked_message():
 	read_mistakes()
 
 func _correct_report():
-	$Show_text.text = "We checked your report, great job\n Press eneter to close"
+	$Show_text.text = "We checked your report, great job.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -89,7 +88,7 @@ func _correct_report():
 		$GameFinnish.show()
 	
 func _wrong_report():
-	$Show_text.text = "We checked your report, with this email is all right, please be more cautios next time\n Press eneter to close"
+	$Show_text.text = "We checked your report, and this email is all right. Please be more cautious next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -97,7 +96,7 @@ func _wrong_report():
 	read_mistakes()
 	
 func _answer_send():
-	$Show_text.text = "Answer send\n Press eneter to close"
+	$Show_text.text = "Answer send\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -105,8 +104,7 @@ func _answer_send():
 	
 func _companydata_send():
 	$GameStart/Wallpaper/WorkChat.hide()
-	$Show_text.text = "Manager: we recive from our team that someone is chnanged records in our system. IT is comming from your credentials.
-	It is good that we have backups, next time pay close attention what you do.\n Press eneter to close"
+	$Show_text.text = "Manager: We received from our team about a DDOS attack using the credentails of our workers.  Next time, pay close attention to what you do.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
@@ -198,7 +196,7 @@ func _record_chnage():
 		$GameFinnish.show()
 
 func _false_change():
-	$Show_text.text = "We recive information that records was placed icorectly. Please be better next time\n Press enter to close"
+	$Show_text.text = "We received notice that the information in the record was incorrectly placed. Please be better next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
