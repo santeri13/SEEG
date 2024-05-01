@@ -22,16 +22,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a5dea")
 
-[node name="Show_text" type="TextEdit" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 307.0
-offset_top = 382.0
-offset_right = 849.0
-offset_bottom = 455.0
-editable = false
-metadata/_edit_use_anchors_ = true
-
 [node name="GameStart" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -239,6 +229,16 @@ offset_top = 321.0
 offset_right = 664.0
 offset_bottom = 372.0
 text = "Back to menu"
+
+[node name="Show_text" type="TextEdit" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.266493
+anchor_top = 0.589506
+anchor_right = 0.736979
+anchor_bottom = 0.70216
+editable = false
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="GameStart/Book_Button" to="." method="_on_book_button_pressed"]
 [connection signal="pressed" from="GameStart/Back_to_menu" to="." method="_on_back_to_menu_pressed"]
