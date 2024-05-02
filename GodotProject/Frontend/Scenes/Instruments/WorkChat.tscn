@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://j1gaj4y3ktw1"]
+[gd_scene load_steps=4 format=3 uid="uid://j1gaj4y3ktw1"]
 
 [ext_resource type="Script" path="res://Backend/Code/Instruments/WorkChat.gd" id="1_5vdxx"]
 [ext_resource type="Texture2D" uid="uid://bk1tnttmlnc1w" path="res://Frontend/Recourses/enter (1).png" id="2_qw7ao"]
+[ext_resource type="Texture2D" uid="uid://mk55wr4u222j" path="res://Frontend/Recourses/icons8-close-window-48.png" id="3_8q3cv"]
 
 [node name="WorkChat" type="Control"]
 layout_mode = 3
@@ -30,16 +31,6 @@ offset_top = 12.0
 offset_right = -0.0321045
 offset_bottom = 76.0
 texture_normal = ExtResource("2_qw7ao")
-
-[node name="Close" type="ColorPickerButton" parent="Panel"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -46.0
-offset_bottom = 42.0
-grow_horizontal = 0
-color = Color(1, 0, 0, 1)
 
 [node name="LinkEdit" type="LineEdit" parent="Panel"]
 layout_mode = 1
@@ -307,8 +298,22 @@ grow_horizontal = 2
 text = "Company name"
 alignment = 1
 
+[node name="Close" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_bottom = 48.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_8q3cv")
+texture_pressed = ExtResource("3_8q3cv")
+texture_hover = ExtResource("3_8q3cv")
+texture_disabled = ExtResource("3_8q3cv")
+texture_focused = ExtResource("3_8q3cv")
+
 [connection signal="pressed" from="Panel/TextureButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Panel/CompanyPhishing/OrderNumber/Send" to="." method="_on_sendcompanydata_pressed"]
 [connection signal="pressed" from="Panel/Prize/OrderNumber/Send" to="." method="_on_sendprize_pressed"]
 [connection signal="pressed" from="Panel/Credentials/OrderNumber/Send" to="." method="_on_sendcredential_pressed"]
+[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]

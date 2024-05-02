@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://qxtpt0gymowq"]
+[gd_scene load_steps=3 format=3 uid="uid://qxtpt0gymowq"]
 
 [ext_resource type="Script" path="res://Backend/Code/Instruments/VPN.gd" id="1_6pfjq"]
+[ext_resource type="Texture2D" uid="uid://mk55wr4u222j" path="res://Frontend/Recourses/icons8-close-window-48.png" id="2_vt223"]
 
 [node name="Vpn" type="Control"]
 layout_mode = 3
@@ -18,16 +19,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Close" type="ColorPickerButton" parent="Panel"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -52.0
-offset_bottom = 54.0
-grow_horizontal = 0
-color = Color(1, 0, 0, 1)
 
 [node name="Name" type="Label" parent="Panel"]
 layout_mode = 1
@@ -84,5 +75,19 @@ theme_override_font_sizes/font_size = 15
 text = "Connect"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
+[node name="Close" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_bottom = 48.0
+grow_horizontal = 0
+texture_normal = ExtResource("2_vt223")
+texture_pressed = ExtResource("2_vt223")
+texture_hover = ExtResource("2_vt223")
+texture_disabled = ExtResource("2_vt223")
+texture_focused = ExtResource("2_vt223")
+
 [connection signal="pressed" from="Panel/Send" to="." method="_on_send_pressed"]
+[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]

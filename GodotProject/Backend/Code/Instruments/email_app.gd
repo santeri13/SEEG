@@ -130,3 +130,4 @@ func _on_answer_send():
 
 func _on_close_button_pressed():
 	CloseEmail.emit()
+

@@ -40,6 +40,7 @@ func _ready():
 	$GameStart/Wallpaper/RecordApp.connect("CloseRecordApp",_on_close_pressed_RecordApp)
 	$GameStart/Wallpaper/WorkChat.connect("CloseWorkChat",_on_close_pressed_WorkChat)
 	$GameStart/Wallpaper/Book.connect("CloseBook",_close_book)
+	$GameStart/Wallpaper/RecordApp.connect("WorkedWithRecord",_worked_number)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -64,7 +65,9 @@ func _on_button_2_pressed():
 
 func _on_button_pressed():
 	$GameStart/Wallpaper/RecordApp.show()
-
+	for child in $GameStart/Wallpaper.get_children():
+		if child.has_method("level_check"):
+			child.level_check(1)
 
 func _on_close_pressed_Email():
 	$GameStart/Wallpaper/Email.hide()
@@ -205,3 +208,10 @@ func _on_book_button_pressed():
 
 func _close_book():
 	$GameStart/Wallpaper/Book.hide()
+	
+func _worked_number():
+	$Show_text.text = "You have already worked with this cargo, or you do not have access to it. \n Press enter to close"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()

@@ -2,21 +2,26 @@ extends Control
 signal pressedEnter
 
 var save_path = "user://data.save"
-
+var passclose = false
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var emails = []
-	emails.append("boss@utcorp.com,Welcoming letter,Welcom into position second level support. Our team welcom you and wiat when we all start to work together.,OK,''")
+	emails.append("boss@utcorp.com,Welcoming letter,Welcome into the position of second-level support. Our team welcomes you.,OK,''")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.WRITE)
 	for email in emails:
 		file.store_line(email)
 	file.close()
+	$GameStart/Wallpaper/Button.disabled = true
+	$GameStart/Wallpaper/Button2.disabled = true
+	$GameStart/Wallpaper/Button3.disabled = true
+	$GameStart/Wallpaper/Button4.disabled = true
 	$Show_text.text = "Hello, and welcome to your first day at your job. My name is Morty. I will teach you how to work with the tools that you will use on your job \n Press enter"
 	await pressedEnter
 	await pressedEnter
 	$"Email-Arrow".show()
+	$GameStart/Wallpaper/Button2.disabled = false
 	$Show_text.text = "Let's start with the mailbox where you can see the emails that you receive at work\n Open mail"
 	$GameStart/Wallpaper/Vpn.connect("CloseVPN",_on_close_pressed_VPN)
 	$GameStart/Wallpaper/Email.connect("CloseEmail",_on_button_pressed_email)
@@ -62,10 +67,13 @@ func _on_button_pressed():
 func _on_button_pressed_email():
 	$GameStart/Wallpaper/Email.hide()
 	$"Internet-Arrow".show()
+	$GameStart/Wallpaper/Button2.disabled = true
+	$GameStart/Wallpaper/Button.disabled = false
 	$Show_text.text = "Now open your primary tool\n Open record app"
 
 
 func _on_close_pressed_VPN():
+	$GameStart/Wallpaper/Button4.disabled = true
 	$GameStart/Wallpaper/Vpn.hide()
 	$Show_text.text = "Also, there are some things which could help you in your work\n Press enter"
 	await pressedEnter
@@ -84,13 +92,18 @@ func _on_close_pressed_VPN():
 func _on_close_pressed_Workchat():
 	$GameStart/Wallpaper/WorkChat.hide()
 	$"VPN-Arrow".show()
+	$GameStart/Wallpaper/Button3.disabled = true
+	$GameStart/Wallpaper/Button4.disabled = false
 	$Show_text.text = "The last one is not related much to your work, but it is important that you know about it \n Open VPN app"
 
 
 func _on_close_pressed_RecordApp():
-	$GameStart/Wallpaper/RecordApp.hide()
-	$"Chat-Arrow".show()
-	$Show_text.text = "Now that you know how you would communicate in your work, let's see browser\n Open browser"
+	if passclose == true:
+		$GameStart/Wallpaper/Button.disabled = true
+		$GameStart/Wallpaper/Button3.disabled = false
+		$GameStart/Wallpaper/RecordApp.hide()
+		$"Chat-Arrow".show()
+		$Show_text.text = "Now that you know how you would communicate in your work, let's see browser\n Open browser"
 	
 func _input(event):
 	if event.as_text() == "Enter":
@@ -123,3 +136,4 @@ func _on_next_day_pressed():
 
 func _show_message():
 	$Show_text.text = "Great job. Now you see information about this cargo, which you sometimes need to change to meet client needs. Now close app \n Close application"
+	passclose = true

@@ -176,14 +176,10 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.00682189
-anchor_top = -0.0995738
-anchor_right = 1.10007
-anchor_bottom = 1.27643
-offset_left = 0.354
-offset_top = 0.198002
-offset_right = 0.12793
-offset_bottom = -0.026062
+anchor_left = -0.0380334
+anchor_top = -0.00843882
+anchor_right = 1.01113
+anchor_bottom = 1.15612
 metadata/_edit_use_anchors_ = true
 
 [node name="Next_day" type="Button" parent="."]
@@ -208,29 +204,33 @@ grow_vertical = 2
 
 [node name="LineEdit" type="LineEdit" parent="GameOver"]
 layout_mode = 0
-offset_left = 308.0
-offset_top = 179.0
-offset_right = 877.0
-offset_bottom = 244.0
+anchor_left = 0.267361
+anchor_top = 0.276235
+anchor_right = 0.761285
+anchor_bottom = 0.376543
+offset_bottom = -1.52588e-05
 text = "Game Over"
 alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit2" type="LineEdit" parent="GameOver"]
 layout_mode = 0
-offset_left = 406.0
-offset_top = 265.0
-offset_right = 767.0
-offset_bottom = 296.0
-text = "You mad to may mistakes"
+anchor_left = 0.352431
+anchor_top = 0.408951
+anchor_right = 0.665799
+anchor_bottom = 0.45679
+text = "You made to may mistakes"
 alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Exit" type="Button" parent="GameOver"]
 layout_mode = 0
-offset_left = 511.0
-offset_top = 321.0
-offset_right = 664.0
-offset_bottom = 372.0
+anchor_left = 0.443576
+anchor_top = 0.49537
+anchor_right = 0.576389
+anchor_bottom = 0.574074
 text = "Back to menu"
+metadata/_edit_use_anchors_ = true
 
 [node name="Show_text" type="TextEdit" parent="."]
 visible = false

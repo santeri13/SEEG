@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpt2kcjnrcwgb"]
+[gd_scene load_steps=5 format=3 uid="uid://dpt2kcjnrcwgb"]
 
 [ext_resource type="Script" path="res://Backend/Code/Instruments/Book.gd" id="1_juhax"]
 [ext_resource type="Texture2D" uid="uid://sh74itpevsuf" path="res://Frontend/Recourses/tablet.png" id="2_ya8p5"]
 [ext_resource type="Texture2D" uid="uid://blhb1wmhvptvc" path="res://Frontend/Recourses/painting-mountain-lake-with-mountain-background.jpg" id="3_s3kf8"]
+[ext_resource type="Texture2D" uid="uid://c70p4h2p5w3es" path="res://Frontend/Recourses/icons8-close-window-96.png" id="4_k0qgm"]
 
 [node name="Book" type="Control"]
 layout_mode = 3
@@ -15,15 +16,18 @@ script = ExtResource("1_juhax")
 
 [node name="Tablet" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 619.0
-offset_bottom = 344.0
+anchors_preset = -1
+anchor_left = 0.00173611
+anchor_top = 0.00154321
+anchor_right = 1.00017
+anchor_bottom = 0.994136
+offset_right = 766.8
+offset_bottom = 428.8
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_ya8p5")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="Tablet"]
 layout_mode = 1
@@ -38,15 +42,19 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_s3kf8")
 
-[node name="CloseBook" type="ColorPickerButton" parent="Tablet/TextureRect"]
+[node name="CloseBook" type="TextureButton" parent="Tablet/TextureRect"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -61.0
-offset_bottom = 56.0
+offset_left = -96.0
+offset_bottom = 96.0
 grow_horizontal = 0
-color = Color(1, 0, 0, 1)
+texture_normal = ExtResource("4_k0qgm")
+texture_pressed = ExtResource("4_k0qgm")
+texture_hover = ExtResource("4_k0qgm")
+texture_disabled = ExtResource("4_k0qgm")
+texture_focused = ExtResource("4_k0qgm")
 
 [node name="LineEdit" type="LineEdit" parent="Tablet/TextureRect"]
 modulate = Color(1, 0.027451, 0.0745098, 1)
@@ -123,15 +131,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Close_VPN" type="ColorPickerButton" parent="Tablet/TextureRect/VPN_note"]
+[node name="Close_VPN" type="TextureButton" parent="Tablet/TextureRect/VPN_note"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -60.0
-offset_bottom = 57.0
+offset_left = -40.0
+offset_bottom = 40.0
 grow_horizontal = 0
-color = Color(1, 0, 0, 1)
+texture_normal = ExtResource("4_k0qgm")
+texture_pressed = ExtResource("4_k0qgm")
+texture_hover = ExtResource("4_k0qgm")
+texture_disabled = ExtResource("4_k0qgm")
+texture_focused = ExtResource("4_k0qgm")
 
 [node name="TextEdit" type="TextEdit" parent="Tablet/TextureRect/VPN_note"]
 layout_mode = 1
@@ -172,15 +184,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Close_Report" type="ColorPickerButton" parent="Tablet/TextureRect/Report_note"]
+[node name="Close_Report" type="TextureButton" parent="Tablet/TextureRect/Report_note"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -57.0
-offset_bottom = 56.0
+offset_left = -96.0
+offset_bottom = 96.0
 grow_horizontal = 0
-color = Color(1, 0, 0, 1)
+texture_normal = ExtResource("4_k0qgm")
+texture_pressed = ExtResource("4_k0qgm")
+texture_hover = ExtResource("4_k0qgm")
+texture_disabled = ExtResource("4_k0qgm")
+texture_focused = ExtResource("4_k0qgm")
 
 [node name="TextEdit" type="TextEdit" parent="Tablet/TextureRect/Report_note"]
 layout_mode = 1
@@ -221,15 +237,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Close_Email" type="ColorPickerButton" parent="Tablet/TextureRect/Email_note"]
+[node name="Close_Email" type="TextureButton" parent="Tablet/TextureRect/Email_note"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -60.0
-offset_bottom = 59.0
+offset_left = -96.0
+offset_bottom = 96.0
 grow_horizontal = 0
-color = Color(1, 0, 0, 1)
+texture_normal = ExtResource("4_k0qgm")
+texture_pressed = ExtResource("4_k0qgm")
+texture_hover = ExtResource("4_k0qgm")
+texture_disabled = ExtResource("4_k0qgm")
+texture_focused = ExtResource("4_k0qgm")
 
 [node name="TextEdit" type="TextEdit" parent="Tablet/TextureRect/Email_note"]
 layout_mode = 1
@@ -270,15 +290,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Close_Links" type="ColorPickerButton" parent="Tablet/TextureRect/Links_note"]
+[node name="Close_Links" type="TextureButton" parent="Tablet/TextureRect/Links_note"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -60.0
-offset_bottom = 57.0
+offset_left = -96.0
+offset_bottom = 96.0
 grow_horizontal = 0
-color = Color(1, 0, 0, 1)
+texture_normal = ExtResource("4_k0qgm")
+texture_pressed = ExtResource("4_k0qgm")
+texture_hover = ExtResource("4_k0qgm")
+texture_disabled = ExtResource("4_k0qgm")
+texture_focused = ExtResource("4_k0qgm")
 
 [node name="TextEdit" type="TextEdit" parent="Tablet/TextureRect/Links_note"]
 layout_mode = 1

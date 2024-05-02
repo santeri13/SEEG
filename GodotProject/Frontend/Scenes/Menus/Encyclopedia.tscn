@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://56dm5pdiavks"]
+[gd_scene load_steps=7 format=3 uid="uid://56dm5pdiavks"]
 
 [ext_resource type="Script" path="res://Backend/Code/Menus/Encyclopedia.gd" id="1_omqet"]
 [ext_resource type="Texture2D" uid="uid://dfs524qkgv8py" path="res://Frontend/Recourses/Light-surface-container.png" id="2_dhbiq"]
 [ext_resource type="Texture2D" uid="uid://6anm32slic78" path="res://Frontend/Recourses/6020105.jpg" id="2_u8cvo"]
 [ext_resource type="Texture2D" uid="uid://u605ox0e1klc" path="res://Frontend/Recourses/schwab-email.png" id="3_5y0vh"]
 [ext_resource type="Texture2D" uid="uid://c703oghmpqgn2" path="res://Frontend/Recourses/left-arrow-in-circular-button-black-symbol.png" id="5_jn57l"]
+[ext_resource type="Texture2D" uid="uid://mk55wr4u222j" path="res://Frontend/Recourses/icons8-close-window-48.png" id="6_87hpt"]
 
 [node name="Encyclopedia" type="Control"]
 layout_mode = 3
@@ -14,6 +15,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_omqet")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -79.0
+offset_bottom = 72.0
+grow_horizontal = 0
+icon = ExtResource("5_jn57l")
+flat = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -148,7 +160,6 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_dhbiq")
 
 [node name="Explanation" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -205,27 +216,21 @@ position = Vector2(819, 440)
 scale = Vector2(0.8, 0.833)
 texture = ExtResource("3_5y0vh")
 
-[node name="Close" type="ColorPickerButton" parent="Explanation"]
+[node name="Close" type="TextureButton" parent="Explanation"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -47.0
-offset_bottom = 41.0
+offset_left = -48.0
+offset_bottom = 48.0
 grow_horizontal = 0
-color = Color(1, 0, 0, 1)
+texture_normal = ExtResource("6_87hpt")
+texture_pressed = ExtResource("6_87hpt")
+texture_hover = ExtResource("6_87hpt")
+texture_disabled = ExtResource("6_87hpt")
+texture_focused = ExtResource("6_87hpt")
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -79.0
-offset_bottom = 72.0
-grow_horizontal = 0
-icon = ExtResource("5_jn57l")
-flat = true
-
+[connection signal="pressed" from="Button" to="." method="_on_backbutton_pressed"]
 [connection signal="pressed" from="VBoxContainer/Phishing" to="." method="_on_phishing_pressed"]
 [connection signal="pressed" from="VBoxContainer/PhishihgContainer/Data_protection" to="." method="_on_data_protection_pressed"]
 [connection signal="pressed" from="VBoxContainer/PhishihgContainer/Maiciouse_email" to="." method="_on_maiciouse_email_pressed"]
@@ -237,4 +242,3 @@ flat = true
 [connection signal="pressed" from="VBoxContainer/PharmingContainer/Malisiouse_prize" to="." method="_on_malisiouse_prize_pressed"]
 [connection signal="pressed" from="VBoxContainer/PharmingContainer/Maliciouse_link" to="." method="_on_maliciouse_link_pressed"]
 [connection signal="pressed" from="Explanation/Close" to="." method="_on_buttonclose_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_backbutton_pressed"]

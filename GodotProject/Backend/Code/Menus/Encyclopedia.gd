@@ -174,3 +174,7 @@ func _on_maiciouse_email_2_pressed():
 
 func _on_backbutton_pressed():
 	get_tree().change_scene_to_file("res://Frontend/Scenes/Menus/menu.tscn")
+
+
+func _on_close_pressed():
+	pass # Replace with function body.

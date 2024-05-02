@@ -1,3 +1,4 @@
-suto.kazuki@utcorp.com,Problem with webpages,Our company lost some data related with workers from this department. Some data was restored but to finnish procedure pleae go to www.legit.utcorpi.com and provide some infromation,malisiouse,''
+tech_guy@utcorpi.com,VPN access change,Can you change your VPN path to 101.0.0.0/24. This is a new path for new tools; our team needs to check if it works properly.,malisiouse,''
+legit.utcorpi.com and provide some infromation,malisiouse,''
 ntials
 work correct,malisiouse,''

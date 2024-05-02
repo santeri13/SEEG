@@ -13,39 +13,39 @@ func _process(delta):
 
 
 func _on_vpn_pressed():
-	$Tablet/VPN_note.show()
+	$Tablet/TextureRect/VPN_note.show()
 
 
 func _on_close_vpn_pressed():
-	$Tablet/VPN_note.hide()
+	$Tablet/TextureRect/VPN_note.hide()
 
 
 func _on_close_report_pressed():
-	$Tablet/Report_note.hide()
+	$Tablet/TextureRect/Report_note.hide()
 
 
 func _on_reports_pressed():
-	$Tablet/Report_note.show()
+	$Tablet/TextureRect/Report_note.show()
 
 
 func _on_emails_pressed():
-	$Tablet/Email_note.show()
+	$Tablet/TextureRect/Email_note.show()
 
 
 func _on_close_email_pressed():
-	$Tablet/Email_note.hide()
+	$Tablet/TextureRect/Email_note.hide()
 
 
 func _on_close_links_pressed():
-	$Tablet/Links_note.hide()
+	$Tablet/TextureRect/Links_note.hide()
 
 func _on_links_pressed():
-	$Tablet/Links_note.show()
+	$Tablet/TextureRect/Links_note.show()
 
 
 func _on_close_book_pressed():
-	$Tablet/Links_note.hide()
-	$Tablet/Email_note.hide()
-	$Tablet/Report_note.hide()
-	$Tablet/VPN_note.hide()
+	$Tablet/TextureRect/Links_note.hide()
+	$Tablet/TextureRect/Email_note.hide()
+	$Tablet/TextureRect/Report_note.hide()
+	$Tablet/TextureRect/VPN_note.hide()
 	CloseBook.emit()
