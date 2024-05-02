@@ -125,33 +125,35 @@ metadata/_edit_use_anchors_ = true
 [node name="Answer" type="Button" parent="Panel/Email_text"]
 visible = false
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 150.0
-offset_top = -59.0
-offset_right = 284.0
-offset_bottom = -11.0
+anchors_preset = -1
+anchor_left = 0.176471
+anchor_top = 0.901503
+anchor_right = 0.334118
+anchor_bottom = 0.981636
 grow_vertical = 0
 text = "Answer"
+metadata/_edit_use_anchors_ = true
 
 [node name="Report" type="Button" parent="Panel/Email_text"]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 7.0
-offset_top = -59.0
-offset_right = 141.0
-offset_bottom = -11.0
+anchors_preset = -1
+anchor_left = 0.0082353
+anchor_top = 0.901503
+anchor_right = 0.165882
+anchor_bottom = 0.981636
 grow_vertical = 0
 text = "Report"
+metadata/_edit_use_anchors_ = true
 
 [node name="Answers" type="Panel" parent="Panel/Email_text"]
 visible = false
-layout_mode = 0
-offset_right = 608.0
-offset_bottom = 598.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Answer" type="Button" parent="Panel/Email_text/Answers"]
 layout_mode = 1

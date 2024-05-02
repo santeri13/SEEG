@@ -16,25 +16,25 @@ var Maiciouse_email2 = false
 func _ready():
 	load_data()
 	if VPN == true:
-		$VBoxContainer/WiPhishihngContainer/VPN.disable = false
+		$VBoxContainer/WiPhishihngContainer/VPN.disabled = false
 		$VBoxContainer/WiPhishihngContainer/VPN/LockExample1.hide()
 	if Wrong_path == true:
-		$VBoxContainer/WiPhishihngContainer/Wrong_path.disable = false
+		$VBoxContainer/WiPhishihngContainer/Wrong_path.disabled = false
 		$VBoxContainer/WiPhishihngContainer/Wrong_path/LockExample1.hide()
 	if Malisiouse_prize == true:
-		$VBoxContainer/WiPhishihngContainer/Malisiouse_prize.disable = false
+		$VBoxContainer/WiPhishihngContainer/Malisiouse_prize.disabled = false
 		$VBoxContainer/WiPhishihngContainer/Malisiouse_prize/LockExample1.hide()
 	if Maliciouse_link == true:
-		$VBoxContainer/WiPhishihngContainer/Maliciouse_link.disable = false
+		$VBoxContainer/WiPhishihngContainer/Maliciouse_link.disabled = false
 		$VBoxContainer/WiPhishihngContainer/Maliciouse_link/LockExample1.hide()
 	if Data_protection == true:
-		$VBoxContainer/WiPhishihngContainer/Data_protection.disable = false
+		$VBoxContainer/WiPhishihngContainer/Data_protection.disabled = false
 		$VBoxContainer/WiPhishihngContainer/Data_protection/LockExample1.hide()
 	if Maiciouse_email == true:
-		$VBoxContainer/WiPhishihngContainer/Maiciouse_email.disable = false
+		$VBoxContainer/WiPhishihngContainer/Maiciouse_email.disabled = false
 		$VBoxContainer/WiPhishihngContainer/Maiciouse_email/LockExample1.hide()
 	if Maiciouse_email2 == true:
-		$VBoxContainer/WiPhishihngContainer/Maiciouse_email2.disable = false
+		$VBoxContainer/WiPhishihngContainer/Maiciouse_email2.disabled = false
 		$VBoxContainer/WiPhishihngContainer/Maiciouse_email2/LockExample1.hide()
 	
 func _on_phishing_pressed():

@@ -167,11 +167,12 @@ offset_bottom = -0.026062
 metadata/_edit_use_anchors_ = true
 
 [node name="Show_text" type="TextEdit" parent="."]
-layout_mode = 0
-anchor_left = 0.266493
-anchor_top = 0.589506
-anchor_right = 0.736979
-anchor_bottom = 0.70216
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.270833
+anchor_top = 0.714506
+anchor_right = 0.741319
+anchor_bottom = 0.82716
 editable = false
 wrap_mode = 1
 metadata/_edit_use_anchors_ = true
@@ -281,7 +282,7 @@ anchor_right = 0.653212
 anchor_bottom = 0.356481
 grow_horizontal = 2
 grow_vertical = 2
-text = "Congartulations on your first day"
+text = "Congratulations on your first day"
 alignment = 1
 metadata/_edit_use_anchors_ = true
 

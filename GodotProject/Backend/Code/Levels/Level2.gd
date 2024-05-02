@@ -62,7 +62,7 @@ func _on_button_2_pressed():
 	if $GameStart/Wallpaper/Email.has_method("_on_inbox_pressed"):
 		$GameStart/Wallpaper/Email._on_inbox_pressed()
 	$GameStart/Wallpaper/Email.show()
-	$GameStart/Wallpaper/List_of_tasks/Text_List_of_task.text = "Tasks:\nFK7085: \n \t departure to Lithuania \n RD6021: \n \t arrival to 30.04.2024"
+	$GameStart/Wallpaper/List_of_tasks/Text_List_of_task.text = "Tasks:\nFK7085:\n\tdeparture to Lithuania\nRD6021:\n\tarrival to 30.04.2024"
 
 
 func _on_button_pressed():

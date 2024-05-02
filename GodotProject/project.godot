@@ -14,3 +14,9 @@ config/name="SEEGProject"
 run/main_scene="res://Frontend/Scenes/Menus/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Frontend/Recourses/icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/resizable=false

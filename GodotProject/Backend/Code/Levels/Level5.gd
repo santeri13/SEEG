@@ -61,7 +61,7 @@ func _on_button_2_pressed():
 	if $GameStart/Wallpaper/Email.has_method("_on_inbox_pressed"):
 		$GameStart/Wallpaper/Email._on_inbox_pressed()
 	$GameStart/Wallpaper/Email.show()
-	$GameStart/Wallpaper/List_of_tasks/Text_List_of_task.text = "Tasks:\nNE9167: \n \t arrival to France \n OI5832: \n \t company name to Hellenic Logistics Solutions"
+	$GameStart/Wallpaper/List_of_tasks/Text_List_of_task.text = "Tasks:\nNE9167:\n\tarrival to France\nOI5832:\n\tcompany name to Hellenic Logistics Solutions"
 
 
 func _on_button_pressed():

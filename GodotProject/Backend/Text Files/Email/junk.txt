@@ -1,4 +1,3 @@
-tech_guy@utcorpi.com,VPN access change,Can you change your VPN path to 101.0.0.0/24. This is a new path for new tools; our team needs to check if it works properly.,malisiouse,''
-legit.utcorpi.com and provide some infromation,malisiouse,''
-ntials
+ralf.cout@utcorpsi.com,VPN access chnage,Our company updates information in the system and requires all personnel to mail their information with credentials. Please send your information by the end of the day.,malisiouse,Here is my credentials
+ls
 work correct,malisiouse,''

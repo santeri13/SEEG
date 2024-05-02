@@ -113,7 +113,7 @@ func _on_answer_send():
 				for mail2 in list_of_emails:
 					file2.store_line(mail2.email+","+mail2.name+","+mail2.text+","+mail2.malicious+","+mail2.answerson)
 				file2.close()
-				$Panel/Email_text/Email_text.hide()
+				$Panel/Email_text/Answers.hide()
 			elif mail.malicious == "OK":
 				AnswerSend.emit()
 				var file = FileAccess.open("res://Backend/Text Files/Email/sended_email.txt", FileAccess.READ_WRITE)
@@ -124,7 +124,7 @@ func _on_answer_send():
 				for mail2 in list_of_emails:
 					file2.store_line(mail2.email+","+mail2.name+","+mail2.text+","+mail2.malicious+","+mail2.answerson)
 				file2.close()
-				$Panel/Email_text/Email_text.hide()
+				$Panel/Email_text/Answers.hide()
 		i = i+1
 
 
