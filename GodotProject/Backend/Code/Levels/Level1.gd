@@ -131,7 +131,7 @@ func load_data():
 
 func read_mistakes():
 	mistakes=mistakes+1
-	print(mistakes)
+	$Miastakes.text=mistakes
 	if mistakes == 5:
 		$GameOver.show()
 	
@@ -171,7 +171,7 @@ func _on_next_day_pressed():
 
 
 func _on_exit_pressed():
-	level = 0
+	level = 1
 	mistakes = 0
 	money = 10000
 	var file = FileAccess.open(save_path, FileAccess.WRITE)

@@ -169,12 +169,53 @@ metadata/_edit_use_anchors_ = true
 [node name="Show_text" type="TextEdit" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.270833
-anchor_top = 0.714506
-anchor_right = 0.741319
-anchor_bottom = 0.82716
+anchor_left = 0.264844
+anchor_top = 0.873611
+anchor_right = 0.735156
+anchor_bottom = 1.0
 editable = false
 wrap_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0320312
+anchor_right = 0.15
+anchor_bottom = 0.0763889
+theme_override_colors/font_color = Color(0.988235, 0.0901961, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Mistakes:"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Miastakes" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.153125
+anchor_top = 0.00277778
+anchor_right = 0.246875
+anchor_bottom = 0.0777778
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "0"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Mistakes-Arrow" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.189318
+anchor_top = -0.0319444
+anchor_right = 0.189318
+anchor_bottom = 0.113425
+offset_left = 104.673
+offset_right = 628.006
+offset_bottom = 418.699
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_l2ryp")
 metadata/_edit_use_anchors_ = true
 
 [node name="VPN-Arrow" type="TextureRect" parent="."]

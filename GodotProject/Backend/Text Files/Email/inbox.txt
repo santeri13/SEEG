@@ -1,2 +1,1 @@
-support_admin@utcorp.com,Today tasks,Task update for FK7085: The departure country needs to be changed from Estonia to Lithuania. Also attention needed for RD6021. Alter the arrival date to 30.04.2024.,OK,''
-ralf.cout@utcorpsi.com,VPN access chnage,Our company updates information in the system and requires all personnel to mail their information with credentials. Please send your information by the end of the day.,malisiouse,Here is my credentials
+boss@utcorp.com,Welcoming letter,Welcome into the position of second-level support. Our team welcomes you.,OK,''

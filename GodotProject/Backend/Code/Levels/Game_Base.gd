@@ -79,11 +79,16 @@ func _on_close_pressed_VPN():
 	await pressedEnter
 	await pressedEnter
 	$"Tasks-Arrow".show()
-	$Show_text.text = "Here, you can see a sticky note with tasks you must do each day. Remember that first, you need to check your email, and then they appear in a sticky note \n Press enter"
+	$Show_text.text = "Here, you can see a sticky note with tasks you must do each day. Remember that first, you need to check your email, and then they appear in a sticky note\n Press enter"
 	await pressedEnter
 	await pressedEnter
 	$"Tasks-Arrow".hide()
-	$Show_text.text = "That all remember to read the manual for personal and work hard \n Press enter for next day"
+	$"Mistakes-Arrow".show()
+	$Show_text.text = "Here, you can see how many mistakes you have made. As in real work, you can make only a few mistakes. Here, you are allowed to make 5 mistakes, and then you need to replay the day again\n Press enter"
+	await pressedEnter
+	await pressedEnter
+	$"Mistakes-Arrow".hide()
+	$Show_text.text = "That all remember to read the manual for personal and work hard\n Press enter for next day"
 	await pressedEnter
 	await pressedEnter
 	$Panel.show()

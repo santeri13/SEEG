@@ -5,6 +5,11 @@ signal RecordChange
 signal FalseChange
 signal CloseRecordApp
 signal WorkedWithRecord
+signal WrongComapnyName
+signal WrongDepartureDate
+signal WrongArrivingDate
+signal WrongDepartureTown
+signal WrongArrivingTown
 
 var level = 0
 
@@ -205,7 +210,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				ZP9538 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "EuroTrans Logistics":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "21.04.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "21.05.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "France":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Helsinki":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"GV4210":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Alpine Express" && $Panel/OrderData/Date_of_Departure_Text.text == "17.01.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "25.04.2024" && $Panel/OrderData/From_Text.text == "Switzerland" && $Panel/OrderData/To_Text.text == "Austria":
@@ -213,7 +231,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				GV4210 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Alpine Express":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "17.01.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "25.04.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Switzerland":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Austria":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"FK7085":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Baltic Freight Solutions" && $Panel/OrderData/Date_of_Departure_Text.text == "23.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "26.04.2024" && $Panel/OrderData/From_Text.text == "Lithuania" && $Panel/OrderData/To_Text.text == "Latvia":
@@ -221,7 +252,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				FK7085 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Baltic Freight Solutions":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "25.04.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "26.04.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Lithuania":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Latvia":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"RD6021":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Nordic Haulage Ltd." && $Panel/OrderData/Date_of_Departure_Text.text == "24.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "30.04.2024" && $Panel/OrderData/From_Text.text == "Sweden" && $Panel/OrderData/To_Text.text == "Norway":
@@ -229,7 +273,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				RD6021 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Nordic Haulage Ltd.":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "24.04.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "30.04.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Sweden":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Norway":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"WH3472":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Iberian Cargo Services" && $Panel/OrderData/Date_of_Departure_Text.text == "25.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "28.04.2024" && $Panel/OrderData/From_Text.text == "Spain" && $Panel/OrderData/To_Text.text == "Spain":
@@ -237,7 +294,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				WH3472 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Iberian Cargo Services":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "25.04.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "28.04.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Spain":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Spain":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"QL8496":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Balkan Express Logistics" && $Panel/OrderData/Date_of_Departure_Text.text == "26.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "29.04.2024" && $Panel/OrderData/From_Text.text == "Croatia" && $Panel/OrderData/To_Text.text == "Slovenia":
@@ -245,7 +315,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				QL8496 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Balkan Express Logistics":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "26.04.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "29.05.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Croatia":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Slovenia":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"JP0135":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Benelux Logistics" && $Panel/OrderData/Date_of_Departure_Text.text == "27.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "30.04.2024" && $Panel/OrderData/From_Text.text == "Belgium" && $Panel/OrderData/To_Text.text == "Greece":
@@ -253,7 +336,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				JP0135 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Benelux Logistics":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "27.04.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "30.04.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Belgium":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Greece":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"UV2479":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Danube Shipping Co." && $Panel/OrderData/Date_of_Departure_Text.text == "27.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "30.04.2024" && $Panel/OrderData/From_Text.text == "Hungary" && $Panel/OrderData/To_Text.text == "Romania":
@@ -261,7 +357,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				UV2479 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Danube Shipping Co.":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "27.04.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "30.04.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Hungary":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Romania":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"NE9167":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Irish Transport Services" && $Panel/OrderData/Date_of_Departure_Text.text == "29.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "02.05.2024" && $Panel/OrderData/From_Text.text == "Ireland" && $Panel/OrderData/To_Text.text == "France":
@@ -269,7 +378,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				NE9167 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Irish Transport Services":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "29.04.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "02.05.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Ireland":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "France":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"OI5832":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Hellenic Logistics Solutions" && $Panel/OrderData/Date_of_Departure_Text.text == "30.04.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "03.05.2024" && $Panel/OrderData/From_Text.text == "Greece" && $Panel/OrderData/To_Text.text == "Cyprus":
@@ -277,7 +399,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				OI5832 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Hellenic Logistics Solutions":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "30.04.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "03.05.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Greece":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Cyprus":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"YX4096":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Italian Freight Forwarders" && $Panel/OrderData/Date_of_Departure_Text.text == "01.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "04.05.2024" && $Panel/OrderData/From_Text.text == "Cyprus" && $Panel/OrderData/To_Text.text == "Vatican City":
@@ -285,7 +420,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				YX4096 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Italian Freight Forwarders":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "01.05.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "04.05.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Cyprus":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Vatikan City":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"LD6259":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Central European Transport" && $Panel/OrderData/Date_of_Departure_Text.text == "01.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "05.05.2024" && $Panel/OrderData/From_Text.text == "Czech Republic" && $Panel/OrderData/To_Text.text == "Slovakia":
@@ -293,7 +441,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				LD6259 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Central European Transport":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "01.05.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "05.05.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Czech Republic":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "France":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"AM7148":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Swiss Cargo Solutions" && $Panel/OrderData/Date_of_Departure_Text.text == "03.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "06.05.2024" && $Panel/OrderData/From_Text.text == "Switzerland" && $Panel/OrderData/To_Text.text == "Liechtenstein":
@@ -301,7 +462,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				AM7148 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Swiss Cargo Solutions":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "03.05.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "06.05.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Switzerland":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Liechtenstein":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"ZT8032":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Polish Cargo Logistics" && $Panel/OrderData/Date_of_Departure_Text.text == "04.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "07.05.2024" && $Panel/OrderData/From_Text.text == "Poland" && $Panel/OrderData/To_Text.text == "Ukraine":
@@ -309,7 +483,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				ZT8032 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Polish Cargo Logistics":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "04.05.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "07.05.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Poland":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Ukraine":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"BG1094":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Finnish Freight Carriers" && $Panel/OrderData/Date_of_Departure_Text.text == "05.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "08.05.2024" && $Panel/OrderData/From_Text.text == "Finland" && $Panel/OrderData/To_Text.text == "Finland":
@@ -317,7 +504,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				BG1094 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Finnish Freight Carriers":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "05.05.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "08.05.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Finland":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Finland":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"EC2675":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Scandinavian Shipping Solutions" && $Panel/OrderData/Date_of_Departure_Text.text == "06.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "08.05.2024" && $Panel/OrderData/From_Text.text == "Denmark" && $Panel/OrderData/To_Text.text == "Norway":
@@ -325,7 +525,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				EC2675 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Scandinavian Shipping Solutions":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "06.05.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "08.05.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Denmark":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Norway":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"JN5204":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Italian Express Logistics" && $Panel/OrderData/Date_of_Departure_Text.text == "07.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "10.05.2024" && $Panel/OrderData/From_Text.text == "Malta" && $Panel/OrderData/To_Text.text == "Italy":
@@ -333,7 +546,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				JN5204 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Italian Express Logistics":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "07.05.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "10.05.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Malta":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Italy":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 		"KP9013":
 			if $Panel/OrderData/Comapny_Name_Text.text == "Luxembourg Logistics Group" && $Panel/OrderData/Date_of_Departure_Text.text == "16.05.2024" && $Panel/OrderData/Date_of_Arriving_Text.text == "20.05.2024" && $Panel/OrderData/From_Text.text == "Luxembourg" && $Panel/OrderData/To_Text.text == "Belgium":
@@ -341,7 +567,20 @@ func _on_button_pressed():
 				$Panel/OrderData.hide()
 				$Panel/OrderNumber.show()
 				KP9013 = true
-			else:
+			elif $Panel/OrderData/Comapny_Name_Text.text != "Luxembourg Logistics Group":
+				WrongComapnyName.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/Date_of_Departure_Text.text != "16.05.2024":
+				WrongDepartureDate.emit()
+				FalseChange.emit()
+			elif  $Panel/OrderData/Date_of_Arriving_Text.text != "20.05.2024":
+				WrongArrivingDate.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/From_Text.text != "Luxembourg":
+				WrongDepartureTown.emit()
+				FalseChange.emit()
+			elif $Panel/OrderData/To_Text.text == "Belgium":
+				WrongArrivingTown.emit()
 				FalseChange.emit()
 
 
