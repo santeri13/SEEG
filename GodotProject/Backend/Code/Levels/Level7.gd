@@ -43,6 +43,11 @@ func _ready():
 	$GameStart/Wallpaper/WorkChat.connect("CloseWorkChat",_on_close_pressed_WorkChat)
 	$GameStart/Wallpaper/Book.connect("CloseBook",_close_book)
 	$GameStart/Wallpaper/RecordApp.connect("WorkedWithRecord",_worked_number)
+	$GameStart/Wallpaper/RecordApp.connect("WrongComapnyName",_wrong_name)
+	$GameStart/Wallpaper/RecordApp.connect("WrongDepartureDate",_wrong_deoarture_date)
+	$GameStart/Wallpaper/RecordApp.connect("WrongArrivingDate",_wrong_arriving_date)
+	$GameStart/Wallpaper/RecordApp.connect("WrongDepartureTown",_wrong_deoarture_town)
+	$GameStart/Wallpaper/RecordApp.connect("WrongArrivingTown",_wrong_arriving_town)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -229,6 +234,41 @@ func _close_book():
 
 func _worked_number():
 	$Show_text.text = "You have already worked with this cargo, or you do not have access to it. \n Press enter to close"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()
+
+func _wrong_name():
+	$Show_text.text = "You have wrong name of the company. Please provide right name\nPress enter to close"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()
+	
+func _wrong_deoarture_date():
+	$Show_text.text = "You have wrong departure date. Please provide right departure date\nPress enter to close"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()
+
+func _wrong_arriving_date():
+	$Show_text.text = "You placed wrong arriving date. Please provide arriving date\nPress enter to close"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()
+	
+func _wrong_deoarture_town():
+	$Show_text.text = "You placed wrong departure town. Please provide right departure town\n Press enter to close"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()
+	
+func _wrong_arriving_town():
+	$Show_text.text = "You placed wrong arriving town. Please provide right departure town\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
