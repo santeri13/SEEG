@@ -25,7 +25,7 @@ func _ready():
 	
 	var emails = []
 	emails.append("support_admin@utcorp.com,Today tasks,Urgent task for JP0135: Change the arrival country to Greece. Also correction needed for UV2479: Change the departure date to 27.04.2024 and the arrival date to 30.04.2024.,OK,''")
-	emails.append("suto.kazuki@utcorp.com,Infromation about cargo,Can you send me information about your tracking numbers for today? I worked with one of them yesterday, and it could be that I changed something there incorrectly.,malisiouse,Sure I work today with numbers JP0135 and UV2479. In attachment you cna find all information about record.")
+	emails.append("suto.kazuki@utcorp.com,Infromation about cargo,Can you send me information about your tracking numbers for today? I worked with one of them yesterday and it could be that I changed something there incorrectly.,malisiouse,Sure I work today with numbers JP0135 and UV2479. In attachment you cna find all information about record.")
 	var file = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.READ_WRITE)
 	for email in emails:
 		file.store_line(email)
@@ -34,6 +34,7 @@ func _ready():
 	$GameStart/Wallpaper/Email.connect("RightReport",_correct_report)
 	$GameStart/Wallpaper/Email.connect("WrongReport",_wrong_report)
 	$GameStart/Wallpaper/Email.connect("AnswerSend",_answer_send)
+	$GameStart/Wallpaper/Email.connect("MalisiouseAnswerSend",_malisiouse_answer)
 	$GameStart/Wallpaper/RecordApp.connect("RecordChange",_record_chnage)
 	$GameStart/Wallpaper/RecordApp.connect("FalseChange",_false_change)
 	$GameStart/Wallpaper/Vpn.connect("CloseVPN",_on_close_pressed_Vpn)
@@ -75,12 +76,20 @@ func _on_button_pressed():
 			child.level_check(4)
 	
 func _hacked_message():
+	read_mistakes()
 	$Show_text.text = "Manager: We received from our team that someone accessed our server and downloaded the company's important data. By logs records were changed from your credentials. It is good that we have backups. Next time, pay close attention to what you do.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
+	
+func _malisiouse_answer():
 	read_mistakes()
+	$Show_text.text = "We lost access in some parts of the system, by our investigation we understood that it was happend from your credentials, we restore access back, please be more cautios next time\n Press eneter to close"
+	$Show_text.show()
+	await pressedEnter
+	await pressedEnter
+	$Show_text.hide()
 
 func _correct_report():
 	Maiciouse_email2 = true
@@ -94,12 +103,12 @@ func _correct_report():
 		$Next_day.show()
 	
 func _wrong_report():
+	read_mistakes()
 	$Show_text.text = "We checked your report, and this email is all right. Please be more cautious next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
-	read_mistakes()
 	
 func _answer_send():
 	$Show_text.text = "Answer send\n Press enter to close"
@@ -109,12 +118,12 @@ func _answer_send():
 	$Show_text.hide()
 	
 func _false_change():
+	read_mistakes()
 	$Show_text.text = "We received notice that the information in the record was incorrectly placed. Please be better next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
-	read_mistakes()
 	
 func _input(event):
 	if event.as_text() == "Enter":
@@ -141,6 +150,7 @@ func load_data():
 		var file = FileAccess.open(save_path,FileAccess.READ)
 		level = file.get_var(level)
 		mistakes = file.get_var(mistakes)
+		$Miastakes.text=str(mistakes)
 		money = file.get_var(money)
 		VPN = file.get_var(VPN)
 		Wrong_path = file.get_var(Wrong_path)
@@ -152,7 +162,7 @@ func load_data():
 		
 func read_mistakes():
 	mistakes = mistakes+1
-	$Miastakes.text=mistakes
+	$Miastakes.text=str(mistakes)
 	if mistakes == 5:
 		$GameOver.show()
 	

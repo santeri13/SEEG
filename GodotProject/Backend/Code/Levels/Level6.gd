@@ -66,7 +66,7 @@ func _on_button_2_pressed():
 	if $GameStart/Wallpaper/Email.has_method("_on_inbox_pressed"):
 		$GameStart/Wallpaper/Email._on_inbox_pressed()
 	$GameStart/Wallpaper/Email.show()
-	$GameStart/Wallpaper/List_of_tasks/Text_List_of_task.text = "Tasks:\nYX4096:\n\tdeparture to Cyprus\nLD6259:\n\tdeparture date to 01.05.2024"
+	$GameStart/Wallpaper/List_of_tasks/Text_List_of_task.text = "Tasks:\nYX4096:\n\tdeparture from Cyprus\nLD6259:\n\tdeparture date to 01.05.2024"
 
 
 func _on_button_pressed():
@@ -76,12 +76,12 @@ func _on_button_pressed():
 			child.level_check(6)
 	
 func _hacked_message():
+	read_mistakes()
 	$Show_text.text = "Manager: We received from our team that someone has changed records in our system. It is coming from your credentials. It is good that we have backups. Next time, pay close attention to what you do.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
-	read_mistakes()
 
 func _correct_report():
 	Malisiouse_prize = true
@@ -95,12 +95,12 @@ func _correct_report():
 		$Next_day.show()
 	
 func _wrong_report():
+	read_mistakes()
 	$Show_text.text = "We checked your report, and this email is all right. Please be more cautious next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
-	read_mistakes()
 	
 func _answer_send():
 	$Show_text.text = "Answer send\n Press enter to close"
@@ -110,21 +110,21 @@ func _answer_send():
 	$Show_text.hide()
 	
 func _prize_send():
-	$GameStart/WorkChat.hide()
+	read_mistakes()
+	$GameStart/Wallpaper/WorkChat.hide()
 	$Show_text.text = "Bank: Hello! Someone tried to take a loan in your name using your data. Please do not provide your data to a suspisious person you do not know. \n Press eneter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
-	read_mistakes()
 	
 func _false_change():
+	read_mistakes()
 	$Show_text.text = "We received notice that the information in the record was incorrectly placed. Please be better next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
-	read_mistakes()
 	
 func _input(event):
 	if event.as_text() == "Enter":
@@ -151,6 +151,7 @@ func load_data():
 		var file = FileAccess.open(save_path,FileAccess.READ)
 		level = file.get_var(level)
 		mistakes = file.get_var(mistakes)
+		$Miastakes.text=str(mistakes)
 		money = file.get_var(money)
 		VPN = file.get_var(VPN)
 		Wrong_path = file.get_var(Wrong_path)
@@ -162,7 +163,7 @@ func load_data():
 		
 func read_mistakes():
 	mistakes = mistakes+1
-	$Miastakes.text=mistakes
+	$Miastakes.text=str(mistakes)
 	if mistakes == 5:
 		$GameOver.show()
 

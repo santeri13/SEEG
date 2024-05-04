@@ -59,68 +59,68 @@ texture_focused = ExtResource("4_k0qgm")
 [node name="LineEdit" type="LineEdit" parent="Tablet/TextureRect"]
 modulate = Color(1, 0.027451, 0.0745098, 1)
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -173.0
-offset_top = 74.0
-offset_right = 173.0
-offset_bottom = 162.0
+anchors_preset = -1
+anchor_left = 0.347796
+anchor_top = 0.0685524
+anchor_right = 0.649734
+anchor_bottom = 0.186203
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "Book of knowlege "
 alignment = 1
 editable = false
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Emails" type="Button" parent="Tablet/TextureRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -94.0
-offset_top = 246.0
-offset_right = 96.0
-offset_bottom = 316.0
+anchors_preset = -1
+anchor_left = 0.428175
+anchor_top = 0.208436
+anchor_right = 0.571415
+anchor_bottom = 0.315897
 grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
 text = "Emails"
+metadata/_edit_use_anchors_ = true
 
 [node name="Vpn" type="Button" parent="Tablet/TextureRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -95.0
-offset_top = 345.0
-offset_right = 95.0
-offset_bottom = 415.0
+anchors_preset = -1
+anchor_left = 0.428175
+anchor_top = 0.352952
+anchor_right = 0.571415
+anchor_bottom = 0.460413
 grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
 text = "VPN"
+metadata/_edit_use_anchors_ = true
 
 [node name="Links" type="Button" parent="Tablet/TextureRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -95.0
-offset_top = 439.0
-offset_right = 95.0
-offset_bottom = 509.0
+anchors_preset = -1
+anchor_left = 0.428175
+anchor_top = 0.493762
+anchor_right = 0.571415
+anchor_bottom = 0.601223
 grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
 text = "Links"
+metadata/_edit_use_anchors_ = true
 
 [node name="Reports" type="Button" parent="Tablet/TextureRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -95.0
-offset_top = 545.0
-offset_right = 95.0
-offset_bottom = 615.0
+anchors_preset = -1
+anchor_left = 0.428175
+anchor_top = 0.639204
+anchor_right = 0.571415
+anchor_bottom = 0.746665
 grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
 text = "Reports
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="VPN_note" type="Panel" parent="Tablet/TextureRect"]
 visible = false
@@ -130,6 +130,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Tablet/TextureRect/VPN_note"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Close_VPN" type="TextureButton" parent="Tablet/TextureRect/VPN_note"]
 layout_mode = 1
@@ -155,25 +164,25 @@ offset_top = 0.287994
 offset_bottom = -0.320068
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 30
 text = "VPN is used to receive access to our company's network. As second-level support, you are forbidden to change any settings in the VPN connection. If required, we will send you a private email message where we will write about the day and time when you need to provide your device to the service center."
 editable = false
 wrap_mode = 1
 
 [node name="LineEdit" type="LineEdit" parent="Tablet/TextureRect/VPN_note"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -99.0
-offset_top = 154.0
-offset_right = 100.0
-offset_bottom = 219.0
+anchors_preset = -1
+anchor_left = 0.385409
+anchor_top = 0.0907856
+anchor_right = 0.609544
+anchor_bottom = 0.235301
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "VPN"
 alignment = 1
 editable = false
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Report_note" type="Panel" parent="Tablet/TextureRect"]
 visible = false
@@ -183,6 +192,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Tablet/TextureRect/Report_note"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Close_Report" type="TextureButton" parent="Tablet/TextureRect/Report_note"]
 layout_mode = 1
@@ -208,25 +226,26 @@ offset_top = -0.384003
 offset_bottom = -0.128052
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 30
 text = "Each company worker must be cautious in their actions, which could harm the company. If you find something suspicious, send a report about it, but please double-check if you are sure that something you found is dangerous."
 editable = false
 wrap_mode = 1
 
 [node name="LineEdit" type="LineEdit" parent="Tablet/TextureRect/Report_note"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -99.0
-offset_top = 142.0
-offset_right = 100.0
-offset_bottom = 210.0
+anchors_preset = -1
+anchor_left = 0.44899
+anchor_top = 0.131546
+anchor_right = 0.551525
+anchor_bottom = 0.202878
+offset_bottom = -9.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "Reports"
 alignment = 1
 editable = false
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Email_note" type="Panel" parent="Tablet/TextureRect"]
 visible = false
@@ -236,6 +255,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Tablet/TextureRect/Email_note"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Close_Email" type="TextureButton" parent="Tablet/TextureRect/Email_note"]
 layout_mode = 1
@@ -261,25 +289,26 @@ offset_top = -0.320007
 offset_bottom = 0.42395
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 30
 text = "Each worker has a private email address with the domain utcorp.com. Also, we write in a traditional style, so no big letters or special characters are in messages. This is also for security purposes."
 editable = false
 wrap_mode = 1
 
 [node name="LineEdit" type="LineEdit" parent="Tablet/TextureRect/Email_note"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -99.0
-offset_top = 154.0
-offset_right = 100.0
-offset_bottom = 226.0
+anchors_preset = -1
+anchor_left = 0.44899
+anchor_top = 0.142663
+anchor_right = 0.551525
+anchor_bottom = 0.213995
+offset_bottom = -5.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "Email"
 alignment = 1
 editable = false
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Links_note" type="Panel" parent="Tablet/TextureRect"]
 visible = false
@@ -289,6 +318,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Tablet/TextureRect/Links_note"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Close_Links" type="TextureButton" parent="Tablet/TextureRect/Links_note"]
 layout_mode = 1
@@ -313,6 +351,7 @@ anchor_bottom = 1.0
 offset_top = 0.375977
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 30
 text = "For security measures, the browser on your workstations is programmed so that you can only access company products on them. For now, we are working on three products to which you will receive access in the future: 
 support.utcorp.com
 it.utcorp.com
@@ -331,7 +370,7 @@ offset_top = 157.0
 offset_right = 100.0
 offset_bottom = 230.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "Links"
 alignment = 1
 editable = false

@@ -1,3 +1,4 @@
-ralf.cout@utcorpsi.com,VPN access chnage,Our company updates information in the system and requires all personnel to mail their information with credentials. Please send your information by the end of the day.,malisiouse,Here is my credentials
-ls
-work correct,malisiouse,''
+suto.kazuki@utcorp.com,Problem with webpages,Our company lost some data related to workers from this department. Some data was restored but to finish procedure please go to www.legit.utcorpi.com and provide some information.,malisiouse,''
+als
+official.utcorp.com to check if all work is correct.,malisiouse,''
+ion about record.

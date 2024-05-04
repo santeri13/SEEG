@@ -84,7 +84,7 @@ offset_bottom = 176.0
 flat = true
 
 [node name="Mail9068642" type="Sprite2D" parent="GameStart/Wallpaper/Button2"]
-position = Vector2(45, 45)
+position = Vector2(45.8888, 59)
 scale = Vector2(0.151367, 0.143892)
 texture = ExtResource("4_7ag5v")
 
@@ -97,7 +97,7 @@ offset_bottom = 265.0
 flat = true
 
 [node name="Browser" type="Sprite2D" parent="GameStart/Wallpaper/Button3"]
-position = Vector2(40, 43)
+position = Vector2(41.8888, 74)
 scale = Vector2(0.161377, 0.153749)
 texture = ExtResource("5_0uqcp")
 
@@ -110,16 +110,17 @@ offset_bottom = 358.0
 flat = true
 
 [node name="Vpn9694717" type="Sprite2D" parent="GameStart/Wallpaper/Button4"]
-position = Vector2(42, 47)
+position = Vector2(44.8888, 91)
 scale = Vector2(0.150879, 0.142706)
 texture = ExtResource("6_j64fg")
 
 [node name="List_of_tasks" type="Panel" parent="GameStart/Wallpaper"]
-layout_mode = 0
-offset_left = 870.0
-offset_top = 3.0
-offset_right = 1080.0
-offset_bottom = 205.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.805011
+anchor_right = 1.0
+anchor_bottom = 0.43249
+grow_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="Color_List_of_tasks" type="ColorRect" parent="GameStart/Wallpaper/List_of_tasks"]
@@ -145,43 +146,33 @@ editable = false
 [node name="Email" parent="GameStart/Wallpaper" instance=ExtResource("7_1ybyu")]
 visible = false
 layout_mode = 1
-offset_left = 1.0
-offset_top = 1.0
-offset_right = -74.0
-offset_bottom = -173.0
 
 [node name="Vpn" parent="GameStart/Wallpaper" instance=ExtResource("8_bx72f")]
 visible = false
 layout_mode = 1
-offset_left = 798.0
-offset_top = 171.0
-offset_right = -75.0
-offset_bottom = -174.0
+anchors_preset = -1
+anchor_left = 0.736212
+anchor_top = 0.368354
+anchor_right = 0.998608
+anchor_bottom = 1.00253
+metadata/_edit_use_anchors_ = true
 
 [node name="WorkChat" parent="GameStart/Wallpaper" instance=ExtResource("9_n44hc")]
 visible = false
 layout_mode = 1
-offset_left = 3.0
-offset_top = 5.0
-offset_right = -76.0
-offset_bottom = -177.0
 
 [node name="RecordApp" parent="GameStart/Wallpaper" instance=ExtResource("10_jehvj")]
 visible = false
 layout_mode = 1
-offset_left = 9.0
-offset_top = 2.0
-offset_right = -77.0
-offset_bottom = -177.0
 
 [node name="Book" parent="GameStart/Wallpaper" instance=ExtResource("11_2bra4")]
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.0176417
-anchor_top = 0.07173
-anchor_right = 0.982358
-anchor_bottom = 1.07173
+anchor_left = -0.00584959
+anchor_top = 0.0265823
+anchor_right = 1.03454
+anchor_bottom = 1.02721
 metadata/_edit_use_anchors_ = true
 
 [node name="Show_text" type="TextEdit" parent="."]

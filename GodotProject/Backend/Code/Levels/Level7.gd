@@ -76,12 +76,12 @@ func _on_button_pressed():
 			child.level_check(7)
 	
 func _hacked_message():
+	read_mistakes()
 	$Show_text.text = "Manager: We received from our team that someone has changed records in our system. It is coming from your credentials. It is good that we have backups. Next time, pay close attention to what you do.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
-	read_mistakes()
 
 func _correct_report():
 	Maliciouse_link = true
@@ -95,12 +95,12 @@ func _correct_report():
 		$Next_day.show()
 	
 func _wrong_report():
+	read_mistakes()
 	$Show_text.text = "We checked your report, and this email is all right. Please be more cautious next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
-	read_mistakes()
 	
 func _answer_send():
 	$Show_text.text = "Answer send\n Press enter to close"
@@ -111,20 +111,20 @@ func _answer_send():
 	
 func _companydata_send():
 	$GameStart/Wallpaper/WorkChat.hide()
+	read_mistakes()
 	$Show_text.text = "Manager: We received from our team about a DDOS attack using the credentails of our workers.  Next time, pay close attention to what you do.\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
-	read_mistakes()
 
 func _false_change():
+	read_mistakes()
 	$Show_text.text = "We received notice that the information in the record was incorrectly placed. Please be better next time\n Press enter to close"
 	$Show_text.show()
 	await pressedEnter
 	await pressedEnter
 	$Show_text.hide()
-	read_mistakes()
 	
 func _input(event):
 	if event.as_text() == "Enter":
@@ -151,6 +151,7 @@ func load_data():
 		var file = FileAccess.open(save_path,FileAccess.READ)
 		level = file.get_var(level)
 		mistakes = file.get_var(mistakes)
+		$Miastakes.text=str(mistakes)
 		money = file.get_var(money)
 		VPN = file.get_var(VPN)
 		Wrong_path = file.get_var(Wrong_path)
@@ -162,7 +163,7 @@ func load_data():
 		
 func read_mistakes():
 	mistakes = mistakes+1
-	$Miastakes.text=mistakes
+	$Miastakes.text=str(mistakes)
 	if mistakes == 5:
 		$GameOver.show()
 	

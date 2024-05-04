@@ -176,10 +176,10 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.0343228
-anchor_top = -0.0147679
-anchor_right = 1.00835
-anchor_bottom = 1.173
+anchor_left = -0.00435991
+anchor_top = -0.0111814
+anchor_right = 1.03831
+anchor_bottom = 1.17659
 metadata/_edit_use_anchors_ = true
 
 [node name="Show_text" type="TextEdit" parent="."]

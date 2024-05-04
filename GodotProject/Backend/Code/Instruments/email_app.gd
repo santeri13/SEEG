@@ -105,27 +105,29 @@ func _on_answer_send():
 		if mail.email == email && mail.name == name:
 			if mail.malicious == "malisiouse":
 				MalisiouseAnswerSend.emit()
-				var file = FileAccess.open("res://Backend/Text Files/Email/junk.txt", FileAccess.READ_WRITE)
-				file.store_line(mail.email+","+mail.name+","+mail.text+","+mail.malicious+","+mail.answerson)
-				file.close()
-				list_of_emails.remove_at(i)
-				var file2 = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.WRITE)
-				for mail2 in list_of_emails:
-					file2.store_line(mail2.email+","+mail2.name+","+mail2.text+","+mail2.malicious+","+mail2.answerson)
-				file2.close()
 				$Panel/Email_text/Answers.hide()
+				$Panel/Email_text.hide()
+				#var file = FileAccess.open("res://Backend/Text Files/Email/junk.txt", FileAccess.READ_WRITE)
+				#file.store_line(mail.email+","+mail.name+","+mail.text+","+mail.malicious+","+mail.answerson)
+				#file.close()
+				#list_of_emails.remove_at(i)
+				#var file2 = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.WRITE)
+				#for mail2 in list_of_emails:
+					#file2.store_line(mail2.email+","+mail2.name+","+mail2.text+","+mail2.malicious+","+mail2.answerson)
+				#file2.close()
 			elif mail.malicious == "OK":
 				AnswerSend.emit()
-				var file = FileAccess.open("res://Backend/Text Files/Email/sended_email.txt", FileAccess.READ_WRITE)
-				file.store_line(mail.email+","+mail.name+","+mail.text+","+mail.malicious+","+mail.answerson)
-				file.close()
-				list_of_emails.remove_at(i)
-				var file2 = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.WRITE)
-				for mail2 in list_of_emails:
-					file2.store_line(mail2.email+","+mail2.name+","+mail2.text+","+mail2.malicious+","+mail2.answerson)
-				file2.close()
+				#var file = FileAccess.open("res://Backend/Text Files/Email/sended_email.txt", FileAccess.READ_WRITE)
+				#file.store_line(mail.email+","+mail.name+","+mail.text+","+mail.malicious+","+mail.answerson)
+				#file.close()
+				#list_of_emails.remove_at(i)
+				#var file2 = FileAccess.open("res://Backend/Text Files/Email/inbox.txt", FileAccess.WRITE)
+				#for mail2 in list_of_emails:
+					#file2.store_line(mail2.email+","+mail2.name+","+mail2.text+","+mail2.malicious+","+mail2.answerson)
+				#file2.close()
 				$Panel/Email_text/Answers.hide()
 		i = i+1
+	#_load_file('res://Backend/Text Files/Email/inbox.txt')
 
 
 func _on_close_button_pressed():
