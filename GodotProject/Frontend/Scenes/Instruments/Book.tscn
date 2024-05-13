@@ -68,7 +68,6 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
 text = "Book of knowlege "
 alignment = 1
-editable = false
 flat = true
 metadata/_edit_use_anchors_ = true
 
@@ -154,7 +153,7 @@ texture_hover = ExtResource("4_k0qgm")
 texture_disabled = ExtResource("4_k0qgm")
 texture_focused = ExtResource("4_k0qgm")
 
-[node name="TextEdit" type="TextEdit" parent="Tablet/TextureRect/VPN_note"]
+[node name="VPN_note_text" type="TextEdit" parent="Tablet/TextureRect/VPN_note"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.317
@@ -169,7 +168,7 @@ text = "VPN is used to receive access to our company's network. As second-level 
 editable = false
 wrap_mode = 1
 
-[node name="LineEdit" type="LineEdit" parent="Tablet/TextureRect/VPN_note"]
+[node name="VPN_note_name" type="LineEdit" parent="Tablet/TextureRect/VPN_note"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.385409
@@ -216,7 +215,7 @@ texture_hover = ExtResource("4_k0qgm")
 texture_disabled = ExtResource("4_k0qgm")
 texture_focused = ExtResource("4_k0qgm")
 
-[node name="TextEdit" type="TextEdit" parent="Tablet/TextureRect/Report_note"]
+[node name="Report_note_text" type="TextEdit" parent="Tablet/TextureRect/Report_note"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.369
@@ -231,7 +230,7 @@ text = "Each company worker must be cautious in their actions, which could harm 
 editable = false
 wrap_mode = 1
 
-[node name="LineEdit" type="LineEdit" parent="Tablet/TextureRect/Report_note"]
+[node name="Report_note_name" type="LineEdit" parent="Tablet/TextureRect/Report_note"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.44899
@@ -279,7 +278,7 @@ texture_hover = ExtResource("4_k0qgm")
 texture_disabled = ExtResource("4_k0qgm")
 texture_focused = ExtResource("4_k0qgm")
 
-[node name="TextEdit" type="TextEdit" parent="Tablet/TextureRect/Email_note"]
+[node name="Email_note_text" type="TextEdit" parent="Tablet/TextureRect/Email_note"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.37
@@ -294,7 +293,7 @@ text = "Each worker has a private email address with the domain utcorp.com. Also
 editable = false
 wrap_mode = 1
 
-[node name="LineEdit" type="LineEdit" parent="Tablet/TextureRect/Email_note"]
+[node name="Email_note_name" type="LineEdit" parent="Tablet/TextureRect/Email_note"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.44899
@@ -342,7 +341,7 @@ texture_hover = ExtResource("4_k0qgm")
 texture_disabled = ExtResource("4_k0qgm")
 texture_focused = ExtResource("4_k0qgm")
 
-[node name="TextEdit" type="TextEdit" parent="Tablet/TextureRect/Links_note"]
+[node name="Links_note_text" type="TextEdit" parent="Tablet/TextureRect/Links_note"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.334
@@ -360,7 +359,7 @@ All the information will be given here if there are new products."
 editable = false
 wrap_mode = 1
 
-[node name="LineEdit" type="LineEdit" parent="Tablet/TextureRect/Links_note"]
+[node name="Links_note_name" type="LineEdit" parent="Tablet/TextureRect/Links_note"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

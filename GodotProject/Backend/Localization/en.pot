@@ -1,0 +1,1135 @@
+# LANGUAGE translation for SEEGProject for the following files:
+# res://Frontend/Scenes/Levels/Level1.tscn
+# res://Frontend/Scenes/Levels/Level2.tscn
+# res://Frontend/Scenes/Levels/Level3.tscn
+# res://Frontend/Scenes/Levels/Level4.tscn
+# res://Frontend/Scenes/Levels/Level5.tscn
+# res://Frontend/Scenes/Levels/Level6.tscn
+# res://Frontend/Scenes/Levels/Level7.tscn
+# res://Frontend/Scenes/Levels/Level8.tscn
+# res://Frontend/Scenes/Levels/Tutorial.tscn
+# res://Frontend/Scenes/Menus/Encyclopedia.tscn
+# res://Frontend/Scenes/Menus/menu.tscn
+# res://Frontend/Scenes/Instruments/Book.tscn
+# res://Frontend/Scenes/Instruments/Email.tscn
+# res://Frontend/Scenes/Instruments/RecordApp.tscn
+# res://Frontend/Scenes/Instruments/VPN.tscn
+# res://Frontend/Scenes/Instruments/WorkChat.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SEEGProject\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: Frontend/Scenes/Levels/Level1.tscn
+msgid ""
+"Tasks:\n"
+"ZP9538:\n"
+"\tarrival to Helsinki\n"
+"\tarrival time to 21.05.2024\n"
+"GV4210:\n"
+"\tdeparture to 17.01.2024"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+msgid ""
+"Manager: We received from our team that someone has changed records in our system. By logs records were changed from your credentials. It is good that we have backups. Next time, pay close attention to what you do.\n"
+" Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"We checked your report, great job.\n"
+" Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"We checked your report, and this email is all right. Please be more cautious next time\n"
+" Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"Record changed, good job\n"
+" Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"We received notice that the information in the record was incorrectly placed. Please be better next time\n"
+" Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+msgid ""
+"You have already worked with this cargo, or you do not have access to it.\n"
+"Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"You have wrong name of the company. Please provide right name\n"
+"Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"You have wrong departure date. Please provide right departure date\n"
+"Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"You placed wrong arriving date. Please provide arriving date\n"
+"Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"You placed wrong departure town. Please provide right departure town\n"
+" Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"You placed wrong arriving town. Please provide right departure town\n"
+" Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"Task:\n"
+"Open Email"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid "Book"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid "Menu"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+msgid "Next Day"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level1.tscn
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid "Back to menu"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"We lost access in some parts of the system, by our investigation we understood that it was happend from your credentials, we restore access back, please be more cautios next time\n"
+" Press eneter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"Answer send\n"
+" Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level2.tscn
+#: Frontend/Scenes/Levels/Level3.tscn
+#: Frontend/Scenes/Levels/Level4.tscn
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"You have already worked with this cargo, or you do not have access to it. \n"
+" Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level2.tscn
+msgid ""
+"Tasks:\n"
+"FK7085:\n"
+"\tdeparture from Lithuania\n"
+"RD6021:\n"
+"\tarrival to 30.04.2024"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level3.tscn
+msgid ""
+"Tasks:\n"
+"WH3472:\n"
+"\tdeparture from Spain\n"
+"QL8496:\n"
+"\tcompany name to Balkan Express Logistics"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level4.tscn
+msgid ""
+"Manager: We received from our team that someone accessed our server and downloaded the company\'s important data. By logs records were changed from your credentials. It is good that we have backups. Next time, pay close attention to what you do.\n"
+" Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level4.tscn
+msgid ""
+"Tasks:\n"
+"JP0135:\n"
+"\tarrival to Greece\n"
+"UV2479:\n"
+"\tdeparture date to 27.04.2024\n"
+"\tarrival date to 30.04.2024"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level5.tscn
+msgid ""
+"Tasks:\n"
+"NE9167:\n"
+"\tarrival to France\n"
+"OI5832:\n"
+"\tcompany name to Hellenic Logistics Solutions"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level5.tscn
+#: Frontend/Scenes/Levels/Level6.tscn
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"Manager: We received from our team that someone has changed records in our system. It is coming from your credentials. It is good that we have backups. Next time, pay close attention to what you do.\n"
+" Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level5.tscn
+msgid ""
+"Manager: We recive from our team accessed our server and dowanloaded from there importnat data. By logs records was chnaged from your credentials.\n"
+"\tIt is good that we have backups, next time pay close attention what you do.\n"
+" Press eneter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level6.tscn
+msgid ""
+"Tasks:\n"
+"YX4096:\n"
+"\tdeparture from Cyprus\n"
+"LD6259:\n"
+"\tdeparture date to 01.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level6.tscn
+msgid ""
+"Bank: Hello! Someone tried to take a loan in your name using your data. Please do not provide your data to a suspisious person you do not know. \n"
+" Press eneter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level7.tscn
+msgid ""
+"Tasks:\n"
+"AM7148:\n"
+"\tcompany name to Swiss Cargo Solutions\n"
+"ZT8032:\n"
+"\tarrival from Belarus to Ukraine"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level7.tscn
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"Manager: We received from our team about a DDOS attack using the credentails of our workers.  Next time, pay close attention to what you do.\n"
+" Press enter to close"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Level8.tscn
+msgid ""
+"Tasks:\n"
+"BG1094:\n"
+"\tarrival from Sweden to Finland\n"
+"EC2675:\n"
+"\tarrival date to 08.05.2024\n"
+"JN5204:\n"
+"\tcompany name to Italian Express Logistics\n"
+"KP9013:\n"
+"\tdeparture date to 16.05.2024\n"
+"\tarrival date to 20.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"Hello, and welcome to your first day at your job. My name is Morty. I will teach you how to work with the tools that you will use on your job \n"
+" Press enter"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"Let\'s start with the mailbox where you can see the emails that you receive at work\n"
+" Open mail"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"This is a VPN application that connects you to our organization\'s network. You would rarely need to use it, but sometimes it happens\n"
+" Close VPN app"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"Here, you can access tools that company workers access by browser. You can access only company-provided websites. You can check information about them later in Book of Knowlege\n"
+" Close browser"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"Here you can see emails which are written to you and write answers or report them if you find something suspiscious.\n"
+" Close mail"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"As you can see here, you need the cargo tracking code to make changes in the system. \n"
+" Press enter to next"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"Tracking numbers come in your email as work tasks from support_admin@utcorp.com. Now I will give you one as practice. Put there (PL289087) \n"
+" Enter code in app"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"Now open your primary tool\n"
+" Open record app"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"Also, there are some things which could help you in your work\n"
+" Press enter"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"Here, you can see a sticky note with tasks you must do each day. Remember that first, you need to check your email, and then they appear in a sticky note\n"
+" Press enter"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"Here, you can see how many mistakes you have made. As in real work, you can make only a few mistakes. Here, you are allowed to make 5 mistakes, and then you need to replay the day again\n"
+" Press enter"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"That all remember to read the manual for personal and work hard\n"
+" Press enter for next day"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"The last one is not related much to your work, but it is important that you know about it \n"
+" Open VPN app"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"Now that you know how you would communicate in your work, let\'s see browser\n"
+" Open browser"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid ""
+"Great job. Now you see information about this cargo, which you sometimes need to change to meet client needs. Now close app \n"
+" Close application"
+msgstr ""
+
+#: Frontend/Scenes/Levels/Tutorial.tscn
+msgid "Next day"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Email Phishing"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Phishing is an attack in which an attacker writes a message to a target by email, chat, or other text communication tool and tries to receive something interesting. The attacker\'s target could be personal information, bank account information, or installing on target workstation malware, which collects user data. In this example, the user received a message from another worker who needed information about a record that he worked on ealier but could not receive access to it because his account was locked."
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid ""
+"Here are instructions on what to do to not find yourself in such a situation:\n"
+"1. If his account was locked, then it was done on purpose.\n"
+"\n"
+"2. If he has a problem with the account, he must go to support and receive help there.\n"
+"\n"
+"3. You cannot give information about the shipment to other unrelated people. This could cause reputational damage to the company."
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "VPN phishing"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Type of social engineering attack when attacker gives target address by which he accesses to the private network. When the target is connected, the attacker could see data traffic from a user. This could cause loss of your private data, such as passwords from accounts, private photo or video leaks, and other sensitive information."
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid ""
+"Here are instructions on what to do to not find yourself in such a situation:\n"
+"\t\t\n"
+"1. Do not connect to a network in which security is under question\n"
+"\n"
+"2. If you still want to check the given VPN address, do not log in with credentials from primary accounts, and do not go to websites with an unsecured connection."
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Pharming with known webpage"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Pharming is an attack in which the attacker creates a copy of the original website or profile and uses it to collect data from the target, impersonating itself as legitimate. In this example, we have an original link of the company where the content was changed so that hacker collect information from users."
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid ""
+"Here are instructions on what to do to not find yourself in such a situation:\n"
+"\t\t\n"
+"1. Check the content on a webpage. A legitimate company with a good reputation creates a website with good design.\n"
+"\n"
+"2. Google information on this domain. It could be possible that you could find information about a recent hack of company service\n"
+"\n"
+"3. Companies do not collect any personal data if it is not related to work or future contacts with a perosn which they are interested"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Pharming with prize"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Pharming is an attack in which the attacker creates a copy of the original website or profile and uses it to collect data from the target, impersonating itself as legitimate. In this example, the attacker creates a website with a form. Then he sends a targeted email that target wins a prize and to receive it, he needs to provide personal information."
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid ""
+"Here are instructions on what to do to not find yourself in such a situation:\n"
+"\t\t\n"
+"1. Google about such contests. If you were selected to receive a prize in a contest about which you do not know, then it is already suspicious.\n"
+"\n"
+"2. the attacker could have written, \'To receive a prize on your bank account, you need to write in from your bank account or card data\'. Do not provide any information related to your bank accounts. By such manipulation, attacker could receive information about your bank card number and CVV code, by which the attacker could obtain access to your money.\n"
+"\n"
+"3. If you need to receive a prize, write back that you received it only privately. You go to the company office which does the lottery and receive the prize there"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Pharming with malisious link"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Pharming is an attack in which the attacker creates a copy of the original website or profile and uses it to collect data from the target, impersonating itself as legitimate. In this example, users receive a link to the website, which imitates the original company website. Users who would see the original design of the company website do not think about changed links to it and could provide their data to attacker."
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid ""
+"Here are instructions on what to do to not find yourself in such a situation:\n"
+"\t\t\n"
+"1. Check the webpage on Google or other search websites. Check it if you have a slight idea that the page needs to be more legit.\n"
+"\n"
+"2. Small details are important. Hackers cannot 100% copy the owner\'s website. If you find something strange in some tiny detail, check if it is an original website.\n"
+"\n"
+"3. Companies do not collect personal data if it is unrelated to work or future contacts with the person they are interested in."
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Phishig of personal data"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Phishing is an attack in which an attacker writes a message to a target by email, chat, or other text communication tool and tries to receive something interesting. The attacker\'s target could be personal information, bank account information, or installing on target workstation malware, which collects user data. In this example, the attacker sends a message to collect information about company workers."
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid ""
+"Here are instructions on what to do to not find yourself in such a situation:\n"
+"\t\t\n"
+"1. Check the email from where it was written.\n"
+"\n"
+"2. If the official message is related to you, it would start as \'Dear Name\' or something like that.\n"
+"\n"
+"3. The company already has all the needed information on you. If they require additional information, then they ask you personally\n"
+"\n"
+"4. Do not forget to check the email address from where it is written"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Phishing is an attack in which an attacker writes a message to a target by email, chat, or other text communication tool and tries to receive something interesting. The attacker\'s target could be personal information, bank account information, or installing on target workstation malware, which collects user data. In this example, the user receives the message that he requires the same thing as the previous one, but it is different by providing text of a different format, which is not expected from a company worker."
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid ""
+"Here are instructions on what to do to not find yourself in such a situation:\n"
+"1. If his account was locked, then it was done on purpose.\n"
+"\n"
+"2. If he has a problem with the account, he must go to support and receive help there.\n"
+"\n"
+"3. You cannot give information about the shipment to other unrelated people. This could cause reputational damage to the company.\n"
+"\n"
+"4. Check the template if there is something strange. As a practice, company email is written in one style, and if there are two styles or something that is not common practice in company email messages, then it could be a trigger for the action."
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Phishing"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Example1"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Example2"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Example3"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "WIPhishing"
+msgstr ""
+
+#: Frontend/Scenes/Menus/Encyclopedia.tscn
+msgid "Pharming"
+msgstr ""
+
+#: Frontend/Scenes/Menus/menu.tscn
+msgid "Start"
+msgstr ""
+
+#: Frontend/Scenes/Menus/menu.tscn
+msgid "Encyclopedia"
+msgstr ""
+
+#: Frontend/Scenes/Menus/menu.tscn
+msgid "Exit"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Book.tscn
+msgid "VPN"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Book.tscn
+msgid "VPN is used to receive access to our company\'s network. As second-level support, you are forbidden to change any settings in the VPN connection. If required, we will send you a private email message where we will write about the day and time when you need to provide your device to the service center."
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Book.tscn
+msgid "Reports"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Book.tscn
+msgid "Each company worker must be cautious in their actions, which could harm the company. If you find something suspicious, send a report about it, but please double-check if you are sure that something you found is dangerous."
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Book.tscn
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Email"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Book.tscn
+msgid "Each worker has a private email address with the domain utcorp.com. Also, we write in a traditional style, so no big letters or special characters are in messages. This is also for security purposes."
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Book.tscn
+msgid "Links"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Book.tscn
+msgid ""
+"For security measures, the browser on your workstations is programmed so that you can only access company products on them. For now, we are working on three products to which you will receive access in the future:\n"
+"\n"
+"\tsupport.utcorp.com\n"
+"\n"
+"\tit.utcorp.com\n"
+"\n"
+"\tsource.utcorp.com\n"
+"\n"
+"\tAll the information will be given here if there are new products."
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Book.tscn
+msgid "Emails"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Book.tscn
+msgid "Reports\n"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Email.tscn
+msgid "Inbox"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Email.tscn
+msgid "Sended email"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Email.tscn
+msgid "Deleted"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Email.tscn
+msgid "Junk"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Email.tscn
+msgid "Answer"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/Email.tscn
+msgid "Report"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "DepartureOU"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "19.11.2023"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "19.12.2023"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Poland"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Estonia"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "EuroTrans Logistics"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "21.04.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "24.04.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "France"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Spain"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Alpine Express"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "22.04.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "25.04.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Switzerland"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Austria"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Baltic Freight Solutions"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "23.04.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "26.04.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Latvia"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Nordic Haulage Ltd."
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "27.04.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Sweden"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Norway"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Iberian Cargo Services"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "28.04.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Portugal"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Balkan Transport Solutions"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "29.04.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Croatia"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Slovenia"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Benelux Logistics"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "30.04.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Belgium"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Netherlands"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Danube Shipping Co."
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "01.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Hungary"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Romania"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Irish Transport Services"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "02.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Ireland"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "United Kingdom"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Greek Express Logistics"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "03.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Greece"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Cyprus"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Italian Freight Forwarders"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "04.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Italy"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Vatican City"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Central European Transport"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "05.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Czech Republic"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Slovakia"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Swiss Alpine Hauliers"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "06.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Liechtenstein"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Polish Cargo Logistics"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "07.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Belarus"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Finnish Freight Carriers"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "08.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Finland"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Scandinavian Shipping Solutions"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "09.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Denmark"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Maltese Transport Services"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "10.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Malta"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Luxembourg Logistics Group"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "11.05.2024"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Luxembourg"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid ""
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Order number"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Place order number"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Send"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Order Data"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Company Name"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "From"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "To"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Date of Departure"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/RecordApp.tscn
+msgid "Date of Arriving"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/VPN.tscn
+msgid "Access VPN"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/VPN.tscn
+msgid "Please insert VPN address"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/VPN.tscn
+msgid "Type VPN address"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/VPN.tscn
+msgid "Connect"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "You win prize, please provide us infromation to send you a prize"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Credentails send"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Email field is empty"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Password field is empty"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Your credentails not right"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Something wrong with credentials"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Data send"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Name is empy"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Surname is empty"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Birthdate is empty"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Email is empty"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Address is empty"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "user@utcorp.com"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "TonyRule"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Liza"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Marienko"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "19.09.1991"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Sir street 48-19"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Provide link"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Name"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Surname"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Birthdate"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Address"
+msgstr ""
+
+#: Frontend/Scenes/Instruments/WorkChat.tscn
+msgid "Password"
+msgstr ""

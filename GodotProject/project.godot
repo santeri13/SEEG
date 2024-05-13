@@ -20,3 +20,8 @@ config/icon="res://Frontend/Recourses/icon.svg"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/resizable=false
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://Backend/Localization/en.po", "res://Backend/Localization/et.po", "res://Backend/Localization/ru.po")
+locale/translations_pot_files=PackedStringArray("res://Frontend/Scenes/Levels/Level1.tscn", "res://Frontend/Scenes/Levels/Level2.tscn", "res://Frontend/Scenes/Levels/Level3.tscn", "res://Frontend/Scenes/Levels/Level4.tscn", "res://Frontend/Scenes/Levels/Level5.tscn", "res://Frontend/Scenes/Levels/Level6.tscn", "res://Frontend/Scenes/Levels/Level7.tscn", "res://Frontend/Scenes/Levels/Level8.tscn", "res://Frontend/Scenes/Levels/Tutorial.tscn", "res://Frontend/Scenes/Menus/Encyclopedia.tscn", "res://Frontend/Scenes/Menus/menu.tscn", "res://Frontend/Scenes/Instruments/Book.tscn", "res://Frontend/Scenes/Instruments/Email.tscn", "res://Frontend/Scenes/Instruments/RecordApp.tscn", "res://Frontend/Scenes/Instruments/VPN.tscn", "res://Frontend/Scenes/Instruments/WorkChat.tscn")

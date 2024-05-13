@@ -25,6 +25,7 @@ func _on_button_pressed():
 		$Panel/Prize.show()
 		$Panel/Credentials.hide()
 		$Panel/CompanyPhishing.hide()
+		$Panel/Prize/Comment_prize.text=tr("You win prize, please provide us infromation to send you a prize")
 		$Panel/Prize/OrderNumber/OrderNumber.text = "Liza"
 		$Panel/Prize/OrderNumber/OrderNumber2.text = "Marienko"
 		$Panel/Prize/OrderNumber/OrderNumber3.text = "19.09.1991"
@@ -43,52 +44,52 @@ func _on_button_pressed():
 
 func _on_sendcredential_pressed():
 	if $Panel/Credentials/OrderNumber/OrderNumber.text == "user@utcorp.com" && $Panel/Credentials/OrderNumber/OrderNumber2.text == "TonyRule":
-		$Panel/Credentials/OrderNumber/Coment.text = "Credentails send"
+		$Panel/Credentials/OrderNumber/Coment.text = tr("Credentails send")
 		CredentalSend.emit()
 	elif $Panel/Credentials/OrderNumber/OrderNumber.text == "":
-		$Panel/Credentials/OrderNumber/Coment.text = "Email field is empty"
+		$Panel/Credentials/OrderNumber/Coment.text = tr("Email field is empty")
 	elif $Panel/Credentials/OrderNumber/OrderNumber2.text == "":
-		$Panel/Credentials/OrderNumber/Coment.text = "Password field is empty"
+		$Panel/Credentials/OrderNumber/Coment.text = tr("Password field is empty")
 	elif $Panel/Credentials/OrderNumber/OrderNumber.text != "user@utcorp.com" || $Panel/Credentials/OrderNumber/OrderNumber2.text != "TonyRule":
-		$Panel/Credentials/OrderNumber/Coment.text = "Your credentails not right"
+		$Panel/Credentials/OrderNumber/Coment.text = tr("Your credentails not right")
 	else:
-		$Panel/CompanyPhishing/OrderNumber/Coment.text = "Something wrong with credentials"
+		$Panel/CompanyPhishing/OrderNumber/Coment.text = tr("Something wrong with credentials")
 
 
 func _on_sendprize_pressed():
 	if $Panel/Prize/OrderNumber/OrderNumber.text == "Liza" && $Panel/Prize/OrderNumber/OrderNumber2.text == "Marienko" && $Panel/Prize/OrderNumber/OrderNumber3.text == "19.09.1991" && $Panel/Prize/OrderNumber/OrderNumber4.text == "user@utcorp.com" && $Panel/Prize/OrderNumber/OrderNumber5.text == "Sir street 48-19":
-		$Panel/Prize/OrderNumber/Coment.text = "Data send"
+		$Panel/Prize/OrderNumber/Coment.text = tr("Data send")
 		PrizeSend.emit()
 		$Panel/Prize.hide()
 	elif $Panel/Prize/OrderNumber/OrderNumber.text == "":
-		$Panel/Prize/OrderNumber/Coment.text = "Name is empy"
+		$Panel/Prize/OrderNumber/Coment.text = tr("Name is empy")
 	elif $Panel/Prize/OrderNumber/OrderNumber2.text == "":
-		$Panel/Prize/OrderNumber/Coment.text = "Surname is empty"
+		$Panel/Prize/OrderNumber/Coment.text = tr("Surname is empty")
 	elif $Panel/Prize/OrderNumber/OrderNumber3.text == "":
-		$Panel/Prize/OrderNumber/Coment.text = "Birthdate is empty"
+		$Panel/Prize/OrderNumber/Coment.text = tr("Birthdate is empty")
 	elif $Panel/Prize/OrderNumber/OrderNumber4.text == "":
-		$Panel/Prize/OrderNumber/Coment.text = "Email is empty"
+		$Panel/Prize/OrderNumber/Coment.text = tr("Email is empty")
 	elif $Panel/Prize/OrderNumber/OrderNumber5.text == "":
-		$Panel/Prize/OrderNumber/Coment.text = "Address is empty"
+		$Panel/Prize/OrderNumber/Coment.text = tr("Address is empty")
 	else:
-		$Panel/CompanyPhishing/OrderNumber/Coment.text = "Something wrong with credentials"
+		$Panel/CompanyPhishing/OrderNumber/Coment.text = tr("Something wrong with credentials")
 
 
 func _on_sendcompanydata_pressed():
 	if $Panel/CompanyPhishing/OrderNumber/OrderNumber.text == "Liza" && $Panel/CompanyPhishing/OrderNumber/OrderNumber2.text == "Marienko" && $Panel/CompanyPhishing/OrderNumber/OrderNumber3.text == "19.09.1991" && $Panel/CompanyPhishing/OrderNumber/OrderNumber4.text == "user@utcorp.com":
-		$Panel/CompanyPhishing/OrderNumber/Coment.text = "Data send"
+		$Panel/CompanyPhishing/OrderNumber/Coment.text = tr("Data send")
 		CompanyWebpage.emit()
 		$Panel/CompanyPhishing.hide()
 	elif $Panel/CompanyPhishing/OrderNumber/OrderNumber.text == "":
-		$Panel/CompanyPhishing/OrderNumber/Coment.text = "Name is empy"
+		$Panel/CompanyPhishing/OrderNumber/Coment.text = tr("Name is empy")
 	elif $Panel/CompanyPhishing/OrderNumber/OrderNumber2.text == "":
-		$Panel/CompanyPhishing/OrderNumber/Coment.text = "Surname is empty"
+		$Panel/CompanyPhishing/OrderNumber/Coment.text = tr("Surname is empty")
 	elif $Panel/CompanyPhishing/OrderNumber/OrderNumber3.text == "":
-		$Panel/CompanyPhishing/OrderNumber/Coment.text = "Birthdate is empty"
+		$Panel/CompanyPhishing/OrderNumber/Coment.text = tr("Birthdate is empty")
 	elif $Panel/CompanyPhishing/OrderNumber/OrderNumber4.text == "":
-		$Panel/CompanyPhishing/OrderNumber/Coment.text = "Email is empty"
+		$Panel/CompanyPhishing/OrderNumber/Coment.text = tr("Email is empty")
 	else:
-		$Panel/CompanyPhishing/OrderNumber/Coment.text = "Something wrong with credentials"
+		$Panel/CompanyPhishing/OrderNumber/Coment.text = tr("Something wrong with credentials")
 
 
 func _on_close_pressed():

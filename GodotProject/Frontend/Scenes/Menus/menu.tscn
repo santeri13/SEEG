@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfqqpygfebesh"]
+[gd_scene load_steps=6 format=3 uid="uid://cfqqpygfebesh"]
 
 [ext_resource type="Script" path="res://Backend/Code/Menus/menu.gd" id="1_4fjy4"]
 [ext_resource type="Texture2D" uid="uid://crda5u6l4fpvu" path="res://Frontend/Recourses/6017768.jpg" id="2_2ce8r"]
+[ext_resource type="Texture2D" uid="uid://bndiq5ls5x6t8" path="res://Frontend/Recourses/icons8-russian-federation-96.png" id="3_wbx1y"]
+[ext_resource type="Texture2D" uid="uid://b7upiojpg51a7" path="res://Frontend/Recourses/icons8-great-britain-96.png" id="4_6yv5l"]
+[ext_resource type="Texture2D" uid="uid://ccpqen0in04jb" path="res://Frontend/Recourses/icons8-estonia-96.png" id="5_15d08"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -24,16 +27,14 @@ expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 246.0
-offset_top = -50.0
-offset_right = -249.0
-offset_bottom = 51.0
+anchors_preset = -1
+anchor_left = 0.192188
+anchor_top = 0.430556
+anchor_right = 0.805469
+anchor_bottom = 0.570833
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -49,19 +50,62 @@ text = "Exit"
 
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -91.0
-offset_top = 73.0
-offset_right = 93.0
-offset_bottom = 121.0
+anchors_preset = -1
+anchor_left = 0.428906
+anchor_top = 0.101389
+anchor_right = 0.572656
+anchor_bottom = 0.170833
+offset_bottom = -2.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 30
 text = "SEEG"
 alignment = 1
 flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Russian_icon" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -96.0
+offset_bottom = 96.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_wbx1y")
+texture_pressed = ExtResource("3_wbx1y")
+texture_hover = ExtResource("3_wbx1y")
+texture_disabled = ExtResource("3_wbx1y")
+texture_focused = ExtResource("3_wbx1y")
+
+[node name="English_icon" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.765625
+anchor_right = 0.840625
+anchor_bottom = 0.133333
+texture_normal = ExtResource("4_6yv5l")
+texture_pressed = ExtResource("4_6yv5l")
+texture_hover = ExtResource("4_6yv5l")
+texture_disabled = ExtResource("4_6yv5l")
+texture_focused = ExtResource("4_6yv5l")
+metadata/_edit_use_anchors_ = true
+
+[node name="Estonian_icon" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.846094
+anchor_right = 0.921094
+anchor_bottom = 0.133333
+texture_normal = ExtResource("5_15d08")
+texture_pressed = ExtResource("5_15d08")
+texture_hover = ExtResource("5_15d08")
+texture_disabled = ExtResource("5_15d08")
+texture_focused = ExtResource("5_15d08")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Encyclopedia" to="." method="_on_encyclopedia_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Russian_icon" to="." method="_on_russian_icon_pressed"]
+[connection signal="pressed" from="English_icon" to="." method="_on_english_icon_pressed"]
+[connection signal="pressed" from="Estonian_icon" to="." method="_on_estonian_icon_pressed"]
