@@ -16,6 +16,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_omqet")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_u8cvo")
+expand_mode = 1
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 1
@@ -26,16 +36,6 @@ offset_bottom = 72.0
 grow_horizontal = 0
 icon = ExtResource("5_jn57l")
 flat = true
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_u8cvo")
-expand_mode = 1
 
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 1
