@@ -738,7 +738,7 @@ msgstr "Answer"
 
 #: Frontend/Scenes/Instruments/Email.tscn
 msgid "Report"
-msgstr "Aruanne"
+msgstr "Report"
 
 #: Frontend/Scenes/Instruments/RecordApp.tscn
 msgid "DepartureOU"

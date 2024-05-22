@@ -795,7 +795,7 @@ msgstr ""
 
 #: Frontend/Scenes/Instruments/Email.tscn
 msgid "Report"
-msgstr "Отчет"
+msgstr "Report"
 
 #: Frontend/Scenes/Instruments/Book.tscn
 msgid "Reports\n"
@@ -941,7 +941,7 @@ msgstr ""
 "Задачи:\n"
 "NE9167:\n"
 "\tприбытие во France\n"
-"I5832:\n"
+"OI5832:\n"
 "\tназвание компании Hellenic Logistics Solutions"
 
 #: Frontend/Scenes/Levels/Level3.tscn
@@ -983,7 +983,7 @@ msgid ""
 msgstr ""
 "Задачи:\n"
 "ZP9538:\n"
-"\tприбытие в Хельсинки\n"
+"\tприбытие в Helsinki\n"
 "\tвремя прибытия до 21.05.2024\n"
 "GV4210:\n"
 "\tвылет до 17.01.2024"

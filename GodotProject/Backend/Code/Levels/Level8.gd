@@ -74,7 +74,7 @@ func _on_button_2_pressed():
 	if $GameStart/Wallpaper/Email.has_method("_on_inbox_pressed"):
 		$GameStart/Wallpaper/Email._on_inbox_pressed()
 	$GameStart/Wallpaper/Email.show()
-	$GameStart/Wallpaper/List_of_tasks/Text_List_of_task.text = "Tasks:\nBG1094:\n\tarrival from Sweden to Finland\nEC2675:\n\tarrival date to 08.05.2024\nJN5204:\n\tcompany name to Italian Express Logistics\nKP9013:\n\tdeparture date to 16.05.2024\n\tarrival date to 20.05.2024"
+	$GameStart/Wallpaper/List_of_tasks/Text_List_of_task.text = tr("Tasks:\nBG1094:\n\tarrival from Sweden to Finland\nEC2675:\n\tarrival date to 08.05.2024\nJN5204:\n\tcompany name to Italian Express Logistics\nKP9013:\n\tdeparture date to 16.05.2024\n\tarrival date to 20.05.2024")
 
 
 func _on_button_pressed():
